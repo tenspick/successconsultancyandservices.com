@@ -8,9 +8,9 @@
   </url>
 
   <url>
-    <loc>https://successconsultancyandservices.com/about.html</loc>
+    <loc>https://successconsultancyandservices.com/services.html</loc>
     <lastmod>2026-02-27</lastmod>
-    <priority>0.80</priority>
+    <priority>0.90</priority>
   </url>
 
   <url>
@@ -19,11 +19,12 @@
     <priority>0.85</priority>
   </url>
   
-  <url>
-    <loc>https://successconsultancyandservices.com/gallery.html</loc>
+<url>
+    <loc>https://successconsultancyandservices.com/about.html</loc>
     <lastmod>2026-02-27</lastmod>
-    <priority>0.75</priority>
+    <priority>0.80</priority>
   </url>
+
   
   <url>
     <loc>https://successconsultancyandservices.com/contact.html</loc>
