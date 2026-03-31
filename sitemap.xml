@@ -1,35 +1,78 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-
   <url>
-    <loc>https://successconsultancyandservices.com/</loc>
-    <lastmod>2026-02-27</lastmod>
+    <loc>https://www.successconsultancyandservices.com/</loc>
+    <lastmod>2026-03-31</lastmod>
     <priority>1.00</priority>
   </url>
-
   <url>
-    <loc>https://successconsultancyandservices.com/services.html</loc>
-    <lastmod>2026-02-27</lastmod>
-    <priority>0.90</priority>
-  </url>
-
-  <url>
-    <loc>https://successconsultancyandservices.com/courses.html</loc>
-    <lastmod>2026-02-27</lastmod>
-    <priority>0.85</priority>
-  </url>
-  
-<url>
-    <loc>https://successconsultancyandservices.com/about.html</loc>
-    <lastmod>2026-02-27</lastmod>
+    <loc>https://www.successconsultancyandservices.com/about.html</loc>
+    <lastmod>2026-03-31</lastmod>
     <priority>0.80</priority>
   </url>
-
-  
   <url>
-    <loc>https://successconsultancyandservices.com/contact.html</loc>
-    <lastmod>2026-02-27</lastmod>
-    <priority>0.70</priority>
+    <loc>https://www.successconsultancyandservices.com/contact.html</loc>
+    <lastmod>2026-03-31</lastmod>
+    <priority>0.80</priority>
   </url>
-
+  <url>
+    <loc>https://www.successconsultancyandservices.com/courses.html</loc>
+    <lastmod>2026-03-31</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://www.successconsultancyandservices.com/services.html</loc>
+    <lastmod>2026-03-31</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://www.successconsultancyandservices.com/course-cloud.html</loc>
+    <lastmod>2026-03-31</lastmod>
+    <priority>0.64</priority>
+  </url>
+  <url>
+    <loc>https://www.successconsultancyandservices.com/course-data.html</loc>
+    <lastmod>2026-03-31</lastmod>
+    <priority>0.64</priority>
+  </url>
+  <url>
+    <loc>https://www.successconsultancyandservices.com/course-fullstack.html</loc>
+    <lastmod>2026-03-31</lastmod>
+    <priority>0.64</priority>
+  </url>
+  <url>
+    <loc>https://www.successconsultancyandservices.com/course-programming.html</loc>
+    <lastmod>2026-03-31</lastmod>
+    <priority>0.64</priority>
+  </url>
+  <url>
+    <loc>https://www.successconsultancyandservices.com/course-security.html</loc>
+    <lastmod>2026-03-31</lastmod>
+    <priority>0.64</priority>
+  </url>
+  <url>
+    <loc>https://www.successconsultancyandservices.com/course-testing.html</loc>
+    <lastmod>2026-03-31</lastmod>
+    <priority>0.64</priority>
+  </url>
+  <url>
+    <loc>https://www.successconsultancyandservices.com/course-web.html</loc>
+    <lastmod>2026-03-31</lastmod>
+    <priority>0.64</priority>
+  </url>
+  <url>
+    <loc>https://www.successconsultancyandservices.com/services-guidance.html</loc>
+    <lastmod>2026-03-31</lastmod>
+    <priority>0.64</priority>
+  </url>
+  <url>
+    <loc>https://www.successconsultancyandservices.com/services-placement.html</loc>
+    <lastmod>2026-03-31</lastmod>
+    <priority>0.64</priority>
+  </url>
+  <url>
+    <loc>https://www.successconsultancyandservices.com/services-training.html</loc>
+    <lastmod>2026-03-31</lastmod>
+    <priority>0.64</priority>
+  </url>
 </urlset>
