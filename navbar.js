@@ -2,36 +2,37 @@
   const host = document.getElementById("siteHeader");
   if (!host) return;
 
-  const page = (window.location.pathname.split("/").pop() || "index.html").toLowerCase();
+  const path = window.location.pathname;
+  const page = path.endsWith("/") || path === "" ? "/" : path.split("/").pop().replace(".html", "").toLowerCase();
 
   const navItems = [
-    { href: "index.html", label: "Home", active: page === "index.html" || page === "" },
+    { href: "/", label: "Home", active: page === "/" || page === "index" },
     {
-      href: "services.html",
+      href: "/services",
       label: "Services",
-      active: page === "services.html" || page.startsWith("services-"),
+      active: page === "services" || page.startsWith("services-"),
       children: [
-        { href: "services-training.html", label: "Training Programs", active: page === "services-training.html" },
-        { href: "services-placement.html", label: "Placement Assistance", active: page === "services-placement.html" },
-        { href: "services-guidance.html", label: "Career Guidance", active: page === "services-guidance.html" }
+        { href: "/services-training", label: "Training Programs", active: page === "services-training" },
+        { href: "/services-placement", label: "Placement Assistance", active: page === "services-placement" },
+        { href: "/services-guidance", label: "Career Guidance", active: page === "services-guidance" }
       ]
     },
     {
-      href: "courses.html",
+      href: "/courses",
       label: "Courses",
-      active: page === "courses.html" || page.startsWith("course-"),
+      active: page === "courses" || page.startsWith("course-"),
       children: [
-        { href: "course-programming.html", label: "Programming", active: page === "course-programming.html" },
-        { href: "course-web.html", label: "Web Development", active: page === "course-web.html" },
-        { href: "course-fullstack.html", label: "Full Stack", active: page === "course-fullstack.html" },
-        { href: "course-data.html", label: "Data Science & AI", active: page === "course-data.html" },
-        { href: "course-cloud.html", label: "Cloud Computing", active: page === "course-cloud.html" },
-        { href: "course-security.html", label: "Cyber Security", active: page === "course-security.html" },
-        { href: "course-testing.html", label: "Software Testing", active: page === "course-testing.html" }
+        { href: "/course-programming", label: "Programming", active: page === "course-programming" },
+        { href: "/course-web", label: "Web Development", active: page === "course-web" },
+        { href: "/course-fullstack", label: "Full Stack", active: page === "course-fullstack" },
+        { href: "/course-data", label: "Data Science & AI", active: page === "course-data" },
+        { href: "/course-cloud", label: "Cloud Computing", active: page === "course-cloud" },
+        { href: "/course-security", label: "Cyber Security", active: page === "course-security" },
+        { href: "/course-testing", label: "Software Testing", active: page === "course-testing" }
       ]
     },
-    { href: "about.html", label: "About", active: page === "about.html" },
-    { href: "contact.html", label: "Contact", active: page === "contact.html" }
+    { href: "/about", label: "About", active: page === "about" },
+    { href: "/contact", label: "Contact", active: page === "contact" }
   ];
 
   // Desktop Item Renderer
@@ -68,7 +69,7 @@
   const renderMobileItem = (item) => {
     const isActive = item.active;
     const baseClass = isActive ? "bg-blue-700 text-white" : "bg-white text-slate-900 border-slate-200";
-    
+
     if (!item.children) {
       return `
         <li>
@@ -98,7 +99,7 @@
   host.innerHTML = `
     <header class="fixed top-0 left-0 right-0 z-[100] border-b border-blue-100 bg-white/90 shadow-sm backdrop-blur-md">
       <nav class="mx-auto flex max-w-7xl items-center justify-between px-4 py-3 sm:px-6 lg:px-8">
-        <a href="index.html" class="flex items-center gap-3">
+        <a href="/" class="flex items-center gap-3">
           <img src="logo.jpg" alt="Logo" class="h-10 w-10 rounded-lg object-cover ring-2 ring-blue-50" />
           <div class="block">
             <p class="text-sm font-black leading-none text-blue-700 sm:text-base">Success Consultancy & Services</p>
@@ -161,7 +162,7 @@
   const openMenu = () => {
     navOverlay.classList.remove("invisible");
     body.style.overflow = "hidden"; // Stop background scroll
-    
+
     // Request animation frame to ensure classes trigger transition
     requestAnimationFrame(() => {
       backdrop.classList.add("opacity-100");
