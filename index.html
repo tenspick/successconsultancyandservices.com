@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-
+ 
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -8,72 +8,34 @@
   <link rel="icon" type="image/jpeg" href="logo.jpg" />
   <meta property="og:type" content="website" />
   <meta property="og:title" content="Success Consultancy and Services" />
-  <meta property="og:description"
-    content="Expert Career Guidance, Cloud and Fullstack Training, and Placement Services." />
+  <meta property="og:description" content="Expert Career Guidance, Cloud and Fullstack Training, and Placement Services." />
   <meta property="og:image" content="logo.jpg" />
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="Success Consultancy and Services" />
-  <meta name="twitter:description"
-    content="Expert Career Guidance, Cloud and Fullstack Training, and Placement Services." />
+  <meta name="twitter:description" content="Expert Career Guidance, Cloud and Fullstack Training, and Placement Services." />
   <meta name="twitter:image" content="logo.jpg" />
-  <meta name="description"
-    content="Success Consultancy and Services offers expert Career Guidance, Cloud and Fullstack Training, and reliable Placement Services across India." />
+  <meta name="description" content="Success Consultancy and Services offers expert Career Guidance, Cloud and Fullstack Training, and reliable Placement Services across India." />
   <script type="application/ld+json">
-      [
-        {
-          "@context": "https://schema.org",
-          "@type": "EducationalOrganization",
-          "name": "Success Consultancy and Services",
-          "url": "https://successconsultancyandservices.com",
-          "description": "Expert Career Guidance, Cloud and Fullstack Training, and dedicated Placement Services for IT and non-IT jobs.",
-          "telephone": "+91-9866634443",
-          "email": "successconsultancy0808@gmail.com",
-          "address": {
-            "@type": "PostalAddress",
-            "streetAddress": "D No: 23-8-69/11, RC Road, Beside Harsha Residency Hotel",
-            "addressLocality": "Tirupati",
-            "postalCode": "517501",
-            "addressCountry": "IN"
-          }
-        },
-        {
-          "@context": "https://schema.org",
-          "@type": "ItemList",
-          "itemListElement": [
-            {
-              "@type": "SiteNavigationElement",
-              "position": 1,
-              "name": "Services",
-              "description": "Career Guidance and Placement Services",
-              "url": "https://successconsultancyandservices.com/services"
-            },
-            {
-              "@type": "SiteNavigationElement",
-              "position": 2,
-              "name": "Courses",
-              "description": "Cloud and Fullstack Training Courses",
-              "url": "https://successconsultancyandservices.com/courses"
-            },
-            {
-              "@type": "SiteNavigationElement",
-              "position": 3,
-              "name": "About Us",
-              "description": "About Success Consultancy and Services",
-              "url": "https://successconsultancyandservices.com/about"
-            },
-            {
-              "@type": "SiteNavigationElement",
-              "position": 4,
-              "name": "Contact",
-              "description": "Contact us for Career Guidance",
-              "url": "https://successconsultancyandservices.com/contact"
-            }
-          ]
+    [
+      {
+        "@context": "https://schema.org",
+        "@type": "EducationalOrganization",
+        "name": "Success Consultancy and Services",
+        "url": "https://successconsultancyandservices.com",
+        "description": "Expert Career Guidance, Cloud and Fullstack Training, and dedicated Placement Services for IT and non-IT jobs.",
+        "telephone": "+91-9866634443",
+        "email": "successconsultancy0808@gmail.com",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "D No: 23-8-69/11, RC Road, Beside Harsha Residency Hotel",
+          "addressLocality": "Tirupati",
+          "postalCode": "517501",
+          "addressCountry": "IN"
         }
-      ]
-    </script>
+      }
+    ]
+  </script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
-  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
     tailwind.config = {
@@ -84,138 +46,225 @@
             brandWhite: "#ffffff",
             softRed: "#eff6ff",
           },
-          animation: {
-            'float': 'float 3s ease-in-out infinite',
-            'pulse-soft': 'pulse-soft 2s infinite',
-          },
-          keyframes: {
-            float: {
-              '0%, 100%': { transform: 'translateY(0)' },
-              '50%': { transform: 'translateY(-15px)' },
-            },
-            'pulse-soft': {
-              '0%, 100%': { opacity: 1 },
-              '50%': { opacity: 0.7 },
-            }
-          }
         },
       },
     };
   </script>
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap');
-
+ 
     html {
-      scroll-behavior: smooth;
+      scroll-behavior: auto;
       overflow-x: hidden;
     }
-
+ 
     body {
       font-family: 'Plus Jakarta Sans', sans-serif;
       overflow-x: hidden;
     }
-
+ 
+    /* ─── Scroll: instant, native, zero jank ─── */
+    * { scroll-behavior: auto !important; }
+ 
+    /* ─── Background dot pattern ─── */
     .bg-pattern {
       background-color: #ffffff;
       background-image: radial-gradient(#1d4ed8 0.5px, transparent 0.5px);
       background-size: 24px 24px;
       opacity: 0.05;
     }
-
+ 
+    /* ─── Card hover: translate only, no scroll dependency ─── */
     .card-hover {
-      transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-      border: 1px solid rgba(193, 18, 31, 0.05);
+      transition: transform 0.35s cubic-bezier(0.4,0,0.2,1),
+                  border-color 0.35s ease,
+                  box-shadow 0.35s ease;
+      border: 1px solid rgba(29,78,216,0.08);
+      will-change: transform;
     }
-
     .card-hover:hover {
       transform: translateY(-10px);
       border-color: #1d4ed8;
-      box-shadow: 0 20px 25px -5px rgba(193, 18, 31, 0.1);
+      box-shadow: 0 20px 40px -10px rgba(29,78,216,0.15);
     }
-
-    .btn-primary {
-      @apply bg-brandRed text-white px-8 py-4 rounded-full font-bold transition-all duration-300 hover:bg-blue-700 hover:shadow-lg active:scale-95;
+ 
+    /* ─── Floating illustration ─── */
+    @keyframes float {
+      0%, 100% { transform: translateY(0px); }
+      50%       { transform: translateY(-18px); }
     }
-
-    .btn-secondary {
-      @apply border-2 border-brandRed text-brandRed px-8 py-4 rounded-full font-bold transition-all duration-300 hover:bg-brandRed hover:text-white active:scale-95;
+    .animate-float { animation: float 4s ease-in-out infinite; }
+ 
+    /* ─── Badge shimmer ─── */
+    @keyframes shimmer {
+      0%   { background-position: -200% center; }
+      100% { background-position:  200% center; }
     }
-
-    .stagger-item {
-      opacity: 0;
-      transform: translateY(20px);
-      transition: all 0.6s ease-out;
+    .badge-shimmer {
+      background: linear-gradient(90deg, #eff6ff 30%, #bfdbfe 50%, #eff6ff 70%);
+      background-size: 200% auto;
+      animation: shimmer 3s linear infinite;
     }
-
-    .stagger-item.aos-animate {
-      opacity: 1;
-      transform: translateY(0);
+ 
+    /* ─── Stat counter pulse (number glow on hover) ─── */
+    .stat-num {
+      transition: color 0.3s ease, transform 0.3s ease;
+      display: inline-block;
     }
+    .stat-num:hover { color: #1d4ed8; transform: scale(1.08); }
+ 
+    /* ─── Icon bounce on card hover ─── */
+    .card-hover:hover .icon-bounce {
+      animation: iconBounce 0.5s ease;
+    }
+    @keyframes iconBounce {
+      0%, 100% { transform: translateY(0) rotate(0deg); }
+      30%       { transform: translateY(-6px) rotate(-5deg); }
+      60%       { transform: translateY(-2px) rotate(3deg); }
+    }
+ 
+    /* ─── Course card icon rotate on hover ─── */
+    .course-card:hover .course-icon {
+      background-color: #1d4ed8 !important;
+      color: #ffffff !important;
+      transform: rotate(8deg) scale(1.1);
+      transition: all 0.35s cubic-bezier(0.4,0,0.2,1);
+    }
+    .course-icon { transition: all 0.35s cubic-bezier(0.4,0,0.2,1); }
+ 
+    /* ─── Course underline expand ─── */
+    .course-line {
+      height: 3px; width: 48px;
+      background: #bfdbfe;
+      margin: 0 auto;
+      transition: width 0.4s ease, background-color 0.4s ease;
+    }
+    .course-card:hover .course-line { width: 80px; background-color: #1d4ed8; }
+ 
+    /* ─── Trust badge ticker ─── */
+    @keyframes ticker {
+      0%   { transform: translateX(0); }
+      100% { transform: translateX(-50%); }
+    }
+    .ticker-track { display: flex; width: max-content; animation: ticker 18s linear infinite; }
+    .ticker-track:hover { animation-play-state: paused; }
+ 
+    /* ─── CTA blob pulse ─── */
+    @keyframes blobPulse {
+      0%, 100% { transform: scale(1); opacity: 0.2; }
+      50%       { transform: scale(1.25); opacity: 0.35; }
+    }
+    .blob { animation: blobPulse 6s ease-in-out infinite; }
+    .blob-delay { animation: blobPulse 6s ease-in-out 3s infinite; }
+ 
+    /* ─── Button press ─── */
+    .btn-press { transition: transform 0.15s ease, box-shadow 0.15s ease; }
+    .btn-press:hover  { transform: translateY(-2px); box-shadow: 0 8px 24px rgba(29,78,216,0.3); }
+    .btn-press:active { transform: scale(0.97); box-shadow: none; }
+ 
+    /* ─── Section entrance: immediate fade-in on load ─── */
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(28px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+    .hero-animate-1 { animation: fadeInUp 0.7s ease-out 0.05s both; }
+    .hero-animate-2 { animation: fadeInUp 0.7s ease-out 0.2s both; }
+    .hero-animate-3 { animation: fadeInUp 0.7s ease-out 0.35s both; }
+    .hero-animate-4 { animation: fadeInUp 0.7s ease-out 0.5s both; }
+    .hero-animate-5 { animation: fadeInUp 0.7s ease-out 0.65s both; }
+    .hero-img-animate { animation: fadeInUp 0.9s ease-out 0.3s both; }
+ 
+    /* ─── Navbar link underline ─── */
+    .nav-link { position: relative; }
+    .nav-link::after {
+      content: ''; position: absolute; bottom: -3px; left: 0;
+      width: 0; height: 2px; background: #1d4ed8;
+      transition: width 0.3s ease;
+    }
+    .nav-link:hover::after { width: 100%; }
+ 
+    /* ─── Footer social hover ─── */
+    .social-btn { transition: transform 0.3s ease, background 0.3s ease, color 0.3s ease; }
+    .social-btn:hover { transform: translateY(-3px) scale(1.1); }
+ 
+    /* ─── Scroll progress bar at top ─── */
+    #scroll-progress {
+      position: fixed; top: 0; left: 0; height: 3px;
+      background: linear-gradient(90deg, #1d4ed8, #60a5fa);
+      z-index: 9999; width: 0%; transition: width 0.05s linear;
+    }
+ 
+    /* ─── Feature icon ring pulse ─── */
+    @keyframes ringPulse {
+      0%, 100% { box-shadow: 0 0 0 0 rgba(29,78,216,0.25); }
+      50%       { box-shadow: 0 0 0 8px rgba(29,78,216,0); }
+    }
+    .card-hover:hover .icon-ring { animation: ringPulse 1.2s ease infinite; }
   </style>
 </head>
-
+ 
 <body class="bg-white text-slate-900">
+ 
+  <!-- Scroll Progress Bar -->
+  <div id="scroll-progress"></div>
+ 
   <header id="siteHeader"></header>
   <script src="navbar.js"></script>
-
+ 
   <main class="relative">
     <div class="absolute inset-0 bg-pattern pointer-events-none"></div>
-
+ 
     <!-- Hero Section -->
     <section class="relative overflow-hidden pt-20 pb-16 lg:pt-32 lg:pb-32">
       <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 relative z-10">
         <div class="lg:grid lg:grid-cols-12 lg:gap-16 items-center">
           <div class="lg:col-span-7 text-center lg:text-left">
-            <div data-aos="fade-down" data-aos-duration="1000">
-              <span
-                class="inline-flex items-center rounded-full bg-blue-50 border border-blue-100 px-4 py-1.5 text-sm font-bold text-brandRed mb-8">
+ 
+            <div class="hero-animate-1">
+              <span class="inline-flex items-center rounded-full badge-shimmer border border-blue-100 px-4 py-1.5 text-sm font-bold text-brandRed mb-8">
                 <i class="fa-solid fa-fire-flame-curved mr-2"></i> Leading Career Catalyst in Tirupati
               </span>
             </div>
-            <h1 class="text-5xl font-extrabold tracking-tight text-slate-900 sm:text-7xl mb-8 leading-[1.05]"
-              data-aos="fade-up" data-aos-delay="200">
+ 
+            <h1 class="text-5xl font-extrabold tracking-tight text-slate-900 sm:text-7xl mb-8 leading-[1.05] hero-animate-2">
               Unlock Your Potential <br />
               <span class="text-brandRed relative">
                 In IT & Non-IT Careers
-                <svg class="absolute -bottom-2 left-0 w-full h-3 text-blue-200" viewBox="0 0 300 12" fill="none"
-                  xmlns="http://www.w3.org/2000/svg">
+                <svg class="absolute -bottom-2 left-0 w-full h-3 text-blue-200" viewBox="0 0 300 12" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path d="M1 10C50 3 150 3 299 10" stroke="currentColor" stroke-width="4" stroke-linecap="round" />
                 </svg>
               </span>
             </h1>
-            <p class="text-xl text-slate-600 mb-10 max-w-2xl mx-auto lg:mx-0 leading-relaxed" data-aos="fade-up"
-              data-aos-delay="400">
-              Success Consultancy and Services provides real-world corporate training and dedicated placement support to
-              help you land your dream job at top MNCs.
+ 
+            <p class="text-xl text-slate-600 mb-10 max-w-2xl mx-auto lg:mx-0 leading-relaxed hero-animate-3">
+              Success Consultancy and Services provides real-world corporate training and dedicated placement support to help you land your dream job at top MNCs.
             </p>
-            <div class="flex flex-wrap justify-center lg:justify-start gap-4 mb-12" data-aos="fade-up"
-              data-aos-delay="600">
+ 
+            <div class="flex flex-wrap justify-center lg:justify-start gap-4 mb-12 hero-animate-4">
               <a href="tel:9866634443"
-                class="bg-brandRed text-white px-10 py-5 rounded-full font-bold shadow-xl shadow-blue-200 hover:bg-blue-700 transition-all duration-300 hover:-translate-y-1 flex items-center">
+                class="bg-brandRed text-white px-10 py-5 rounded-full font-bold shadow-xl shadow-blue-200 btn-press flex items-center">
                 Start Training <i class="fa-solid fa-arrow-right ml-3 text-sm"></i>
               </a>
               <a href="https://wa.me/919502504742" target="_blank"
-                class="border-2 border-brandRed text-brandRed px-10 py-5 rounded-full font-bold hover:bg-brandRed hover:text-white transition-all duration-300 hover:-translate-y-1 flex items-center">
+                class="border-2 border-brandRed text-brandRed px-10 py-5 rounded-full font-bold btn-press flex items-center hover:bg-brandRed hover:text-white transition-colors duration-300">
                 <i class="fa-brands fa-whatsapp mr-3 text-xl"></i> WhatsApp Us
               </a>
             </div>
-
-            <div class="flex items-center justify-center lg:justify-start gap-12" data-aos="fade-up"
-              data-aos-delay="800">
+ 
+            <div class="flex items-center justify-center lg:justify-start gap-12 hero-animate-5">
               <div>
-                <p class="text-3xl font-black text-slate-900">500+</p>
+                <p class="text-3xl font-black text-slate-900 stat-num">500+</p>
                 <p class="text-xs uppercase font-bold tracking-widest text-slate-400">Placements</p>
               </div>
               <div class="w-px h-10 bg-slate-200"></div>
               <div>
-                <p class="text-3xl font-black text-slate-900">10+</p>
+                <p class="text-3xl font-black text-slate-900 stat-num">10+</p>
                 <p class="text-xs uppercase font-bold tracking-widest text-slate-400">Years Experience</p>
               </div>
             </div>
           </div>
-
-          <div class="lg:col-span-5 mt-16 lg:mt-0 relative" data-aos="fade-left" data-aos-duration="1500"
-            data-aos-delay="400">
+ 
+          <div class="lg:col-span-5 mt-16 lg:mt-0 relative hero-img-animate">
             <div class="relative z-10 animate-float">
               <img src="Coding workshop-bro.svg" alt="Training Illustration" class="w-full h-auto drop-shadow-2xl" />
             </div>
@@ -225,142 +274,131 @@
         </div>
       </div>
     </section>
-
-    <!-- Trust Badges -->
-    <section class="bg-brandRed py-12">
-      <div class="mx-auto max-w-7xl px-4 text-center">
-        <p class="text-white/70 text-xs font-bold uppercase tracking-[0.3em] mb-8">Our Students are Hired by</p>
-        <div class="flex flex-wrap justify-center items-center gap-8 md:gap-16 opacity-60 grayscale brightness-200">
-          <span class="text-white text-2xl font-black italic">TCS</span>
-          <span class="text-white text-2xl font-black italic">Wipro</span>
-          <span class="text-white text-2xl font-black italic">Infosys</span>
-          <span class="text-white text-2xl font-black italic">Accenture</span>
-          <span class="text-white text-2xl font-black italic">HCL</span>
+ 
+    <!-- Trust Badges — auto-scrolling ticker, no scroll dependency -->
+    <section class="bg-brandRed py-12 overflow-hidden">
+      <div class="max-w-7xl mx-auto px-4 text-center mb-8">
+        <p class="text-white/70 text-xs font-bold uppercase tracking-[0.3em]">Our Students are Hired by</p>
+      </div>
+      <div class="overflow-hidden">
+        <div class="ticker-track">
+          <!-- duplicated for seamless loop -->
+          <span class="text-white text-2xl font-black italic px-12 opacity-70">TCS</span>
+          <span class="text-white text-2xl font-black italic px-12 opacity-70">Wipro</span>
+          <span class="text-white text-2xl font-black italic px-12 opacity-70">Infosys</span>
+          <span class="text-white text-2xl font-black italic px-12 opacity-70">Accenture</span>
+          <span class="text-white text-2xl font-black italic px-12 opacity-70">HCL</span>
+          <span class="text-white text-2xl font-black italic px-12 opacity-70">Cognizant</span>
+          <span class="text-white text-2xl font-black italic px-12 opacity-70">Tech Mahindra</span>
+          <span class="text-white text-2xl font-black italic px-12 opacity-70">TCS</span>
+          <span class="text-white text-2xl font-black italic px-12 opacity-70">Wipro</span>
+          <span class="text-white text-2xl font-black italic px-12 opacity-70">Infosys</span>
+          <span class="text-white text-2xl font-black italic px-12 opacity-70">Accenture</span>
+          <span class="text-white text-2xl font-black italic px-12 opacity-70">HCL</span>
+          <span class="text-white text-2xl font-black italic px-12 opacity-70">Cognizant</span>
+          <span class="text-white text-2xl font-black italic px-12 opacity-70">Tech Mahindra</span>
         </div>
       </div>
     </section>
-
+ 
     <!-- Core Features -->
     <section class="py-24 bg-white relative">
       <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div class="text-center mb-20" data-aos="fade-up">
+        <div class="text-center mb-20">
           <h2 class="text-brandRed font-bold uppercase tracking-widest text-sm mb-4">Why Success Consultancy</h2>
-          <h3 class="text-4xl md:text-5xl font-black text-slate-900">Built for Your Professional <span
-              class="bg-blue-50 px-2">Growth</span></h3>
+          <h3 class="text-4xl md:text-5xl font-black text-slate-900">Built for Your Professional <span class="bg-blue-50 px-2">Growth</span></h3>
         </div>
-
+ 
         <div class="grid md:grid-cols-3 gap-10">
-          <div class="p-10 rounded-[2.5rem] bg-white border border-slate-100 card-hover" data-aos="fade-up"
-            data-aos-delay="100">
-            <div
-              class="w-16 h-16 bg-blue-50 rounded-2xl flex items-center justify-center text-brandRed mb-8 border border-blue-100">
+          <div class="p-10 rounded-[2.5rem] bg-white border border-slate-100 card-hover">
+            <div class="w-16 h-16 bg-blue-50 rounded-2xl flex items-center justify-center text-brandRed mb-8 border border-blue-100 icon-ring icon-bounce">
               <i class="fa-solid fa-graduation-cap text-2xl"></i>
             </div>
             <h4 class="text-2xl font-bold mb-4 text-slate-900">Expert-Led Training</h4>
-            <p class="text-slate-600 leading-relaxed">Curriculum designed by industry experts focusing on
-              interview-critical skills and practical knowledge.</p>
+            <p class="text-slate-600 leading-relaxed">Curriculum designed by industry experts focusing on interview-critical skills and practical knowledge.</p>
           </div>
-
-          <div class="p-10 rounded-[2.5rem] bg-white border border-slate-100 card-hover" data-aos="fade-up"
-            data-aos-delay="200">
-            <div
-              class="w-16 h-16 bg-blue-50 rounded-2xl flex items-center justify-center text-brandRed mb-8 border border-blue-100">
+ 
+          <div class="p-10 rounded-[2.5rem] bg-white border border-slate-100 card-hover">
+            <div class="w-16 h-16 bg-blue-50 rounded-2xl flex items-center justify-center text-brandRed mb-8 border border-blue-100 icon-ring icon-bounce">
               <i class="fa-solid fa-user-check text-2xl"></i>
             </div>
             <h4 class="text-2xl font-bold mb-4 text-slate-900">Mock Interviews</h4>
-            <p class="text-slate-600 leading-relaxed">Rigorous mock interview sessions and aptitude training to build
-              confidence and refine performance.</p>
+            <p class="text-slate-600 leading-relaxed">Rigorous mock interview sessions and aptitude training to build confidence and refine performance.</p>
           </div>
-
-          <div class="p-10 rounded-[2.5rem] bg-white border border-slate-100 card-hover" data-aos="fade-up"
-            data-aos-delay="300">
-            <div
-              class="w-16 h-16 bg-blue-50 rounded-2xl flex items-center justify-center text-brandRed mb-8 border border-blue-100">
+ 
+          <div class="p-10 rounded-[2.5rem] bg-white border border-slate-100 card-hover">
+            <div class="w-16 h-16 bg-blue-50 rounded-2xl flex items-center justify-center text-brandRed mb-8 border border-blue-100 icon-ring icon-bounce">
               <i class="fa-solid fa-briefcase text-2xl"></i>
             </div>
             <h4 class="text-2xl font-bold mb-4 text-slate-900">Placement Support</h4>
-            <p class="text-slate-600 leading-relaxed">Comprehensive resume building and direct placement opportunities
-              in top-tier MNCs across India.</p>
+            <p class="text-slate-600 leading-relaxed">Comprehensive resume building and direct placement opportunities in top-tier MNCs across India.</p>
           </div>
         </div>
       </div>
     </section>
-
+ 
     <!-- Course Highlights -->
     <section class="py-24 bg-white">
       <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div class="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6">
-          <div data-aos="fade-right">
+          <div>
             <h2 class="text-brandRed font-bold uppercase tracking-widest text-sm mb-4">Professional Tracks</h2>
             <h3 class="text-4xl md:text-5xl font-black text-slate-900">Find Your Path</h3>
           </div>
-          <div data-aos="fade-left">
-            <a href="courses.html"
-              class="inline-flex items-center font-bold text-brandRed hover:gap-4 transition-all duration-300">
-              View All Programs <i class="fa-solid fa-arrow-right-long ml-3"></i>
+          <div>
+            <a href="courses.html" class="inline-flex items-center font-bold text-brandRed gap-2 hover:gap-4 transition-all duration-300">
+              View All Programs <i class="fa-solid fa-arrow-right-long"></i>
             </a>
           </div>
         </div>
-
+ 
         <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
-          <a href="course-programming.html"
-            class="group p-8 rounded-[2rem] border border-slate-100 bg-white card-hover text-center" data-aos="zoom-in"
-            data-aos-delay="100">
-            <div
-              class="w-16 h-16 bg-blue-50 rounded-2xl flex items-center justify-center text-brandRed mx-auto mb-8 transition-all group-hover:bg-brandRed group-hover:text-white group-hover:rotate-6">
+          <a href="course-programming.html" class="course-card group p-8 rounded-[2rem] border border-slate-100 bg-white card-hover text-center">
+            <div class="course-icon w-16 h-16 bg-blue-50 rounded-2xl flex items-center justify-center text-brandRed mx-auto mb-8">
               <i class="fa-solid fa-code text-2xl"></i>
             </div>
             <h5 class="font-bold text-slate-900 mb-3">Programming</h5>
             <p class="text-slate-500 text-sm mb-6">Master Java, Python, and C++ from scratch to advanced.</p>
-            <div class="h-1 w-12 bg-blue-100 mx-auto group-hover:w-20 group-hover:bg-brandRed transition-all"></div>
+            <div class="course-line"></div>
           </a>
-
-          <a href="course-web.html"
-            class="group p-8 rounded-[2rem] border border-slate-100 bg-white card-hover text-center" data-aos="zoom-in"
-            data-aos-delay="200">
-            <div
-              class="w-16 h-16 bg-blue-50 rounded-2xl flex items-center justify-center text-brandRed mx-auto mb-8 transition-all group-hover:bg-brandRed group-hover:text-white group-hover:rotate-6">
+ 
+          <a href="course-web.html" class="course-card group p-8 rounded-[2rem] border border-slate-100 bg-white card-hover text-center">
+            <div class="course-icon w-16 h-16 bg-blue-50 rounded-2xl flex items-center justify-center text-brandRed mx-auto mb-8">
               <i class="fa-solid fa-laptop-code text-2xl"></i>
             </div>
             <h5 class="font-bold text-slate-900 mb-3">Web Dev</h5>
             <p class="text-slate-500 text-sm mb-6">Build modern and responsive websites using React & JS.</p>
-            <div class="h-1 w-12 bg-blue-100 mx-auto group-hover:w-20 group-hover:bg-brandRed transition-all"></div>
+            <div class="course-line"></div>
           </a>
-
-          <a href="course-fullstack.html"
-            class="group p-8 rounded-[2rem] border border-slate-100 bg-white card-hover text-center" data-aos="zoom-in"
-            data-aos-delay="300">
-            <div
-              class="w-16 h-16 bg-blue-50 rounded-2xl flex items-center justify-center text-brandRed mx-auto mb-8 transition-all group-hover:bg-brandRed group-hover:text-white group-hover:rotate-6">
+ 
+          <a href="course-fullstack.html" class="course-card group p-8 rounded-[2rem] border border-slate-100 bg-white card-hover text-center">
+            <div class="course-icon w-16 h-16 bg-blue-50 rounded-2xl flex items-center justify-center text-brandRed mx-auto mb-8">
               <i class="fa-solid fa-layer-group text-2xl"></i>
             </div>
             <h5 class="font-bold text-slate-900 mb-3">Full Stack</h5>
             <p class="text-slate-500 text-sm mb-6">Become a 360-degree developer capable of total delivery.</p>
-            <div class="h-1 w-12 bg-blue-100 mx-auto group-hover:w-20 group-hover:bg-brandRed transition-all"></div>
+            <div class="course-line"></div>
           </a>
-
-          <a href="course-data.html"
-            class="group p-8 rounded-[2rem] border border-slate-100 bg-white card-hover text-center" data-aos="zoom-in"
-            data-aos-delay="400">
-            <div
-              class="w-16 h-16 bg-blue-50 rounded-2xl flex items-center justify-center text-brandRed mx-auto mb-8 transition-all group-hover:bg-brandRed group-hover:text-white group-hover:rotate-6">
+ 
+          <a href="course-data.html" class="course-card group p-8 rounded-[2rem] border border-slate-100 bg-white card-hover text-center">
+            <div class="course-icon w-16 h-16 bg-blue-50 rounded-2xl flex items-center justify-center text-brandRed mx-auto mb-8">
               <i class="fa-solid fa-brain text-2xl"></i>
             </div>
             <h5 class="font-bold text-slate-900 mb-3">Data Science</h5>
             <p class="text-slate-500 text-sm mb-6">Analyze and interpret complex data to drive strategy.</p>
-            <div class="h-1 w-12 bg-blue-100 mx-auto group-hover:w-20 group-hover:bg-brandRed transition-all"></div>
+            <div class="course-line"></div>
           </a>
         </div>
       </div>
     </section>
-
+ 
     <!-- CTA -->
     <section class="py-24">
       <div class="mx-auto max-w-6xl px-4 text-center">
-        <div class="bg-slate-900 rounded-[4rem] px-10 py-16 md:py-24 relative overflow-hidden" data-aos="zoom-in">
-          <div class="absolute -top-10 -right-10 w-40 h-40 bg-brandRed/20 blur-3xl rounded-full"></div>
-          <div class="absolute -bottom-10 -left-10 w-40 h-40 bg-brandRed/20 blur-3xl rounded-full"></div>
-
+        <div class="bg-slate-900 rounded-[4rem] px-10 py-16 md:py-24 relative overflow-hidden">
+          <div class="absolute -top-10 -right-10 w-40 h-40 bg-brandRed/20 rounded-full blob"></div>
+          <div class="absolute -bottom-10 -left-10 w-40 h-40 bg-brandRed/20 rounded-full blob-delay"></div>
+ 
           <div class="relative z-10 max-w-3xl mx-auto">
             <h2 class="text-4xl md:text-5xl font-black text-white mb-8">Ready to Transform Your Career?</h2>
             <p class="text-white/60 text-lg mb-12">
@@ -368,18 +406,16 @@
             </p>
             <div class="flex flex-wrap justify-center gap-6">
               <a href="contact.html"
-                class="bg-brandRed text-white px-12 py-5 rounded-full font-bold hover:bg-blue-700 transition-all hover:scale-105 active:scale-95">Enroll
-                Now</a>
+                class="bg-brandRed text-white px-12 py-5 rounded-full font-bold btn-press">Enroll Now</a>
               <a href="courses.html"
-                class="bg-white/10 text-white border border-white/20 px-12 py-5 rounded-full font-bold hover:bg-white/20 transition-all active:scale-95">Browse
-                Courses</a>
+                class="bg-white/10 text-white border border-white/20 px-12 py-5 rounded-full font-bold btn-press hover:bg-white/20 transition-colors">Browse Courses</a>
             </div>
           </div>
         </div>
       </div>
     </section>
   </main>
-
+ 
   <!-- Footer -->
   <footer class="bg-white pt-24 pb-12 border-t border-slate-100">
     <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
@@ -390,55 +426,48 @@
             <span class="text-xl font-black text-slate-900">Success Consultancy</span>
           </div>
           <p class="text-slate-500 leading-relaxed mb-10 max-w-sm">
-            Empowering students through industry-focused training and reliable placement assistance since 2014. Located
-            in the heart of Tirupati.
+            Empowering students through industry-focused training and reliable placement assistance since 2014. Located in the heart of Tirupati.
           </p>
           <div class="flex gap-4">
-            <a href="#"
-              class="w-12 h-12 bg-slate-50 rounded-2xl flex items-center justify-center text-slate-400 hover:text-brandRed hover:bg-blue-50 transition-all"><i
-                class="fa-brands fa-facebook-f"></i></a>
-            <a href="#"
-              class="w-12 h-12 bg-slate-50 rounded-2xl flex items-center justify-center text-slate-400 hover:text-brandRed hover:bg-blue-50 transition-all"><i
-                class="fa-brands fa-linkedin-in"></i></a>
-            <a href="#"
-              class="w-12 h-12 bg-slate-50 rounded-2xl flex items-center justify-center text-slate-400 hover:text-brandRed hover:bg-blue-50 transition-all"><i
-                class="fa-brands fa-instagram"></i></a>
+            <a href="#" class="social-btn w-12 h-12 bg-slate-50 rounded-2xl flex items-center justify-center text-slate-400 hover:text-brandRed hover:bg-blue-50">
+              <i class="fa-brands fa-facebook-f"></i></a>
+            <a href="#" class="social-btn w-12 h-12 bg-slate-50 rounded-2xl flex items-center justify-center text-slate-400 hover:text-brandRed hover:bg-blue-50">
+              <i class="fa-brands fa-linkedin-in"></i></a>
+            <a href="#" class="social-btn w-12 h-12 bg-slate-50 rounded-2xl flex items-center justify-center text-slate-400 hover:text-brandRed hover:bg-blue-50">
+              <i class="fa-brands fa-instagram"></i></a>
           </div>
         </div>
-
+ 
         <div class="lg:col-span-2">
           <h6 class="font-bold text-slate-900 mb-8 uppercase tracking-widest text-xs">Explore</h6>
           <ul class="space-y-4">
-            <li><a href="index.html" class="text-slate-500 hover:text-brandRed transition">Home</a></li>
-            <li><a href="about.html" class="text-slate-500 hover:text-brandRed transition">About</a></li>
-            <li><a href="services.html" class="text-slate-500 hover:text-brandRed transition">Services</a></li>
-            <li><a href="courses.html" class="text-slate-500 hover:text-brandRed transition">Courses</a></li>
+            <li><a href="index.html" class="text-slate-500 hover:text-brandRed transition-colors">Home</a></li>
+            <li><a href="about.html" class="text-slate-500 hover:text-brandRed transition-colors">About</a></li>
+            <li><a href="services.html" class="text-slate-500 hover:text-brandRed transition-colors">Services</a></li>
+            <li><a href="courses.html" class="text-slate-500 hover:text-brandRed transition-colors">Courses</a></li>
           </ul>
         </div>
-
+ 
         <div class="lg:col-span-2">
           <h6 class="font-bold text-slate-900 mb-8 uppercase tracking-widest text-xs">Featured</h6>
           <ul class="space-y-4">
-            <li><a href="course-web.html" class="text-slate-500 hover:text-brandRed transition">Web Development</a></li>
-            <li><a href="course-data.html" class="text-slate-500 hover:text-brandRed transition">Data Science</a></li>
-            <li><a href="course-fullstack.html" class="text-slate-500 hover:text-brandRed transition">Full Stack</a>
-            </li>
-            <li><a href="course-programming.html" class="text-slate-500 hover:text-brandRed transition">Java/Python</a>
-            </li>
+            <li><a href="course-web.html" class="text-slate-500 hover:text-brandRed transition-colors">Web Development</a></li>
+            <li><a href="course-data.html" class="text-slate-500 hover:text-brandRed transition-colors">Data Science</a></li>
+            <li><a href="course-fullstack.html" class="text-slate-500 hover:text-brandRed transition-colors">Full Stack</a></li>
+            <li><a href="course-programming.html" class="text-slate-500 hover:text-brandRed transition-colors">Java/Python</a></li>
           </ul>
         </div>
-
+ 
         <div class="lg:col-span-3">
           <h6 class="font-bold text-slate-900 mb-8 uppercase tracking-widest text-xs">Support</h6>
           <ul class="space-y-6">
-            <li class="flex items-start gap-4 text-slate-500 group">
+            <li class="flex items-start gap-4 text-slate-500">
               <i class="fa-solid fa-phone text-brandRed mt-1"></i>
-              <a href="tel:9866634443" class="hover:text-brandRed transition">+91-9866634443</a>
+              <a href="tel:9866634443" class="hover:text-brandRed transition-colors">+91-9866634443</a>
             </li>
-            <li class="flex items-start gap-4 text-slate-500 group">
+            <li class="flex items-start gap-4 text-slate-500">
               <i class="fa-solid fa-envelope text-brandRed mt-1"></i>
-              <a href="mailto:successconsultancy0808@gmail.com"
-                class="hover:text-brandRed transition text-sm">successconsultancy0808@gmail.com</a>
+              <a href="mailto:successconsultancy0808@gmail.com" class="hover:text-brandRed transition-colors text-sm">successconsultancy0808@gmail.com</a>
             </li>
             <li class="flex items-start gap-4 text-slate-500">
               <i class="fa-solid fa-location-dot text-brandRed mt-1"></i>
@@ -447,49 +476,30 @@
           </ul>
         </div>
       </div>
-
+ 
       <div class="pt-12 border-t border-slate-100 flex flex-col md:flex-row justify-between items-center gap-6">
-        <p class="text-slate-400 text-sm">© <span id="year"></span> Success Consultancy and Services. All rights
-          reserved.</p>
+        <p class="text-slate-400 text-sm">© <span id="year"></span> Success Consultancy and Services. All rights reserved.</p>
         <div class="flex gap-8 text-sm text-slate-400">
-          <a href="#" class="hover:text-brandRed transition">Privacy Policy</a>
-          <a href="#" class="hover:text-brandRed transition">Terms & Conditions</a>
+          <a href="#" class="hover:text-brandRed transition-colors">Privacy Policy</a>
+          <a href="#" class="hover:text-brandRed transition-colors">Terms & Conditions</a>
         </div>
       </div>
     </div>
   </footer>
-
-  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-  <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1.0.19/bundled/lenis.min.js"></script>
+ 
   <script>
     document.addEventListener('DOMContentLoaded', function () {
-      // Performance - Cookies for Loading Speed
-      document.cookie = "performance_optimized=true; max-age=31536000; path=/";
-
-      if (typeof AOS !== 'undefined') {
-        AOS.init({
-          duration: 1000,
-          once: true,
-          easing: 'ease-out-cubic',
-          offset: 100
-        });
-      }
-
-      // Smooth Scroll Optimization
-      const lenis = new Lenis({
-        duration: 1.2,
-        lerp: 0.1,
-        wheelMultiplier: 1,
-      });
-      function raf(time) {
-        lenis.raf(time);
-        requestAnimationFrame(raf);
-      }
-      requestAnimationFrame(raf);
-
       document.getElementById("year").textContent = new Date().getFullYear();
+ 
+      // Scroll progress bar — lightweight rAF loop
+      const bar = document.getElementById('scroll-progress');
+      function updateBar() {
+        const scrollTop = window.scrollY;
+        const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+        bar.style.width = (docHeight > 0 ? (scrollTop / docHeight) * 100 : 0) + '%';
+      }
+      window.addEventListener('scroll', updateBar, { passive: true });
     });
   </script>
 </body>
-
 </html>
