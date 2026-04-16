@@ -6,33 +6,33 @@
   const page = path.endsWith("/") || path === "" ? "/" : path.split("/").pop().replace(".html", "").toLowerCase();
 
   const navItems = [
-    { href: "/", label: "Home", active: page === "/" || page === "index" },
+    { href: "index.html", label: "Home", active: page === "/" || page === "index" },
     {
-      href: "/services",
+      href: "services.html",
       label: "Services",
       active: page === "services" || page.startsWith("services-"),
       children: [
-        { href: "/services-training", label: "Training Programs", active: page === "services-training" },
-        { href: "/services-placement", label: "Placement Assistance", active: page === "services-placement" },
-        { href: "/services-guidance", label: "Career Guidance", active: page === "services-guidance" }
+        { href: "services-training.html", label: "Training Programs", active: page === "services-training" },
+        { href: "services-placement.html", label: "Placement Assistance", active: page === "services-placement" },
+        { href: "services-guidance.html", label: "Career Guidance", active: page === "services-guidance" }
       ]
     },
     {
-      href: "/courses",
+      href: "courses.html",
       label: "Courses",
       active: page === "courses" || page.startsWith("course-"),
       children: [
-        { href: "/course-programming", label: "Programming", active: page === "course-programming" },
-        { href: "/course-web", label: "Web Development", active: page === "course-web" },
-        { href: "/course-fullstack", label: "Full Stack", active: page === "course-fullstack" },
-        { href: "/course-data", label: "Data Science & AI", active: page === "course-data" },
-        { href: "/course-cloud", label: "Cloud Computing", active: page === "course-cloud" },
-        { href: "/course-security", label: "Cyber Security", active: page === "course-security" },
-        { href: "/course-testing", label: "Software Testing", active: page === "course-testing" }
+        { href: "course-programming.html", label: "Programming", active: page === "course-programming" },
+        { href: "course-web.html", label: "Web Development", active: page === "course-web" },
+        { href: "course-fullstack.html", label: "Full Stack", active: page === "course-fullstack" },
+        { href: "course-data.html", label: "Data Science & AI", active: page === "course-data" },
+        { href: "course-cloud.html", label: "Cloud Computing", active: page === "course-cloud" },
+        { href: "course-security.html", label: "Cyber Security", active: page === "course-security" },
+        { href: "course-testing.html", label: "Software Testing", active: page === "course-testing" }
       ]
     },
-    { href: "/about", label: "About", active: page === "about" },
-    { href: "/contact", label: "Contact", active: page === "contact" }
+    { href: "about.html", label: "About", active: page === "about" },
+    { href: "contact.html", label: "Contact", active: page === "contact" }
   ];
 
   // Desktop Item Renderer
@@ -99,7 +99,7 @@
   host.innerHTML = `
     <header class="fixed top-0 left-0 right-0 z-[100] border-b border-blue-100 bg-white/90 shadow-sm backdrop-blur-md">
       <nav class="mx-auto flex max-w-7xl items-center justify-between px-4 py-3 sm:px-6 lg:px-8">
-        <a href="/" class="flex items-center gap-3">
+        <a href="index.html" class="flex items-center gap-3">
           <img src="logo.jpg" alt="Logo" class="h-10 w-10 rounded-lg object-cover ring-2 ring-blue-50" />
           <div class="block">
             <p class="text-sm font-black leading-none text-blue-700 sm:text-base">Success Consultancy & Services</p>
