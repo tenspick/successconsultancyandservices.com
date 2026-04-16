@@ -167,12 +167,7 @@
     .social-btn { transition: transform 0.3s ease, background 0.3s ease, color 0.3s ease; }
     .social-btn:hover { transform: translateY(-3px) scale(1.1); }
 
-    /* ─── Scroll progress ─── */
-    #scroll-progress {
-      position: fixed; top: 0; left: 0; height: 3px;
-      background: linear-gradient(90deg, #1d4ed8, #60a5fa);
-      z-index: 9999; width: 0%; transition: width 0.05s linear;
-    }
+
 
     /* ─── Icon ring pulse ─── */
     @keyframes ringPulse {
@@ -321,46 +316,13 @@
 
 <body class="bg-white text-slate-900">
 
-  <!-- Scroll Progress Bar -->
-  <div id="scroll-progress"></div>
+
 
   <!-- ═══════════════════════════════════════════
        NAVBAR (inline since navbar.js is external)
   ═══════════════════════════════════════════ -->
-  <nav id="mainNav" class="fixed top-0 left-0 right-0 z-50 bg-white transition-all duration-300 border-b border-slate-100">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="flex items-center justify-between h-16">
-        <div class="flex items-center gap-3">
-          <div class="w-9 h-9 bg-brandRed rounded-xl flex items-center justify-center">
-            <i class="fa-solid fa-graduation-cap text-white text-sm"></i>
-          </div>
-          <span class="font-black text-slate-900">Success <span class="text-brandRed">Consultancy</span></span>
-        </div>
-        <div class="hidden md:flex items-center gap-8">
-          <a href="#" class="nav-link text-sm font-semibold text-slate-600 hover:text-brandRed transition-colors">Home</a>
-          <a href="#courses" class="nav-link text-sm font-semibold text-slate-600 hover:text-brandRed transition-colors">Courses</a>
-          <a href="#process" class="nav-link text-sm font-semibold text-slate-600 hover:text-brandRed transition-colors">Process</a>
-          <a href="#testimonials" class="nav-link text-sm font-semibold text-slate-600 hover:text-brandRed transition-colors">Reviews</a>
-          <a href="#faq" class="nav-link text-sm font-semibold text-slate-600 hover:text-brandRed transition-colors">FAQ</a>
-        </div>
-        <a href="tel:9866634443" class="bg-brandRed text-white px-5 py-2.5 rounded-full text-sm font-bold btn-press hidden md:flex items-center gap-2">
-          <i class="fa-solid fa-phone text-xs"></i> Call Now
-        </a>
-        <button id="mobileMenuBtn" class="md:hidden w-9 h-9 flex items-center justify-center rounded-lg border border-slate-200">
-          <i class="fa-solid fa-bars text-slate-600"></i>
-        </button>
-      </div>
-    </div>
-    <!-- Mobile menu -->
-    <div id="mobileMenu" class="hidden md:hidden bg-white border-t border-slate-100 px-4 py-4 space-y-3">
-      <a href="#" class="block text-sm font-semibold text-slate-600 py-2">Home</a>
-      <a href="#courses" class="block text-sm font-semibold text-slate-600 py-2">Courses</a>
-      <a href="#process" class="block text-sm font-semibold text-slate-600 py-2">Process</a>
-      <a href="#testimonials" class="block text-sm font-semibold text-slate-600 py-2">Reviews</a>
-      <a href="#faq" class="block text-sm font-semibold text-slate-600 py-2">FAQ</a>
-      <a href="tel:9866634443" class="block bg-brandRed text-white text-center py-3 rounded-full text-sm font-bold">Call Now</a>
-    </div>
-  </nav>
+  <header id="siteHeader"></header>
+  <script src="navbar.js"></script>
 
   <main class="relative pt-16">
     <div class="absolute inset-0 bg-pattern pointer-events-none"></div>
@@ -870,63 +832,42 @@
   <!-- ═══════════════════════════════════════════
        FOOTER
   ═══════════════════════════════════════════ -->
+  <!-- Footer -->
   <footer class="bg-white pt-24 pb-12 border-t border-slate-100">
     <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
       <div class="grid lg:grid-cols-12 gap-16 mb-20">
         <div class="lg:col-span-5">
           <div class="flex items-center gap-3 mb-8">
-            <div class="w-10 h-10 bg-brandRed rounded-xl flex items-center justify-center">
-              <i class="fa-solid fa-graduation-cap text-white text-sm"></i>
-            </div>
+            <img src="logo.jpg" alt="Logo" class="h-10 w-10 rounded-full" />
             <span class="text-xl font-black text-slate-900">Success Consultancy</span>
           </div>
           <p class="text-slate-500 leading-relaxed mb-10 max-w-sm">
-            Empowering students through industry-focused training and reliable placement assistance since 2014. Located in the heart of Tirupati.
+            Empowering students through industry-focused training and reliable placement assistance since 2025. Located in the heart of Tirupati.
           </p>
-          <!-- Newsletter signup -->
-          <div class="mb-8">
-            <p class="text-xs font-bold uppercase tracking-widest text-slate-400 mb-3">Get Course Updates</p>
-            <div class="flex gap-2">
-              <input type="email" placeholder="your@email.com" class="flex-1 bg-slate-50 border border-slate-200 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-brandRed transition-colors" />
-              <button class="bg-brandRed text-white px-5 py-3 rounded-xl text-sm font-bold btn-press">
-                <i class="fa-solid fa-paper-plane"></i>
-              </button>
-            </div>
-          </div>
           <div class="flex gap-4">
-            <a href="#" class="social-btn w-12 h-12 bg-slate-50 rounded-2xl flex items-center justify-center text-slate-400 hover:text-brandRed hover:bg-blue-50">
-              <i class="fa-brands fa-facebook-f"></i></a>
-            <a href="#" class="social-btn w-12 h-12 bg-slate-50 rounded-2xl flex items-center justify-center text-slate-400 hover:text-brandRed hover:bg-blue-50">
-              <i class="fa-brands fa-linkedin-in"></i></a>
-            <a href="#" class="social-btn w-12 h-12 bg-slate-50 rounded-2xl flex items-center justify-center text-slate-400 hover:text-brandRed hover:bg-blue-50">
-              <i class="fa-brands fa-instagram"></i></a>
-            <a href="https://wa.me/919502504742" target="_blank" class="social-btn w-12 h-12 bg-slate-50 rounded-2xl flex items-center justify-center text-slate-400 hover:text-green-500 hover:bg-green-50">
-              <i class="fa-brands fa-whatsapp"></i></a>
-            <a href="https://www.youtube.com" target="_blank" class="social-btn w-12 h-12 bg-slate-50 rounded-2xl flex items-center justify-center text-slate-400 hover:text-red-500 hover:bg-red-50">
-              <i class="fa-brands fa-youtube"></i></a>
+            <a href="#" class="social-btn w-12 h-12 bg-slate-50 rounded-2xl flex items-center justify-center text-slate-400 hover:text-brandRed hover:bg-blue-50"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="#" class="social-btn w-12 h-12 bg-slate-50 rounded-2xl flex items-center justify-center text-slate-400 hover:text-brandRed hover:bg-blue-50"><i class="fa-brands fa-linkedin-in"></i></a>
+            <a href="#" class="social-btn w-12 h-12 bg-slate-50 rounded-2xl flex items-center justify-center text-slate-400 hover:text-brandRed hover:bg-blue-50"><i class="fa-brands fa-instagram"></i></a>
           </div>
         </div>
 
         <div class="lg:col-span-2">
           <h6 class="font-bold text-slate-900 mb-8 uppercase tracking-widest text-xs">Explore</h6>
           <ul class="space-y-4">
-            <li><a href="index.html" class="text-slate-500 hover:text-brandRed transition-colors">Home</a></li>
-            <li><a href="about.html" class="text-slate-500 hover:text-brandRed transition-colors">About</a></li>
-            <li><a href="services.html" class="text-slate-500 hover:text-brandRed transition-colors">Services</a></li>
-            <li><a href="courses.html" class="text-slate-500 hover:text-brandRed transition-colors">Courses</a></li>
-            <li><a href="contact.html" class="text-slate-500 hover:text-brandRed transition-colors">Contact</a></li>
+            <li><a href="index.html" class="footer-link text-slate-500 inline-block">Home</a></li>
+            <li><a href="about.html" class="footer-link text-slate-500 inline-block">About</a></li>
+            <li><a href="services.html" class="footer-link text-slate-500 inline-block">Services</a></li>
+            <li><a href="courses.html" class="footer-link text-slate-500 inline-block">Courses</a></li>
           </ul>
         </div>
 
         <div class="lg:col-span-2">
           <h6 class="font-bold text-slate-900 mb-8 uppercase tracking-widest text-xs">Featured</h6>
           <ul class="space-y-4">
-            <li><a href="course-web.html" class="text-slate-500 hover:text-brandRed transition-colors">Web Development</a></li>
-            <li><a href="course-data.html" class="text-slate-500 hover:text-brandRed transition-colors">Data Science</a></li>
-            <li><a href="course-fullstack.html" class="text-slate-500 hover:text-brandRed transition-colors">Full Stack</a></li>
-            <li><a href="course-programming.html" class="text-slate-500 hover:text-brandRed transition-colors">Java/Python</a></li>
-            <li><a href="#" class="text-slate-500 hover:text-brandRed transition-colors">AWS Cloud</a></li>
-            <li><a href="#" class="text-slate-500 hover:text-brandRed transition-colors">DevOps</a></li>
+            <li><a href="course-web.html" class="footer-link text-slate-500 inline-block">Web Development</a></li>
+            <li><a href="course-data.html" class="footer-link text-slate-500 inline-block">Data Science</a></li>
+            <li><a href="course-fullstack.html" class="footer-link text-slate-500 inline-block">Full Stack</a></li>
+            <li><a href="course-programming.html" class="footer-link text-slate-500 inline-block">Java/Python</a></li>
           </ul>
         </div>
 
@@ -935,15 +876,11 @@
           <ul class="space-y-6">
             <li class="flex items-start gap-4 text-slate-500">
               <i class="fa-solid fa-phone text-brandRed mt-1"></i>
-              <a href="tel:9866634443" class="hover:text-brandRed transition-colors">+91-9866634443</a>
-            </li>
-            <li class="flex items-start gap-4 text-slate-500">
-              <i class="fa-brands fa-whatsapp text-green-500 mt-1"></i>
-              <a href="https://wa.me/919502504742" target="_blank" class="hover:text-brandRed transition-colors">+91-9502504742</a>
+              <a href="tel:9866634443" class="hover:text-brandRed transition">+91-9866634443</a>
             </li>
             <li class="flex items-start gap-4 text-slate-500">
               <i class="fa-solid fa-envelope text-brandRed mt-1"></i>
-              <a href="mailto:successconsultancy0808@gmail.com" class="hover:text-brandRed transition-colors text-sm">successconsultancy0808@gmail.com</a>
+              <a href="mailto:successconsultancy0808@gmail.com" class="hover:text-brandRed transition text-sm">successconsultancy0808@gmail.com</a>
             </li>
             <li class="flex items-start gap-4 text-slate-500">
               <i class="fa-solid fa-location-dot text-brandRed mt-1"></i>
@@ -954,11 +891,10 @@
       </div>
 
       <div class="pt-12 border-t border-slate-100 flex flex-col md:flex-row justify-between items-center gap-6">
-        <p class="text-slate-400 text-sm">© <span id="year"></span> Success Consultancy and Services. All rights reserved.</p>
+        <p class="text-slate-400 text-sm">©️ <span id="year"></span> Success Consultancy and Services. All rights reserved.</p>
         <div class="flex gap-8 text-sm text-slate-400">
-          <a href="#" class="hover:text-brandRed transition-colors">Privacy Policy</a>
-          <a href="#" class="hover:text-brandRed transition-colors">Terms & Conditions</a>
-          <a href="sitemap.html" class="hover:text-brandRed transition-colors">Sitemap</a>
+          <a href="#" class="hover:text-brandRed transition">Privacy Policy</a>
+          <a href="#" class="hover:text-brandRed transition">Terms & Conditions</a>
         </div>
       </div>
     </div>
@@ -974,27 +910,8 @@
     document.addEventListener('DOMContentLoaded', function () {
       document.getElementById("year").textContent = new Date().getFullYear();
 
-      // ── Scroll progress bar ──
-      const bar = document.getElementById('scroll-progress');
-      function updateBar() {
-        const scrollTop = window.scrollY;
-        const docHeight = document.documentElement.scrollHeight - window.innerHeight;
-        bar.style.width = (docHeight > 0 ? (scrollTop / docHeight) * 100 : 0) + '%';
-      }
-      window.addEventListener('scroll', updateBar, { passive: true });
 
-      // ── Sticky nav ──
-      const nav = document.getElementById('mainNav');
-      window.addEventListener('scroll', () => {
-        if (window.scrollY > 50) nav.classList.add('nav-scrolled');
-        else nav.classList.remove('nav-scrolled');
-      }, { passive: true });
 
-      // ── Mobile menu ──
-      document.getElementById('mobileMenuBtn').addEventListener('click', function () {
-        const menu = document.getElementById('mobileMenu');
-        menu.classList.toggle('hidden');
-      });
 
       // ── Scroll reveal ──
       const revealEls = document.querySelectorAll('.reveal');
@@ -1036,27 +953,9 @@
           if (target) {
             e.preventDefault();
             target.scrollIntoView({ behavior: 'smooth', block: 'start' });
-            document.getElementById('mobileMenu').classList.add('hidden');
           }
         });
       });
-
-      // ── Newsletter form (prevent default) ──
-      const newsletterBtn = document.querySelector('button .fa-paper-plane');
-      if (newsletterBtn) {
-        newsletterBtn.closest('button').addEventListener('click', function () {
-          const input = this.previousElementSibling;
-          if (input && input.value.includes('@')) {
-            input.value = '';
-            this.innerHTML = '<i class="fa-solid fa-check"></i>';
-            this.classList.add('bg-green-500');
-            setTimeout(() => {
-              this.innerHTML = '<i class="fa-solid fa-paper-plane"></i>';
-              this.classList.remove('bg-green-500');
-            }, 2000);
-          }
-        });
-      }
     });
   </script>
 </body>
