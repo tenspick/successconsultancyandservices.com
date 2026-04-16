@@ -1,468 +1,147 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>About Us | Success Consultancy and Services</title>
-  <link rel="icon" type="image/jpeg" href="logo.jpg" />
-  <meta property="og:type" content="website" />
-  <meta property="og:title" content="About Us | Success Consultancy and Services" />
-  <meta property="og:description"
-    content="Learn about our mission, our founder R. Murali, and our commitment to career growth." />
-  <meta property="og:image" content="logo.jpg" />
-  <meta name="description"
-    content="Discover the story behind Success Consultancy and Services in Tirupati. Expert training and placement led by R. Murali." />
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>About Us | Success Consultancy and Services</title>
 
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
-  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          colors: {
-            brandRed: "#1d4ed8",
-            brandWhite: "#ffffff",
-            softRed: "#eff6ff",
-          },
-        },
-      },
-    };
-  </script>
-  <style>
-    @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap');
+<link rel="icon" href="logo.jpg" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+<script src="https://cdn.tailwindcss.com"></script>
 
-    html {
-      scroll-behavior: smooth;
-      overflow-x: hidden;
-    }
+<style>
+body {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  overflow-x: hidden;
+}
 
-    body {
-      font-family: 'Plus Jakarta Sans', sans-serif;
-      overflow-x: hidden;
-    }
+/* Optimized glass */
+.glass {
+  background: rgba(255,255,255,0.08);
+  backdrop-filter: blur(8px);
+  border-radius: 20px;
+}
 
-    .bg-pattern {
-      background-color: #ffffff;
-      background-image: radial-gradient(#1d4ed8 0.5px, transparent 0.5px);
-      background-size: 24px 24px;
-      opacity: 0.05;
-    }
+/* Faster transitions */
+.gallery-card img {
+  transition: 0.4s ease;
+}
 
-    .glass {
-      background: rgba(255, 255, 255, 0.05);
-      backdrop-filter: blur(20px);
-      -webkit-backdrop-filter: blur(20px);
-      border-radius: 24px;
-      border: 1px solid rgba(255, 255, 255, 0.1);
-      box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.1);
-    }
+.gallery-overlay {
+  transition: 0.3s ease;
+}
 
-    .btn-glow {
-      padding: 14px 30px;
-      border-radius: 30px;
-      background: linear-gradient(45deg, #1d4ed8, #60a5fa);
-      color: white;
-      transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-      display: inline-block;
-      font-weight: 700;
-      text-align: center;
-      letter-spacing: 0.5px;
-    }
-
-    .btn-glow:hover {
-      box-shadow: 0 0-25px rgba(29, 78, 216, 0.5);
-      transform: translateY(-3px) scale(1.02);
-    }
-
-    .animate-float-slow {
-      animation: float-slow 6s ease-in-out infinite;
-    }
-
-    @keyframes float-slow {
-
-      0%,
-      100% {
-        transform: translateY(0) rotate(0);
-      }
-
-      50% {
-        transform: translateY(-20px) rotate(2deg);
-      }
-    }
-
-    .gallery-card {
-      position: relative;
-      overflow: hidden;
-      border-radius: 20px;
-      margin-bottom: 1.5rem;
-    }
-
-    .gallery-card img {
-      width: 100%;
-      height: auto;
-      display: block;
-      transition: 0.8s cubic-bezier(0.4, 0, 0.2, 1);
-    }
-
-    .gallery-card:hover img {
-      transform: scale(1.05);
-    }
-
-    .gallery-overlay {
-      position: absolute;
-      inset: 0;
-      background: rgba(29, 78, 216, 0.2);
-      backdrop-filter: blur(4px);
-      opacity: 0;
-      transition: 0.4s;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: white;
-      font-weight: 800;
-    }
-
-    .gallery-card:hover .gallery-overlay {
-      opacity: 1;
-    }
-  </style>
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css" />
+/* Disable heavy effects on mobile */
+@media (max-width:768px){
+  *{
+    animation:none!important;
+    transition:none!important;
+  }
+}
+</style>
 </head>
 
 <body class="bg-white text-slate-900">
-  <header id="siteHeader"></header>
-  <script src="navbar.js"></script>
 
-  <main class="relative">
-    <div class="absolute inset-0 bg-pattern pointer-events-none"></div>
+<header id="siteHeader"></header>
 
-    <!-- Hero Section -->
-    <section class="relative h-[60vh] flex items-center justify-center overflow-hidden">
-      <div class="absolute inset-0 z-0">
-        <img src="images/office gallery 1.avif" alt="Background"
-          class="w-full h-full object-cover scale-110 blur-sm opacity-30" />
-        <div class="absolute inset-0 bg-gradient-to-br from-blue-900/80 via-blue-800/60 to-transparent"></div>
-      </div>
+<main>
 
-      <div id="particles-js" class="absolute inset-0 z-1"></div>
+<!-- HERO -->
+<section class="h-[60vh] flex items-center justify-center relative">
+  <img src="images/office gallery 1.avif" loading="lazy"
+    class="absolute w-full h-full object-cover opacity-30 blur-sm">
 
-      <div class="mx-auto max-w-7xl px-4 relative z-10 text-center">
-        <div class="glass p-10 md:p-16 border-white/10" data-aos="zoom-in">
-          <h1 class="text-5xl font-black text-white sm:text-7xl mb-6">Our Story & Vision</h1>
-          <p class="text-xl text-blue-100 max-w-2xl mx-auto">Building careers and bridging gaps with excellence since
-            2025.</p>
-        </div>
-      </div>
-    </section>
+  <div class="glass p-10 text-center" data-aos="fade-up">
+    <h1 class="text-5xl font-black text-white">Our Story & Vision</h1>
+    <p class="text-white mt-4">Building careers since 2025</p>
+  </div>
+</section>
 
-    <!-- Founder Section -->
-    <section class="py-24 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="grid lg:grid-cols-2 gap-16 items-center">
-        <div class="relative" data-aos="fade-right">
-          <div class="rounded-[2.5rem] overflow-hidden shadow-2xl border-4 border-white">
-            <img src="founder.jpg" alt="R. Murali - Director" class="w-full h-auto" />
-          </div>
-          <div class="absolute -bottom-6 -right-6 glass p-6 shadow-xl hidden md:block">
-            <p class="text-sm font-bold text-brandRed uppercase tracking-widest">Founded in</p>
-            <p class="text-3xl font-black text-slate-900">2025</p>
-          </div>
-        </div>
-        <div data-aos="fade-left">
-          <p class="text-brandRed font-bold uppercase tracking-widest text-sm mb-4">The Leadership</p>
-          <h2 class="text-4xl md:text-6xl font-black text-slate-900 mb-8 leading-tight">R. Murali <br /><span
-              class="text-brandRed text-3xl md:text-4xl">Director & Visionary</span></h2>
-          <p class="text-xl text-slate-600 leading-relaxed mb-8 font-medium">
-            Success Consultancy and Services follows a student-first mission with practical training, interview
-            preparation, and placement guidance for IT and non-IT career growth.
-          </p>
-          <div class="glass p-6 border-blue-100 bg-blue-50/30">
-            <div class="flex items-start gap-4">
-              <i class="fa-solid fa-location-dot text-brandRed mt-1 text-xl"></i>
-              <div>
-                <p class="font-bold text-slate-900">Office Location</p>
-                <p class="text-slate-600">D No: 23-8-69/11, RC Road, Beside Harsha Residency Hotel, Tirupati - 517501.
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
+<!-- FOUNDER -->
+<section class="py-20 max-w-7xl mx-auto px-4 grid lg:grid-cols-2 gap-10">
 
-    <!-- Values Section -->
-    <section class="py-24 bg-slate-50">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="grid md:grid-cols-3 gap-8">
-          <div class="glass p-8 bg-white border-blue-50 transition-all hover:-translate-y-2" data-aos="fade-up"
-            data-aos-delay="100">
-            <div class="w-14 h-14 bg-blue-600 rounded-2xl flex items-center justify-center text-white mb-6">
-              <i class="fa-solid fa-rocket text-xl"></i>
-            </div>
-            <h3 class="text-2xl font-black text-slate-900 mb-4">Our Mission</h3>
-            <p class="text-slate-600 leading-relaxed font-medium">To bridge skill gaps through practical training and
-              help students secure meaningful careers in global industries.</p>
-          </div>
-          <div class="glass p-8 bg-white border-blue-50 transition-all hover:-translate-y-2" data-aos="fade-up"
-            data-aos-delay="200">
-            <div class="w-14 h-14 bg-blue-600 rounded-2xl flex items-center justify-center text-white mb-6">
-              <i class="fa-solid fa-eye text-xl"></i>
-            </div>
-            <h3 class="text-2xl font-black text-slate-900 mb-4">Our Vision</h3>
-            <p class="text-slate-600 leading-relaxed font-medium">To become India's most trusted training and placement
-              ecosystem for aspirants across various professional sectors.</p>
-          </div>
-          <div class="glass p-8 bg-white border-blue-50 transition-all hover:-translate-y-2" data-aos="fade-up"
-            data-aos-delay="300">
-            <div class="w-14 h-14 bg-blue-600 rounded-2xl flex items-center justify-center text-white mb-6">
-              <i class="fa-solid fa-shield-halved text-xl"></i>
-            </div>
-            <h3 class="text-2xl font-black text-slate-900 mb-4">Our Strength</h3>
-            <p class="text-slate-600 leading-relaxed font-medium">Real interview readiness, mentor support, and
-              continuous placement-focused guidance tailored for every student.</p>
-          </div>
-        </div>
-      </div>
-    </section>
+  <div data-aos="fade-right">
+    <img src="founder.jpg" loading="lazy" class="rounded-3xl shadow-xl">
+  </div>
 
-    <!-- Opening Ceremony Gallery -->
-    <section class="py-24 bg-white px-4 sm:px-6 lg:px-8">
-      <div class="max-w-7xl mx-auto">
-        <div class="text-center mb-16">
-          <h2 class="text-4xl md:text-6xl font-black text-slate-900 mb-4">Our Beginning</h2>
-          <p class="text-xl text-slate-600 font-medium max-w-3xl mx-auto">A memorable ceremony marking our commitment to
-            trust and excellence in staffing and consultancy.</p>
-        </div>
-        <div class="columns-1 md:columns-2 lg:columns-3 gap-6 space-y-6">
-          <div class="gallery-card shadow-lg" data-aos="fade-up">
-            <a href="images/opening ceremony 1.jpeg" class="glightbox">
-              <img src="images/opening ceremony 1.jpeg" alt="Opening ceremony" />
-              <div class="gallery-overlay">Full View</div>
-            </a>
-          </div>
-          <div class="gallery-card shadow-lg" data-aos="fade-up">
-            <a href="images/opening ceremony 2.jpeg" class="glightbox">
-              <img src="images/opening ceremony 2.jpeg" alt="Opening ceremony" />
-              <div class="gallery-overlay">Full View</div>
-            </a>
-          </div>
-          <div class="gallery-card shadow-lg" data-aos="fade-up">
-            <a href="images/opening ceremony 3.jpeg" class="glightbox">
-              <img src="images/opening ceremony 3.jpeg" alt="Opening ceremony" />
-              <div class="gallery-overlay">Full View</div>
-            </a>
-          </div>
-          <div class="gallery-card shadow-lg" data-aos="fade-up">
-            <a href="images/opening ceremony 4.jpeg" class="glightbox">
-              <img src="images/opening ceremony 4.jpeg" alt="Opening ceremony" />
-              <div class="gallery-overlay">Full View</div>
-            </a>
-          </div>
-          <div class="gallery-card shadow-lg" data-aos="fade-up">
-            <a href="images/opening ceremony 5.jpeg" class="glightbox">
-              <img src="images/opening ceremony 5.jpeg" alt="Opening ceremony" />
-              <div class="gallery-overlay">Full View</div>
-            </a>
-          </div>
-        </div>
-      </div>
-    </section>
+  <div data-aos="fade-left">
+    <h2 class="text-4xl font-black mb-4">R. Murali</h2>
+    <p class="text-slate-600">
+      Success Consultancy focuses on real-world training and placements.
+    </p>
+  </div>
 
-    <!-- Workspace Gallery Section -->
-    <section class="py-24 bg-slate-50 px-4 sm:px-6 lg:px-8">
-      <div class="max-w-7xl mx-auto">
-        <div class="text-center mb-16">
-          <h2 class="text-4xl md:text-6xl font-black text-slate-900 mb-4">Our Gallery</h2>
-          <p class="text-xl text-slate-600 font-medium max-w-3xl mx-auto">Capturing the environment where we build the
-            futures of our students and candidates.</p>
-        </div>
-        <div class="columns-1 sm:columns-2 lg:columns-4 gap-6 space-y-6">
-          <div class="gallery-card shadow-md" data-aos="fade-up">
-            <a href="images/office gallery 1.avif" class="glightbox">
-              <img src="images/office gallery 1.avif" alt="Workspace" />
-              <div class="gallery-overlay">Full View</div>
-            </a>
-          </div>
-          <div class="gallery-card shadow-md" data-aos="fade-up">
-            <a href="images/office gallery 2.png" class="glightbox">
-              <img src="images/office gallery 2.png" alt="Workspace" />
-              <div class="gallery-overlay">Full View</div>
-            </a>
-          </div>
-          <div class="gallery-card shadow-md" data-aos="fade-up">
-            <a href="images/office gallery 3.png" class="glightbox">
-              <img src="images/office gallery 3.png" alt="Workspace" />
-              <div class="gallery-overlay">Full View</div>
-            </a>
-          </div>
-          <div class="gallery-card shadow-md" data-aos="fade-up">
-            <a href="images/office gallery 4.png" class="glightbox">
-              <img src="images/office gallery 4.png" alt="Workspace" />
-              <div class="gallery-overlay">Full View</div>
-            </a>
-          </div>
-          <div class="gallery-card shadow-md" data-aos="fade-up">
-            <a href="images/office gallery 5.png" class="glightbox">
-              <img src="images/office gallery 5.png" alt="Workspace" />
-              <div class="gallery-overlay">Full View</div>
-            </a>
-          </div>
-          <div class="gallery-card shadow-md" data-aos="fade-up">
-            <a href="images/office gallery 6.png" class="glightbox">
-              <img src="images/office gallery 6.png" alt="Workspace" />
-              <div class="gallery-overlay">Full View</div>
-            </a>
-          </div>
-        </div>
-      </div>
-    </section>
+</section>
 
-    <!-- CTA Section (Aligned with Index) -->
-    <section class="py-24 bg-white">
-      <div class="mx-auto max-w-6xl px-4 text-center">
-        <div class="bg-slate-900 rounded-[4rem] px-10 py-16 md:py-24 relative overflow-hidden" data-aos="zoom-in">
-          <div class="absolute -top-10 -right-10 w-40 h-40 bg-brandRed/20 blur-3xl rounded-full"></div>
-          <div class="absolute -bottom-10 -left-10 w-40 h-40 bg-brandRed/20 blur-3xl rounded-full"></div>
+<!-- VALUES -->
+<section class="py-20 bg-slate-50">
+<div class="max-w-7xl mx-auto grid md:grid-cols-3 gap-6 px-4">
 
-          <div class="relative z-10 max-w-3xl mx-auto">
-            <h2 class="text-4xl md:text-5xl font-black text-white mb-8">Join the Success Success Journey</h2>
-            <p class="text-white/60 text-lg mb-12 font-medium">
-              Join our upcoming batch and start your journey towards a rewarding career with expert guidance from R.
-              Murali.
-            </p>
-            <div class="flex flex-wrap justify-center gap-6">
-              <a href="contact.html"
-                class="bg-brandRed text-white px-12 py-5 rounded-full font-bold hover:bg-blue-700 transition-all hover:scale-105 active:scale-95">Enroll
-                Now</a>
-              <a href="courses.html"
-                class="bg-white/10 text-white border border-white/20 px-12 py-5 rounded-full font-bold hover:bg-white/20 transition-all active:scale-95 text-sm md:text-base">Browse
-                Courses</a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-  </main>
+  <div class="glass p-6" data-aos="fade-up">
+    <h3 class="font-bold text-xl mb-2">Mission</h3>
+    <p>Bridge skill gaps.</p>
+  </div>
 
-  <!-- Footer -->
-  <footer class="bg-white pt-24 pb-12 border-t border-slate-100">
-    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-      <div class="grid lg:grid-cols-12 gap-16 mb-20">
-        <div class="lg:col-span-5">
-          <div class="flex items-center gap-3 mb-8">
-            <img src="logo.jpg" alt="Logo" class="h-10 w-10 rounded-full" />
-            <span class="text-xl font-black text-slate-900">Success Consultancy</span>
-          </div>
-          <p class="text-slate-500 leading-relaxed mb-10 max-w-sm">
-            Empowering students through industry-focused training and reliable placement assistance since 2025. Located
-            in the heart of Tirupati.
-          </p>
-          <div class="flex gap-4">
-            <a href="#"
-              class="w-12 h-12 bg-slate-50 rounded-2xl flex items-center justify-center text-slate-400 hover:text-brandRed hover:bg-blue-50 transition-all"><i
-                class="fa-brands fa-facebook-f"></i></a>
-            <a href="#"
-              class="w-12 h-12 bg-slate-50 rounded-2xl flex items-center justify-center text-slate-400 hover:text-brandRed hover:bg-blue-50 transition-all"><i
-                class="fa-brands fa-linkedin-in"></i></a>
-            <a href="#"
-              class="w-12 h-12 bg-slate-50 rounded-2xl flex items-center justify-center text-slate-400 hover:text-brandRed hover:bg-blue-50 transition-all"><i
-                class="fa-brands fa-instagram"></i></a>
-          </div>
-        </div>
+  <div class="glass p-6" data-aos="fade-up">
+    <h3 class="font-bold text-xl mb-2">Vision</h3>
+    <p>Trusted training ecosystem.</p>
+  </div>
 
-        <div class="lg:col-span-2">
-          <h6 class="font-bold text-slate-900 mb-8 uppercase tracking-widest text-xs">Explore</h6>
-          <ul class="space-y-4">
-            <li><a href="index.html" class="text-slate-500 hover:text-brandRed transition">Home</a></li>
-            <li><a href="about.html" class="text-slate-500 hover:text-brandRed transition">About</a></li>
-            <li><a href="services.html" class="text-slate-500 hover:text-brandRed transition">Services</a></li>
-            <li><a href="courses.html" class="text-slate-500 hover:text-brandRed transition">Courses</a></li>
-          </ul>
-        </div>
+  <div class="glass p-6" data-aos="fade-up">
+    <h3 class="font-bold text-xl mb-2">Strength</h3>
+    <p>Placement focused.</p>
+  </div>
 
-        <div class="lg:col-span-2">
-          <h6 class="font-bold text-slate-900 mb-8 uppercase tracking-widest text-xs">Featured</h6>
-          <ul class="space-y-4">
-            <li><a href="course-web.html" class="text-slate-500 hover:text-brandRed transition">Web Development</a></li>
-            <li><a href="course-data.html" class="text-slate-500 hover:text-brandRed transition">Data Science</a></li>
-            <li><a href="course-fullstack.html" class="text-slate-500 hover:text-brandRed transition">Full Stack</a>
-            </li>
-            <li><a href="course-programming.html" class="text-slate-500 hover:text-brandRed transition">Java/Python</a>
-            </li>
-          </ul>
-        </div>
+</div>
+</section>
 
-        <div class="lg:col-span-3">
-          <h6 class="font-bold text-slate-900 mb-8 uppercase tracking-widest text-xs">Support</h6>
-          <ul class="space-y-6">
-            <li class="flex items-start gap-4 text-slate-500 group">
-              <i class="fa-solid fa-phone text-brandRed mt-1"></i>
-              <a href="tel:9866634443" class="hover:text-brandRed transition">+91-9866634443</a>
-            </li>
-            <li class="flex items-start gap-4 text-slate-500 group">
-              <i class="fa-solid fa-envelope text-brandRed mt-1"></i>
-              <a href="mailto:successconsultancy0808@gmail.com"
-                class="hover:text-brandRed transition text-sm">successconsultancy0808@gmail.com</a>
-            </li>
-            <li class="flex items-start gap-4 text-slate-500">
-              <i class="fa-solid fa-location-dot text-brandRed mt-1"></i>
-              <span class="text-sm">RC Road, Tirupati, AP 517501</span>
-            </li>
-          </ul>
-        </div>
-      </div>
+<!-- GALLERY -->
+<section class="py-20 px-4">
+<div class="max-w-7xl mx-auto columns-2 md:columns-3 gap-4">
 
-      <div class="pt-12 border-t border-slate-100 flex flex-col md:flex-row justify-between items-center gap-6">
-        <p class="text-slate-400 text-sm">© <span id="year"></span> Success Consultancy and Services. All rights
-          reserved.</p>
-        <div class="flex gap-8 text-sm text-slate-400">
-          <a href="#" class="hover:text-brandRed transition">Privacy Policy</a>
-          <a href="#" class="hover:text-brandRed transition">Terms & Conditions</a>
-        </div>
-      </div>
-    </div>
-  </footer>
+  <div class="gallery-card">
+    <img src="images/opening ceremony 1.jpeg" loading="lazy">
+  </div>
 
-  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1.0.19/bundled/lenis.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/glightbox/dist/js/glightbox.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
-  <script>
-    document.addEventListener('DOMContentLoaded', function () {
-      // Performance - Cookies for Loading Speed
-      document.cookie = "performance_optimized=true; max-age=31536000; path=/";
+  <div class="gallery-card">
+    <img src="images/opening ceremony 2.jpeg" loading="lazy">
+  </div>
 
-      AOS.init({ duration: 1000, once: true });
+  <div class="gallery-card">
+    <img src="images/opening ceremony 3.jpeg" loading="lazy">
+  </div>
 
-      // Increased Scrolling Speed with Lenis
-      const lenis = new Lenis({
-        duration: 1.2,
-        easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
-        lerp: 0.15,
-        wheelMultiplier: 1.2,
-      });
-      function raf(time) { lenis.raf(time); requestAnimationFrame(raf); }
-      requestAnimationFrame(raf);
+</div>
+</section>
 
-      const lightbox = GLightbox({ selector: '.glightbox' });
+<!-- CTA -->
+<section class="py-20 text-center">
+  <h2 class="text-3xl font-black mb-6">Join the Journey</h2>
+  <a href="contact.html" class="bg-blue-600 text-white px-8 py-4 rounded-full">Enroll Now</a>
+</section>
 
-      if (document.getElementById('particles-js')) {
-        particlesJS('particles-js', {
-          "particles": {
-            "number": { "value": 50, "density": { "enable": true, "value_area": 800 } },
-            "color": { "value": "#ffffff" },
-            "opacity": { "value": 0.2 },
-            "size": { "value": 2 },
-            "line_linked": { "enable": true, "distance": 150, "color": "#ffffff", "opacity": 0.2, "width": 1 }
-          }
-        });
-      }
-      document.getElementById("year").textContent = new Date().getFullYear();
-    });
-  </script>
+</main>
+
+<footer class="text-center py-10 text-slate-400">
+© <span id="year"></span> Success Consultancy
+</footer>
+
+<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+
+  AOS.init({
+    duration: 600,
+    once: true,
+    offset: 80
+  });
+
+  document.getElementById("year").textContent = new Date().getFullYear();
+
+});
+</script>
+
 </body>
-
 </html>
