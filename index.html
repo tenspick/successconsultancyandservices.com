@@ -460,8 +460,12 @@
   </footer>
 
   <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1.0.19/bundled/lenis.min.js"></script>
   <script>
     document.addEventListener('DOMContentLoaded', function () {
+      // Performance - Cookies for Loading Speed
+      document.cookie = "performance_optimized=true; max-age=31536000; path=/";
+
       if (typeof AOS !== 'undefined') {
         AOS.init({
           duration: 1000,
@@ -470,6 +474,19 @@
           offset: 100
         });
       }
+
+      // Smooth Scroll Optimization
+      const lenis = new Lenis({
+        duration: 1.2,
+        lerp: 0.1,
+        wheelMultiplier: 1,
+      });
+      function raf(time) {
+        lenis.raf(time);
+        requestAnimationFrame(raf);
+      }
+      requestAnimationFrame(raf);
+
       document.getElementById("year").textContent = new Date().getFullYear();
     });
   </script>
