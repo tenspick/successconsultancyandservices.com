@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
- 
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -16,24 +15,22 @@
   <meta name="twitter:image" content="logo.jpg" />
   <meta name="description" content="Success Consultancy and Services offers expert Career Guidance, Cloud and Fullstack Training, and reliable Placement Services across India." />
   <script type="application/ld+json">
-    [
-      {
-        "@context": "https://schema.org",
-        "@type": "EducationalOrganization",
-        "name": "Success Consultancy and Services",
-        "url": "https://successconsultancyandservices.com",
-        "description": "Expert Career Guidance, Cloud and Fullstack Training, and dedicated Placement Services for IT and non-IT jobs.",
-        "telephone": "+91-9866634443",
-        "email": "successconsultancy0808@gmail.com",
-        "address": {
-          "@type": "PostalAddress",
-          "streetAddress": "D No: 23-8-69/11, RC Road, Beside Harsha Residency Hotel",
-          "addressLocality": "Tirupati",
-          "postalCode": "517501",
-          "addressCountry": "IN"
-        }
+    [{
+      "@context": "https://schema.org",
+      "@type": "EducationalOrganization",
+      "name": "Success Consultancy and Services",
+      "url": "https://successconsultancyandservices.com",
+      "description": "Expert Career Guidance, Cloud and Fullstack Training, and dedicated Placement Services for IT and non-IT jobs.",
+      "telephone": "+91-9866634443",
+      "email": "successconsultancy0808@gmail.com",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "D No: 23-8-69/11, RC Road, Beside Harsha Residency Hotel",
+        "addressLocality": "Tirupati",
+        "postalCode": "517501",
+        "addressCountry": "IN"
       }
-    ]
+    }]
   </script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
   <script src="https://cdn.tailwindcss.com"></script>
@@ -52,20 +49,10 @@
   </script>
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap');
- 
-    html {
-      scroll-behavior: auto;
-      overflow-x: hidden;
-    }
- 
-    body {
-      font-family: 'Plus Jakarta Sans', sans-serif;
-      overflow-x: hidden;
-    }
- 
-    /* ─── Scroll: instant, native, zero jank ─── */
-    * { scroll-behavior: auto !important; }
- 
+
+    html { scroll-behavior: smooth; overflow-x: hidden; }
+    body { font-family: 'Plus Jakarta Sans', sans-serif; overflow-x: hidden; }
+
     /* ─── Background dot pattern ─── */
     .bg-pattern {
       background-color: #ffffff;
@@ -73,12 +60,10 @@
       background-size: 24px 24px;
       opacity: 0.05;
     }
- 
-    /* ─── Card hover: translate only, no scroll dependency ─── */
+
+    /* ─── Card hover ─── */
     .card-hover {
-      transition: transform 0.35s cubic-bezier(0.4,0,0.2,1),
-                  border-color 0.35s ease,
-                  box-shadow 0.35s ease;
+      transition: transform 0.35s cubic-bezier(0.4,0,0.2,1), border-color 0.35s ease, box-shadow 0.35s ease;
       border: 1px solid rgba(29,78,216,0.08);
       will-change: transform;
     }
@@ -87,14 +72,14 @@
       border-color: #1d4ed8;
       box-shadow: 0 20px 40px -10px rgba(29,78,216,0.15);
     }
- 
+
     /* ─── Floating illustration ─── */
     @keyframes float {
       0%, 100% { transform: translateY(0px); }
       50%       { transform: translateY(-18px); }
     }
     .animate-float { animation: float 4s ease-in-out infinite; }
- 
+
     /* ─── Badge shimmer ─── */
     @keyframes shimmer {
       0%   { background-position: -200% center; }
@@ -105,25 +90,23 @@
       background-size: 200% auto;
       animation: shimmer 3s linear infinite;
     }
- 
-    /* ─── Stat counter pulse (number glow on hover) ─── */
+
+    /* ─── Stat counter ─── */
     .stat-num {
       transition: color 0.3s ease, transform 0.3s ease;
       display: inline-block;
     }
     .stat-num:hover { color: #1d4ed8; transform: scale(1.08); }
- 
-    /* ─── Icon bounce on card hover ─── */
-    .card-hover:hover .icon-bounce {
-      animation: iconBounce 0.5s ease;
-    }
+
+    /* ─── Icon bounce ─── */
+    .card-hover:hover .icon-bounce { animation: iconBounce 0.5s ease; }
     @keyframes iconBounce {
       0%, 100% { transform: translateY(0) rotate(0deg); }
       30%       { transform: translateY(-6px) rotate(-5deg); }
       60%       { transform: translateY(-2px) rotate(3deg); }
     }
- 
-    /* ─── Course card icon rotate on hover ─── */
+
+    /* ─── Course card ─── */
     .course-card:hover .course-icon {
       background-color: #1d4ed8 !important;
       color: #ffffff !important;
@@ -131,16 +114,13 @@
       transition: all 0.35s cubic-bezier(0.4,0,0.2,1);
     }
     .course-icon { transition: all 0.35s cubic-bezier(0.4,0,0.2,1); }
- 
-    /* ─── Course underline expand ─── */
     .course-line {
       height: 3px; width: 48px;
-      background: #bfdbfe;
-      margin: 0 auto;
+      background: #bfdbfe; margin: 0 auto;
       transition: width 0.4s ease, background-color 0.4s ease;
     }
     .course-card:hover .course-line { width: 80px; background-color: #1d4ed8; }
- 
+
     /* ─── Trust badge ticker ─── */
     @keyframes ticker {
       0%   { transform: translateX(0); }
@@ -148,7 +128,7 @@
     }
     .ticker-track { display: flex; width: max-content; animation: ticker 18s linear infinite; }
     .ticker-track:hover { animation-play-state: paused; }
- 
+
     /* ─── CTA blob pulse ─── */
     @keyframes blobPulse {
       0%, 100% { transform: scale(1); opacity: 0.2; }
@@ -156,13 +136,13 @@
     }
     .blob { animation: blobPulse 6s ease-in-out infinite; }
     .blob-delay { animation: blobPulse 6s ease-in-out 3s infinite; }
- 
+
     /* ─── Button press ─── */
     .btn-press { transition: transform 0.15s ease, box-shadow 0.15s ease; }
     .btn-press:hover  { transform: translateY(-2px); box-shadow: 0 8px 24px rgba(29,78,216,0.3); }
     .btn-press:active { transform: scale(0.97); box-shadow: none; }
- 
-    /* ─── Section entrance: immediate fade-in on load ─── */
+
+    /* ─── Hero animations ─── */
     @keyframes fadeInUp {
       from { opacity: 0; transform: translateY(28px); }
       to   { opacity: 1; transform: translateY(0); }
@@ -173,8 +153,8 @@
     .hero-animate-4 { animation: fadeInUp 0.7s ease-out 0.5s both; }
     .hero-animate-5 { animation: fadeInUp 0.7s ease-out 0.65s both; }
     .hero-img-animate { animation: fadeInUp 0.9s ease-out 0.3s both; }
- 
-    /* ─── Navbar link underline ─── */
+
+    /* ─── Nav link underline ─── */
     .nav-link { position: relative; }
     .nav-link::after {
       content: ''; position: absolute; bottom: -3px; left: 0;
@@ -182,50 +162,230 @@
       transition: width 0.3s ease;
     }
     .nav-link:hover::after { width: 100%; }
- 
-    /* ─── Footer social hover ─── */
+
+    /* ─── Social hover ─── */
     .social-btn { transition: transform 0.3s ease, background 0.3s ease, color 0.3s ease; }
     .social-btn:hover { transform: translateY(-3px) scale(1.1); }
- 
-    /* ─── Scroll progress bar at top ─── */
+
+    /* ─── Scroll progress ─── */
     #scroll-progress {
       position: fixed; top: 0; left: 0; height: 3px;
       background: linear-gradient(90deg, #1d4ed8, #60a5fa);
       z-index: 9999; width: 0%; transition: width 0.05s linear;
     }
- 
-    /* ─── Feature icon ring pulse ─── */
+
+    /* ─── Icon ring pulse ─── */
     @keyframes ringPulse {
       0%, 100% { box-shadow: 0 0 0 0 rgba(29,78,216,0.25); }
       50%       { box-shadow: 0 0 0 8px rgba(29,78,216,0); }
     }
     .card-hover:hover .icon-ring { animation: ringPulse 1.2s ease infinite; }
+
+    /* ─── Scroll-reveal ─── */
+    .reveal {
+      opacity: 0;
+      transform: translateY(40px);
+      transition: opacity 0.7s ease, transform 0.7s ease;
+    }
+    .reveal.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    .reveal-delay-1 { transition-delay: 0.1s; }
+    .reveal-delay-2 { transition-delay: 0.2s; }
+    .reveal-delay-3 { transition-delay: 0.3s; }
+    .reveal-delay-4 { transition-delay: 0.4s; }
+
+    /* ─── Testimonial card ─── */
+    .testimonial-card {
+      transition: transform 0.35s ease, box-shadow 0.35s ease;
+    }
+    .testimonial-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 24px 48px -12px rgba(29,78,216,0.12);
+    }
+
+    /* ─── Number counter animate ─── */
+    @keyframes countUp {
+      from { opacity: 0; transform: translateY(10px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+    .counter-animate { animation: countUp 0.6s ease-out both; }
+
+    /* ─── Process step connector ─── */
+    .step-connector {
+      position: absolute;
+      top: 32px;
+      left: calc(50% + 40px);
+      width: calc(100% - 80px);
+      height: 2px;
+      background: linear-gradient(90deg, #1d4ed8, #bfdbfe);
+      z-index: 0;
+    }
+
+    /* ─── Gradient text ─── */
+    .gradient-text {
+      background: linear-gradient(135deg, #1d4ed8 0%, #3b82f6 50%, #60a5fa 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    /* ─── Glow on hover for stat cards ─── */
+    .stat-card {
+      transition: all 0.35s ease;
+    }
+    .stat-card:hover {
+      background: linear-gradient(135deg, #1d4ed8 0%, #2563eb 100%);
+    }
+    .stat-card:hover .stat-label { color: rgba(255,255,255,0.7); }
+    .stat-card:hover .stat-value { color: #ffffff; }
+    .stat-card:hover .stat-icon  { color: rgba(255,255,255,0.8); }
+
+    /* ─── FAQ accordion ─── */
+    .faq-answer {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.4s ease, padding 0.3s ease;
+    }
+    .faq-answer.open {
+      max-height: 300px;
+    }
+    .faq-chevron {
+      transition: transform 0.3s ease;
+    }
+    .faq-item.open .faq-chevron {
+      transform: rotate(180deg);
+    }
+
+    /* ─── Sticky nav on scroll ─── */
+    .nav-scrolled {
+      box-shadow: 0 4px 24px rgba(29,78,216,0.08);
+      backdrop-filter: blur(12px);
+      background: rgba(255,255,255,0.95) !important;
+    }
+
+    /* ─── Timeline dot pulse ─── */
+    @keyframes dotPulse {
+      0%, 100% { box-shadow: 0 0 0 0 rgba(29,78,216,0.4); }
+      50%       { box-shadow: 0 0 0 8px rgba(29,78,216,0); }
+    }
+    .timeline-dot { animation: dotPulse 2s ease infinite; }
+
+    /* ─── Marquee overlap ─── */
+    .marquee-fade::before, .marquee-fade::after {
+      content: '';
+      position: absolute;
+      top: 0; bottom: 0;
+      width: 80px;
+      z-index: 2;
+      pointer-events: none;
+    }
+    .marquee-fade::before { left: 0; background: linear-gradient(to right, #1d4ed8, transparent); }
+    .marquee-fade::after  { right: 0; background: linear-gradient(to left, #1d4ed8, transparent); }
+
+    /* ─── Particles (CSS only) ─── */
+    @keyframes particle-rise {
+      0%   { transform: translateY(0) scale(1); opacity: 0.6; }
+      100% { transform: translateY(-120px) scale(0); opacity: 0; }
+    }
+    .particle {
+      position: absolute;
+      width: 6px; height: 6px;
+      border-radius: 50%;
+      background: #3b82f6;
+      animation: particle-rise 3s ease-in infinite;
+    }
+
+    /* ─── Highlight chip ─── */
+    .highlight-chip {
+      background: linear-gradient(135deg, #eff6ff, #dbeafe);
+      border: 1px solid #bfdbfe;
+      transition: all 0.3s ease;
+    }
+    .highlight-chip:hover {
+      background: linear-gradient(135deg, #1d4ed8, #2563eb);
+      border-color: #1d4ed8;
+      color: white;
+      transform: translateY(-2px);
+    }
+
+    /* ─── Typing cursor ─── */
+    @keyframes blink {
+      0%, 100% { opacity: 1; }
+      50%       { opacity: 0; }
+    }
+    .cursor { animation: blink 1s infinite; display: inline-block; }
   </style>
 </head>
- 
+
 <body class="bg-white text-slate-900">
- 
+
   <!-- Scroll Progress Bar -->
   <div id="scroll-progress"></div>
- 
-  <header id="siteHeader"></header>
-  <script src="navbar.js"></script>
- 
-  <main class="relative">
+
+  <!-- ═══════════════════════════════════════════
+       NAVBAR (inline since navbar.js is external)
+  ═══════════════════════════════════════════ -->
+  <nav id="mainNav" class="fixed top-0 left-0 right-0 z-50 bg-white transition-all duration-300 border-b border-slate-100">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-16">
+        <div class="flex items-center gap-3">
+          <div class="w-9 h-9 bg-brandRed rounded-xl flex items-center justify-center">
+            <i class="fa-solid fa-graduation-cap text-white text-sm"></i>
+          </div>
+          <span class="font-black text-slate-900">Success <span class="text-brandRed">Consultancy</span></span>
+        </div>
+        <div class="hidden md:flex items-center gap-8">
+          <a href="#" class="nav-link text-sm font-semibold text-slate-600 hover:text-brandRed transition-colors">Home</a>
+          <a href="#courses" class="nav-link text-sm font-semibold text-slate-600 hover:text-brandRed transition-colors">Courses</a>
+          <a href="#process" class="nav-link text-sm font-semibold text-slate-600 hover:text-brandRed transition-colors">Process</a>
+          <a href="#testimonials" class="nav-link text-sm font-semibold text-slate-600 hover:text-brandRed transition-colors">Reviews</a>
+          <a href="#faq" class="nav-link text-sm font-semibold text-slate-600 hover:text-brandRed transition-colors">FAQ</a>
+        </div>
+        <a href="tel:9866634443" class="bg-brandRed text-white px-5 py-2.5 rounded-full text-sm font-bold btn-press hidden md:flex items-center gap-2">
+          <i class="fa-solid fa-phone text-xs"></i> Call Now
+        </a>
+        <button id="mobileMenuBtn" class="md:hidden w-9 h-9 flex items-center justify-center rounded-lg border border-slate-200">
+          <i class="fa-solid fa-bars text-slate-600"></i>
+        </button>
+      </div>
+    </div>
+    <!-- Mobile menu -->
+    <div id="mobileMenu" class="hidden md:hidden bg-white border-t border-slate-100 px-4 py-4 space-y-3">
+      <a href="#" class="block text-sm font-semibold text-slate-600 py-2">Home</a>
+      <a href="#courses" class="block text-sm font-semibold text-slate-600 py-2">Courses</a>
+      <a href="#process" class="block text-sm font-semibold text-slate-600 py-2">Process</a>
+      <a href="#testimonials" class="block text-sm font-semibold text-slate-600 py-2">Reviews</a>
+      <a href="#faq" class="block text-sm font-semibold text-slate-600 py-2">FAQ</a>
+      <a href="tel:9866634443" class="block bg-brandRed text-white text-center py-3 rounded-full text-sm font-bold">Call Now</a>
+    </div>
+  </nav>
+
+  <main class="relative pt-16">
     <div class="absolute inset-0 bg-pattern pointer-events-none"></div>
- 
-    <!-- Hero Section -->
+
+    <!-- ═══════════════════════════════════════════
+         HERO SECTION
+    ═══════════════════════════════════════════ -->
     <section class="relative overflow-hidden pt-20 pb-16 lg:pt-32 lg:pb-32">
+      <!-- Animated particles -->
+      <div class="particle" style="left:10%; bottom:20%; animation-delay:0s;"></div>
+      <div class="particle" style="left:20%; bottom:10%; animation-delay:1s; background:#60a5fa;"></div>
+      <div class="particle" style="left:80%; bottom:25%; animation-delay:0.5s;"></div>
+      <div class="particle" style="left:90%; bottom:15%; animation-delay:1.5s; background:#93c5fd;"></div>
+      <div class="particle" style="left:55%; bottom:5%; animation-delay:2s;"></div>
+
       <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 relative z-10">
         <div class="lg:grid lg:grid-cols-12 lg:gap-16 items-center">
           <div class="lg:col-span-7 text-center lg:text-left">
- 
+
             <div class="hero-animate-1">
               <span class="inline-flex items-center rounded-full badge-shimmer border border-blue-100 px-4 py-1.5 text-sm font-bold text-brandRed mb-8">
                 <i class="fa-solid fa-fire-flame-curved mr-2"></i> Leading Career Catalyst in Tirupati
               </span>
             </div>
- 
+
             <h1 class="text-5xl font-extrabold tracking-tight text-slate-900 sm:text-7xl mb-8 leading-[1.05] hero-animate-2">
               Unlock Your Potential <br />
               <span class="text-brandRed relative">
@@ -235,14 +395,24 @@
                 </svg>
               </span>
             </h1>
- 
+
             <p class="text-xl text-slate-600 mb-10 max-w-2xl mx-auto lg:mx-0 leading-relaxed hero-animate-3">
               Success Consultancy and Services provides real-world corporate training and dedicated placement support to help you land your dream job at top MNCs.
             </p>
- 
+
+            <!-- Skill chips -->
+            <div class="flex flex-wrap justify-center lg:justify-start gap-2 mb-8 hero-animate-3">
+              <span class="highlight-chip text-xs font-bold px-3 py-1.5 rounded-full text-brandRed cursor-default">Java</span>
+              <span class="highlight-chip text-xs font-bold px-3 py-1.5 rounded-full text-brandRed cursor-default">Python</span>
+              <span class="highlight-chip text-xs font-bold px-3 py-1.5 rounded-full text-brandRed cursor-default">React</span>
+              <span class="highlight-chip text-xs font-bold px-3 py-1.5 rounded-full text-brandRed cursor-default">AWS Cloud</span>
+              <span class="highlight-chip text-xs font-bold px-3 py-1.5 rounded-full text-brandRed cursor-default">Full Stack</span>
+              <span class="highlight-chip text-xs font-bold px-3 py-1.5 rounded-full text-brandRed cursor-default">Data Science</span>
+              <span class="highlight-chip text-xs font-bold px-3 py-1.5 rounded-full text-brandRed cursor-default">DevOps</span>
+            </div>
+
             <div class="flex flex-wrap justify-center lg:justify-start gap-4 mb-12 hero-animate-4">
-              <a href="tel:9866634443"
-                class="bg-brandRed text-white px-10 py-5 rounded-full font-bold shadow-xl shadow-blue-200 btn-press flex items-center">
+              <a href="tel:9866634443" class="bg-brandRed text-white px-10 py-5 rounded-full font-bold shadow-xl shadow-blue-200 btn-press flex items-center">
                 Start Training <i class="fa-solid fa-arrow-right ml-3 text-sm"></i>
               </a>
               <a href="https://wa.me/919502504742" target="_blank"
@@ -250,7 +420,7 @@
                 <i class="fa-brands fa-whatsapp mr-3 text-xl"></i> WhatsApp Us
               </a>
             </div>
- 
+
             <div class="flex items-center justify-center lg:justify-start gap-12 hero-animate-5">
               <div>
                 <p class="text-3xl font-black text-slate-900 stat-num">500+</p>
@@ -261,12 +431,36 @@
                 <p class="text-3xl font-black text-slate-900 stat-num">10+</p>
                 <p class="text-xs uppercase font-bold tracking-widest text-slate-400">Years Experience</p>
               </div>
+              <div class="w-px h-10 bg-slate-200"></div>
+              <div>
+                <p class="text-3xl font-black text-slate-900 stat-num">4.9★</p>
+                <p class="text-xs uppercase font-bold tracking-widest text-slate-400">Student Rating</p>
+              </div>
             </div>
           </div>
- 
+
           <div class="lg:col-span-5 mt-16 lg:mt-0 relative hero-img-animate">
             <div class="relative z-10 animate-float">
               <img src="Coding workshop-bro.svg" alt="Training Illustration" class="w-full h-auto drop-shadow-2xl" />
+            </div>
+            <!-- Floating info cards -->
+            <div class="absolute -left-6 top-1/4 bg-white rounded-2xl shadow-xl p-4 flex items-center gap-3 border border-blue-50 z-20 animate-float" style="animation-delay:1s;">
+              <div class="w-10 h-10 bg-green-50 rounded-xl flex items-center justify-center">
+                <i class="fa-solid fa-check text-green-500"></i>
+              </div>
+              <div>
+                <p class="text-xs font-black text-slate-900">Experienced Guidance</p>
+                <p class="text-xs text-slate-400">15+ years of mentor experience</p>
+              </div>
+            </div>
+            <div class="absolute -right-4 bottom-1/4 bg-white rounded-2xl shadow-xl p-4 flex items-center gap-3 border border-blue-50 z-20 animate-float" style="animation-delay:2s;">
+              <div class="w-10 h-10 bg-blue-50 rounded-xl flex items-center justify-center">
+                <i class="fa-solid fa-briefcase text-brandRed"></i>
+              </div>
+              <div>
+                <p class="text-xs font-black text-slate-900">Induatry ready Training</p>
+                <p class="text-xs text-slate-400">Expert led growrth</p>
+              </div>
             </div>
             <div class="absolute -top-10 -right-10 w-72 h-72 bg-blue-50 rounded-full blur-3xl -z-0"></div>
             <div class="absolute -bottom-20 -left-20 w-56 h-56 bg-blue-100/50 rounded-full blur-2xl -z-0"></div>
@@ -274,15 +468,16 @@
         </div>
       </div>
     </section>
- 
-    <!-- Trust Badges — auto-scrolling ticker, no scroll dependency -->
-    <section class="bg-brandRed py-12 overflow-hidden">
+
+    <!-- ═══════════════════════════════════════════
+         TRUST BADGES TICKER
+    ═══════════════════════════════════════════ -->
+    <section class="bg-brandRed py-12 overflow-hidden relative marquee-fade">
       <div class="max-w-7xl mx-auto px-4 text-center mb-8">
         <p class="text-white/70 text-xs font-bold uppercase tracking-[0.3em]">Our Students are Hired by</p>
       </div>
       <div class="overflow-hidden">
         <div class="ticker-track">
-          <!-- duplicated for seamless loop -->
           <span class="text-white text-2xl font-black italic px-12 opacity-70">TCS</span>
           <span class="text-white text-2xl font-black italic px-12 opacity-70">Wipro</span>
           <span class="text-white text-2xl font-black italic px-12 opacity-70">Infosys</span>
@@ -290,6 +485,8 @@
           <span class="text-white text-2xl font-black italic px-12 opacity-70">HCL</span>
           <span class="text-white text-2xl font-black italic px-12 opacity-70">Cognizant</span>
           <span class="text-white text-2xl font-black italic px-12 opacity-70">Tech Mahindra</span>
+          <span class="text-white text-2xl font-black italic px-12 opacity-70">Capgemini</span>
+          <span class="text-white text-2xl font-black italic px-12 opacity-70">IBM</span>
           <span class="text-white text-2xl font-black italic px-12 opacity-70">TCS</span>
           <span class="text-white text-2xl font-black italic px-12 opacity-70">Wipro</span>
           <span class="text-white text-2xl font-black italic px-12 opacity-70">Infosys</span>
@@ -297,137 +494,405 @@
           <span class="text-white text-2xl font-black italic px-12 opacity-70">HCL</span>
           <span class="text-white text-2xl font-black italic px-12 opacity-70">Cognizant</span>
           <span class="text-white text-2xl font-black italic px-12 opacity-70">Tech Mahindra</span>
+          <span class="text-white text-2xl font-black italic px-12 opacity-70">Capgemini</span>
+          <span class="text-white text-2xl font-black italic px-12 opacity-70">IBM</span>
         </div>
       </div>
     </section>
- 
-    <!-- Core Features -->
+
+    <!-- ═══════════════════════════════════════════
+         STATS SECTION (NEW)
+    ═══════════════════════════════════════════ -->
+    <section class="py-20 bg-slate-50 relative overflow-hidden">
+      <div class="absolute inset-0 bg-pattern pointer-events-none opacity-30"></div>
+      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+          <div class="stat-card bg-white rounded-3xl p-8 text-center border border-slate-100 card-hover reveal cursor-default">
+            <i class="fa-solid fa-users stat-icon text-brandRed text-3xl mb-4 block"></i>
+            <p class="stat-value text-4xl font-black text-slate-900 mb-2">500+</p>
+            <p class="stat-label text-sm font-bold text-slate-400 uppercase tracking-widest">Students Placed</p>
+          </div>
+          <div class="stat-card bg-white rounded-3xl p-8 text-center border border-slate-100 card-hover reveal reveal-delay-1 cursor-default">
+            <i class="fa-solid fa-building stat-icon text-brandRed text-3xl mb-4 block"></i>
+            <p class="stat-value text-4xl font-black text-slate-900 mb-2">50+</p>
+            <p class="stat-label text-sm font-bold text-slate-400 uppercase tracking-widest">Partner Companies</p>
+          </div>
+          <div class="stat-card bg-white rounded-3xl p-8 text-center border border-slate-100 card-hover reveal reveal-delay-2 cursor-default">
+            <i class="fa-solid fa-book-open stat-icon text-brandRed text-3xl mb-4 block"></i>
+            <p class="stat-value text-4xl font-black text-slate-900 mb-2">15+</p>
+            <p class="stat-label text-sm font-bold text-slate-400 uppercase tracking-widest">Courses Offered</p>
+          </div>
+          <div class="stat-card bg-white rounded-3xl p-8 text-center border border-slate-100 card-hover reveal reveal-delay-3 cursor-default">
+            <i class="fa-solid fa-star stat-icon text-brandRed text-3xl mb-4 block"></i>
+            <p class="stat-value text-4xl font-black text-slate-900 mb-2">98%</p>
+            <p class="stat-label text-sm font-bold text-slate-400 uppercase tracking-widest">Satisfaction Rate</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════
+         CORE FEATURES
+    ═══════════════════════════════════════════ -->
     <section class="py-24 bg-white relative">
       <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div class="text-center mb-20">
+        <div class="text-center mb-20 reveal">
           <h2 class="text-brandRed font-bold uppercase tracking-widest text-sm mb-4">Why Success Consultancy</h2>
           <h3 class="text-4xl md:text-5xl font-black text-slate-900">Built for Your Professional <span class="bg-blue-50 px-2">Growth</span></h3>
         </div>
- 
+
         <div class="grid md:grid-cols-3 gap-10">
-          <div class="p-10 rounded-[2.5rem] bg-white border border-slate-100 card-hover">
+          <div class="p-10 rounded-[2.5rem] bg-white border border-slate-100 card-hover reveal">
             <div class="w-16 h-16 bg-blue-50 rounded-2xl flex items-center justify-center text-brandRed mb-8 border border-blue-100 icon-ring icon-bounce">
               <i class="fa-solid fa-graduation-cap text-2xl"></i>
             </div>
             <h4 class="text-2xl font-bold mb-4 text-slate-900">Expert-Led Training</h4>
             <p class="text-slate-600 leading-relaxed">Curriculum designed by industry experts focusing on interview-critical skills and practical knowledge.</p>
+            <ul class="mt-6 space-y-2">
+              <li class="flex items-center gap-2 text-sm text-slate-500"><i class="fa-solid fa-circle-check text-brandRed text-xs"></i> Live online & offline batches</li>
+              <li class="flex items-center gap-2 text-sm text-slate-500"><i class="fa-solid fa-circle-check text-brandRed text-xs"></i> Real project experience</li>
+              <li class="flex items-center gap-2 text-sm text-slate-500"><i class="fa-solid fa-circle-check text-brandRed text-xs"></i> LMS portal access</li>
+            </ul>
           </div>
- 
-          <div class="p-10 rounded-[2.5rem] bg-white border border-slate-100 card-hover">
+
+          <div class="p-10 rounded-[2.5rem] bg-white border border-slate-100 card-hover reveal reveal-delay-1">
             <div class="w-16 h-16 bg-blue-50 rounded-2xl flex items-center justify-center text-brandRed mb-8 border border-blue-100 icon-ring icon-bounce">
               <i class="fa-solid fa-user-check text-2xl"></i>
             </div>
             <h4 class="text-2xl font-bold mb-4 text-slate-900">Mock Interviews</h4>
             <p class="text-slate-600 leading-relaxed">Rigorous mock interview sessions and aptitude training to build confidence and refine performance.</p>
+            <ul class="mt-6 space-y-2">
+              <li class="flex items-center gap-2 text-sm text-slate-500"><i class="fa-solid fa-circle-check text-brandRed text-xs"></i> HR + Technical rounds</li>
+              <li class="flex items-center gap-2 text-sm text-slate-500"><i class="fa-solid fa-circle-check text-brandRed text-xs"></i> Group discussion prep</li>
+              <li class="flex items-center gap-2 text-sm text-slate-500"><i class="fa-solid fa-circle-check text-brandRed text-xs"></i> Weekly aptitude tests</li>
+            </ul>
           </div>
- 
-          <div class="p-10 rounded-[2.5rem] bg-white border border-slate-100 card-hover">
+
+          <div class="p-10 rounded-[2.5rem] bg-white border border-slate-100 card-hover reveal reveal-delay-2">
             <div class="w-16 h-16 bg-blue-50 rounded-2xl flex items-center justify-center text-brandRed mb-8 border border-blue-100 icon-ring icon-bounce">
               <i class="fa-solid fa-briefcase text-2xl"></i>
             </div>
             <h4 class="text-2xl font-bold mb-4 text-slate-900">Placement Support</h4>
             <p class="text-slate-600 leading-relaxed">Comprehensive resume building and direct placement opportunities in top-tier MNCs across India.</p>
+            <ul class="mt-6 space-y-2">
+              <li class="flex items-center gap-2 text-sm text-slate-500"><i class="fa-solid fa-circle-check text-brandRed text-xs"></i> Resume building & review</li>
+              <li class="flex items-center gap-2 text-sm text-slate-500"><i class="fa-solid fa-circle-check text-brandRed text-xs"></i> LinkedIn profile optimization</li>
+              <li class="flex items-center gap-2 text-sm text-slate-500"><i class="fa-solid fa-circle-check text-brandRed text-xs"></i> Direct MNC referrals</li>
+            </ul>
           </div>
         </div>
       </div>
     </section>
- 
-    <!-- Course Highlights -->
-    <section class="py-24 bg-white">
+
+    <!-- ═══════════════════════════════════════════
+         HOW IT WORKS / PROCESS (NEW)
+    ═══════════════════════════════════════════ -->
+    <section id="process" class="py-24 bg-slate-50 relative overflow-hidden">
+      <div class="absolute inset-0 bg-pattern pointer-events-none opacity-20"></div>
+      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-20 reveal">
+          <h2 class="text-brandRed font-bold uppercase tracking-widest text-sm mb-4">Simple 4-Step Journey</h2>
+          <h3 class="text-4xl md:text-5xl font-black text-slate-900">From Enrollment to <span class="gradient-text">Dream Job</span></h3>
+        </div>
+
+        <div class="grid md:grid-cols-4 gap-8 relative">
+          <!-- connector lines for desktop -->
+          <div class="hidden md:block absolute top-12 left-[calc(12.5%+20px)] right-[calc(12.5%+20px)] h-0.5 bg-gradient-to-r from-blue-200 via-brandRed to-blue-200 opacity-30 z-0"></div>
+
+          <div class="relative z-10 text-center reveal">
+            <div class="w-16 h-16 bg-brandRed rounded-2xl flex items-center justify-center text-white text-2xl font-black mx-auto mb-6 shadow-lg shadow-blue-200 timeline-dot">1</div>
+            <h5 class="font-bold text-slate-900 mb-3 text-lg">Enroll</h5>
+            <p class="text-slate-500 text-sm leading-relaxed">Choose your course and register online or visit our Tirupati centre.</p>
+          </div>
+          <div class="relative z-10 text-center reveal reveal-delay-1">
+            <div class="w-16 h-16 bg-blue-100 rounded-2xl flex items-center justify-center text-brandRed text-2xl font-black mx-auto mb-6 shadow-lg shadow-blue-100 timeline-dot" style="animation-delay:0.5s;">2</div>
+            <h5 class="font-bold text-slate-900 mb-3 text-lg">Learn</h5>
+            <p class="text-slate-500 text-sm leading-relaxed">Attend expert-led sessions, build real projects, and gain hands-on skills.</p>
+          </div>
+          <div class="relative z-10 text-center reveal reveal-delay-2">
+            <div class="w-16 h-16 bg-blue-100 rounded-2xl flex items-center justify-center text-brandRed text-2xl font-black mx-auto mb-6 shadow-lg shadow-blue-100 timeline-dot" style="animation-delay:1s;">3</div>
+            <h5 class="font-bold text-slate-900 mb-3 text-lg">Practice</h5>
+            <p class="text-slate-500 text-sm leading-relaxed">Mock interviews, aptitude tests, and resume workshops to sharpen your edge.</p>
+          </div>
+          <div class="relative z-10 text-center reveal reveal-delay-3">
+            <div class="w-16 h-16 bg-brandRed rounded-2xl flex items-center justify-center text-white text-2xl font-black mx-auto mb-6 shadow-lg shadow-blue-200 timeline-dot" style="animation-delay:1.5s;">4</div>
+            <h5 class="font-bold text-slate-900 mb-3 text-lg">Get Placed</h5>
+            <p class="text-slate-500 text-sm leading-relaxed">Get referred to top MNCs and land your dream offer with our placement team.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════
+         COURSE HIGHLIGHTS
+    ═══════════════════════════════════════════ -->
+    <section id="courses" class="py-24 bg-white">
       <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div class="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6">
-          <div>
+          <div class="reveal">
             <h2 class="text-brandRed font-bold uppercase tracking-widest text-sm mb-4">Professional Tracks</h2>
             <h3 class="text-4xl md:text-5xl font-black text-slate-900">Find Your Path</h3>
           </div>
-          <div>
+          <div class="reveal">
             <a href="courses.html" class="inline-flex items-center font-bold text-brandRed gap-2 hover:gap-4 transition-all duration-300">
               View All Programs <i class="fa-solid fa-arrow-right-long"></i>
             </a>
           </div>
         </div>
- 
+
         <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
-          <a href="course-programming.html" class="course-card group p-8 rounded-[2rem] border border-slate-100 bg-white card-hover text-center">
+          <a href="course-programming.html" class="course-card group p-8 rounded-[2rem] border border-slate-100 bg-white card-hover text-center reveal">
             <div class="course-icon w-16 h-16 bg-blue-50 rounded-2xl flex items-center justify-center text-brandRed mx-auto mb-8">
               <i class="fa-solid fa-code text-2xl"></i>
             </div>
             <h5 class="font-bold text-slate-900 mb-3">Programming</h5>
-            <p class="text-slate-500 text-sm mb-6">Master Java, Python, and C++ from scratch to advanced.</p>
+            <p class="text-slate-500 text-sm mb-4">Master Java, Python, and C++ from scratch to advanced.</p>
+            <p class="text-xs text-brandRed font-bold mb-6">3 months · Beginner–Advanced</p>
             <div class="course-line"></div>
           </a>
- 
-          <a href="course-web.html" class="course-card group p-8 rounded-[2rem] border border-slate-100 bg-white card-hover text-center">
+
+          <a href="course-web.html" class="course-card group p-8 rounded-[2rem] border border-slate-100 bg-white card-hover text-center reveal reveal-delay-1">
             <div class="course-icon w-16 h-16 bg-blue-50 rounded-2xl flex items-center justify-center text-brandRed mx-auto mb-8">
               <i class="fa-solid fa-laptop-code text-2xl"></i>
             </div>
             <h5 class="font-bold text-slate-900 mb-3">Web Dev</h5>
-            <p class="text-slate-500 text-sm mb-6">Build modern and responsive websites using React & JS.</p>
+            <p class="text-slate-500 text-sm mb-4">Build modern and responsive websites using React & JS.</p>
+            <p class="text-xs text-brandRed font-bold mb-6">4 months · Intermediate</p>
             <div class="course-line"></div>
           </a>
- 
-          <a href="course-fullstack.html" class="course-card group p-8 rounded-[2rem] border border-slate-100 bg-white card-hover text-center">
+
+          <a href="course-fullstack.html" class="course-card group p-8 rounded-[2rem] border border-slate-100 bg-white card-hover text-center reveal reveal-delay-2">
             <div class="course-icon w-16 h-16 bg-blue-50 rounded-2xl flex items-center justify-center text-brandRed mx-auto mb-8">
               <i class="fa-solid fa-layer-group text-2xl"></i>
             </div>
             <h5 class="font-bold text-slate-900 mb-3">Full Stack</h5>
-            <p class="text-slate-500 text-sm mb-6">Become a 360-degree developer capable of total delivery.</p>
+            <p class="text-slate-500 text-sm mb-4">Become a 360-degree developer capable of total delivery.</p>
+            <p class="text-xs text-brandRed font-bold mb-6">6 months · All Levels</p>
             <div class="course-line"></div>
           </a>
- 
-          <a href="course-data.html" class="course-card group p-8 rounded-[2rem] border border-slate-100 bg-white card-hover text-center">
+
+          <a href="course-data.html" class="course-card group p-8 rounded-[2rem] border border-slate-100 bg-white card-hover text-center reveal reveal-delay-3">
             <div class="course-icon w-16 h-16 bg-blue-50 rounded-2xl flex items-center justify-center text-brandRed mx-auto mb-8">
               <i class="fa-solid fa-brain text-2xl"></i>
             </div>
             <h5 class="font-bold text-slate-900 mb-3">Data Science</h5>
-            <p class="text-slate-500 text-sm mb-6">Analyze and interpret complex data to drive strategy.</p>
+            <p class="text-slate-500 text-sm mb-4">Analyze and interpret complex data to drive strategy.</p>
+            <p class="text-xs text-brandRed font-bold mb-6">5 months · Intermediate</p>
+            <div class="course-line"></div>
+          </a>
+        </div>
+
+        <!-- Extra courses row (NEW) -->
+        <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-6">
+          <a href="#" class="course-card group p-8 rounded-[2rem] border border-slate-100 bg-white card-hover text-center reveal">
+            <div class="course-icon w-16 h-16 bg-blue-50 rounded-2xl flex items-center justify-center text-brandRed mx-auto mb-8">
+              <i class="fa-brands fa-aws text-2xl"></i>
+            </div>
+            <h5 class="font-bold text-slate-900 mb-3">AWS Cloud</h5>
+            <p class="text-slate-500 text-sm mb-4">Get certified and deploy production workloads on AWS.</p>
+            <p class="text-xs text-brandRed font-bold mb-6">3 months · Intermediate</p>
+            <div class="course-line"></div>
+          </a>
+          <a href="#" class="course-card group p-8 rounded-[2rem] border border-slate-100 bg-white card-hover text-center reveal reveal-delay-1">
+            <div class="course-icon w-16 h-16 bg-blue-50 rounded-2xl flex items-center justify-center text-brandRed mx-auto mb-8">
+              <i class="fa-solid fa-infinity text-2xl"></i>
+            </div>
+            <h5 class="font-bold text-slate-900 mb-3">DevOps</h5>
+            <p class="text-slate-500 text-sm mb-4">CI/CD, Docker, Kubernetes, Jenkins — end to end automation.</p>
+            <p class="text-xs text-brandRed font-bold mb-6">4 months · Advanced</p>
+            <div class="course-line"></div>
+          </a>
+          <a href="#" class="course-card group p-8 rounded-[2rem] border border-slate-100 bg-white card-hover text-center reveal reveal-delay-2">
+            <div class="course-icon w-16 h-16 bg-blue-50 rounded-2xl flex items-center justify-center text-brandRed mx-auto mb-8">
+              <i class="fa-solid fa-robot text-2xl"></i>
+            </div>
+            <h5 class="font-bold text-slate-900 mb-3">AI & ML</h5>
+            <p class="text-slate-500 text-sm mb-4">Build intelligent systems with TensorFlow and PyTorch.</p>
+            <p class="text-xs text-brandRed font-bold mb-6">5 months · Advanced</p>
             <div class="course-line"></div>
           </a>
         </div>
       </div>
     </section>
- 
-    <!-- CTA -->
+
+   
+    <!-- ═══════════════════════════════════════════
+         FAQ SECTION (NEW)
+    ═══════════════════════════════════════════ -->
+    <section id="faq" class="py-24 bg-white relative">
+      <div class="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-16 reveal">
+          <h2 class="text-brandRed font-bold uppercase tracking-widest text-sm mb-4">Got Questions?</h2>
+          <h3 class="text-4xl md:text-5xl font-black text-slate-900">Frequently Asked <span class="gradient-text">Questions</span></h3>
+        </div>
+
+        <div class="space-y-4" id="faqContainer">
+          <div class="faq-item border border-slate-100 rounded-2xl overflow-hidden reveal">
+            <button class="faq-trigger w-full flex items-center justify-between px-8 py-6 text-left font-bold text-slate-900 hover:text-brandRed transition-colors bg-white">
+              <span>Who can enroll in your courses?</span>
+              <i class="fa-solid fa-chevron-down faq-chevron text-brandRed text-sm flex-shrink-0 ml-4"></i>
+            </button>
+            <div class="faq-answer px-8 text-slate-600 text-sm leading-relaxed bg-slate-50">
+              <div class="pb-6">Anyone can enroll — whether you're a fresh graduate, a working professional looking to upskill, or someone switching careers from a non-IT background. We have beginner to advanced tracks tailored for every level.</div>
+            </div>
+          </div>
+
+          <div class="faq-item border border-slate-100 rounded-2xl overflow-hidden reveal reveal-delay-1">
+            <button class="faq-trigger w-full flex items-center justify-between px-8 py-6 text-left font-bold text-slate-900 hover:text-brandRed transition-colors bg-white">
+              <span>Are classes online or offline?</span>
+              <i class="fa-solid fa-chevron-down faq-chevron text-brandRed text-sm flex-shrink-0 ml-4"></i>
+            </button>
+            <div class="faq-answer px-8 text-slate-600 text-sm leading-relaxed bg-slate-50">
+              <div class="pb-6">We offer both! Our Tirupati centre hosts daily in-person batches. We also have live online sessions for students across India. Recorded sessions are available on our LMS portal for revision.</div>
+            </div>
+          </div>
+
+          <div class="faq-item border border-slate-100 rounded-2xl overflow-hidden reveal reveal-delay-2">
+            <button class="faq-trigger w-full flex items-center justify-between px-8 py-6 text-left font-bold text-slate-900 hover:text-brandRed transition-colors bg-white">
+              <span>Is placement guaranteed after completing a course?</span>
+              <i class="fa-solid fa-chevron-down faq-chevron text-brandRed text-sm flex-shrink-0 ml-4"></i>
+            </button>
+            <div class="faq-answer px-8 text-slate-600 text-sm leading-relaxed bg-slate-50">
+              <div class="pb-6">We provide dedicated placement support including resume prep, mock interviews, and direct referrals to our 50+ partner companies. While we can't guarantee placement (no ethical institution can), our 98% student satisfaction and 500+ placement record speak for themselves.</div>
+            </div>
+          </div>
+
+          <div class="faq-item border border-slate-100 rounded-2xl overflow-hidden reveal reveal-delay-3">
+            <button class="faq-trigger w-full flex items-center justify-between px-8 py-6 text-left font-bold text-slate-900 hover:text-brandRed transition-colors bg-white">
+              <span>What are the course fees?</span>
+              <i class="fa-solid fa-chevron-down faq-chevron text-brandRed text-sm flex-shrink-0 ml-4"></i>
+            </button>
+            <div class="faq-answer px-8 text-slate-600 text-sm leading-relaxed bg-slate-50">
+              <div class="pb-6">Fees vary by course and duration. We offer flexible EMI options and occasional scholarships for deserving candidates. Please call us at +91-9866634443 or WhatsApp for the latest pricing and ongoing offers.</div>
+            </div>
+          </div>
+
+          <div class="faq-item border border-slate-100 rounded-2xl overflow-hidden reveal">
+            <button class="faq-trigger w-full flex items-center justify-between px-8 py-6 text-left font-bold text-slate-900 hover:text-brandRed transition-colors bg-white">
+              <span>How long does it take to get placed after training?</span>
+              <i class="fa-solid fa-chevron-down faq-chevron text-brandRed text-sm flex-shrink-0 ml-4"></i>
+            </button>
+            <div class="faq-answer px-8 text-slate-600 text-sm leading-relaxed bg-slate-50">
+              <div class="pb-6">Most of our students start receiving interview calls within 1–4 weeks of completing placement preparation. Active effort from the student — attending mock interviews and applying consistently — significantly speeds up the process.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════
+         CONTACT / LOCATION (NEW)
+    ═══════════════════════════════════════════ -->
+    <section class="py-24 bg-slate-50 relative overflow-hidden">
+      <div class="absolute inset-0 bg-pattern pointer-events-none opacity-20"></div>
+      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-16 reveal">
+          <h2 class="text-brandRed font-bold uppercase tracking-widest text-sm mb-4">We're Right Here</h2>
+          <h3 class="text-4xl md:text-5xl font-black text-slate-900">Visit Us in <span class="gradient-text">Tirupati</span></h3>
+        </div>
+
+        <div class="grid lg:grid-cols-2 gap-12 items-center">
+          <div class="space-y-6 reveal">
+            <div class="bg-white rounded-3xl p-8 border border-slate-100 card-hover flex items-start gap-6">
+              <div class="w-14 h-14 bg-blue-50 rounded-2xl flex items-center justify-center text-brandRed flex-shrink-0">
+                <i class="fa-solid fa-location-dot text-xl"></i>
+              </div>
+              <div>
+                <h5 class="font-bold text-slate-900 mb-2">Address</h5>
+                <p class="text-slate-500 text-sm leading-relaxed">D No: 23-8-69/11, RC Road, Beside Harsha Residency Hotel, Tirupati – 517 501, Andhra Pradesh</p>
+              </div>
+            </div>
+            <div class="bg-white rounded-3xl p-8 border border-slate-100 card-hover flex items-start gap-6">
+              <div class="w-14 h-14 bg-blue-50 rounded-2xl flex items-center justify-center text-brandRed flex-shrink-0">
+                <i class="fa-solid fa-phone text-xl"></i>
+              </div>
+              <div>
+                <h5 class="font-bold text-slate-900 mb-2">Phone</h5>
+                <a href="tel:9866634443" class="text-brandRed font-bold hover:underline">+91-9866634443</a>
+                <p class="text-slate-400 text-xs mt-1">Mon–Sat, 9 AM – 7 PM</p>
+              </div>
+            </div>
+            <div class="bg-white rounded-3xl p-8 border border-slate-100 card-hover flex items-start gap-6">
+              <div class="w-14 h-14 bg-blue-50 rounded-2xl flex items-center justify-center text-brandRed flex-shrink-0">
+                <i class="fa-solid fa-envelope text-xl"></i>
+              </div>
+              <div>
+                <h5 class="font-bold text-slate-900 mb-2">Email</h5>
+                <a href="mailto:successconsultancy0808@gmail.com" class="text-brandRed font-bold hover:underline text-sm">successconsultancy0808@gmail.com</a>
+                <p class="text-slate-400 text-xs mt-1">We typically reply within 24 hours</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Map embed -->
+          <div class="reveal reveal-delay-1">
+            <div class="rounded-3xl overflow-hidden shadow-xl border border-slate-100 h-96">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3878.5!2d79.4192!3d13.6288!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTPCsDM3JzQ0LjMiTiA3OcKwMjUnMDkuMSJF!5e0!3m2!1sen!2sin!4v1234567890"
+                width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+                title="Success Consultancy Location">
+              </iframe>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════
+         CTA
+    ═══════════════════════════════════════════ -->
     <section class="py-24">
       <div class="mx-auto max-w-6xl px-4 text-center">
-        <div class="bg-slate-900 rounded-[4rem] px-10 py-16 md:py-24 relative overflow-hidden">
+        <div class="bg-slate-900 rounded-[4rem] px-10 py-16 md:py-24 relative overflow-hidden reveal">
           <div class="absolute -top-10 -right-10 w-40 h-40 bg-brandRed/20 rounded-full blob"></div>
           <div class="absolute -bottom-10 -left-10 w-40 h-40 bg-brandRed/20 rounded-full blob-delay"></div>
- 
+          <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-blue-500/5 rounded-full blur-3xl"></div>
+
           <div class="relative z-10 max-w-3xl mx-auto">
+            <div class="inline-flex items-center gap-2 bg-white/10 border border-white/20 rounded-full px-5 py-2 mb-8">
+              <span class="w-2 h-2 bg-green-400 rounded-full animate-pulse"></span>
+              <span class="text-white/80 text-sm font-semibold">Next batch starting soon · Limited seats</span>
+            </div>
             <h2 class="text-4xl md:text-5xl font-black text-white mb-8">Ready to Transform Your Career?</h2>
             <p class="text-white/60 text-lg mb-12">
-              Join our upcoming batch and start your journey towards a rewarding career with expert guidance.
+              Join our upcoming batch and start your journey towards a rewarding career with expert guidance and placement support.
             </p>
             <div class="flex flex-wrap justify-center gap-6">
-              <a href="contact.html"
-                class="bg-brandRed text-white px-12 py-5 rounded-full font-bold btn-press">Enroll Now</a>
-              <a href="courses.html"
-                class="bg-white/10 text-white border border-white/20 px-12 py-5 rounded-full font-bold btn-press hover:bg-white/20 transition-colors">Browse Courses</a>
+              <a href="contact.html" class="bg-brandRed text-white px-12 py-5 rounded-full font-bold btn-press">Enroll Now</a>
+              <a href="courses.html" class="bg-white/10 text-white border border-white/20 px-12 py-5 rounded-full font-bold btn-press hover:bg-white/20 transition-colors">Browse Courses</a>
             </div>
           </div>
         </div>
       </div>
     </section>
   </main>
- 
-  <!-- Footer -->
+
+  <!-- ═══════════════════════════════════════════
+       FOOTER
+  ═══════════════════════════════════════════ -->
   <footer class="bg-white pt-24 pb-12 border-t border-slate-100">
     <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
       <div class="grid lg:grid-cols-12 gap-16 mb-20">
         <div class="lg:col-span-5">
           <div class="flex items-center gap-3 mb-8">
-            <img src="logo.jpg" alt="Logo" class="h-10 w-10 rounded-full" />
+            <div class="w-10 h-10 bg-brandRed rounded-xl flex items-center justify-center">
+              <i class="fa-solid fa-graduation-cap text-white text-sm"></i>
+            </div>
             <span class="text-xl font-black text-slate-900">Success Consultancy</span>
           </div>
           <p class="text-slate-500 leading-relaxed mb-10 max-w-sm">
             Empowering students through industry-focused training and reliable placement assistance since 2014. Located in the heart of Tirupati.
           </p>
+          <!-- Newsletter signup -->
+          <div class="mb-8">
+            <p class="text-xs font-bold uppercase tracking-widest text-slate-400 mb-3">Get Course Updates</p>
+            <div class="flex gap-2">
+              <input type="email" placeholder="your@email.com" class="flex-1 bg-slate-50 border border-slate-200 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-brandRed transition-colors" />
+              <button class="bg-brandRed text-white px-5 py-3 rounded-xl text-sm font-bold btn-press">
+                <i class="fa-solid fa-paper-plane"></i>
+              </button>
+            </div>
+          </div>
           <div class="flex gap-4">
             <a href="#" class="social-btn w-12 h-12 bg-slate-50 rounded-2xl flex items-center justify-center text-slate-400 hover:text-brandRed hover:bg-blue-50">
               <i class="fa-brands fa-facebook-f"></i></a>
@@ -435,9 +900,13 @@
               <i class="fa-brands fa-linkedin-in"></i></a>
             <a href="#" class="social-btn w-12 h-12 bg-slate-50 rounded-2xl flex items-center justify-center text-slate-400 hover:text-brandRed hover:bg-blue-50">
               <i class="fa-brands fa-instagram"></i></a>
+            <a href="https://wa.me/919502504742" target="_blank" class="social-btn w-12 h-12 bg-slate-50 rounded-2xl flex items-center justify-center text-slate-400 hover:text-green-500 hover:bg-green-50">
+              <i class="fa-brands fa-whatsapp"></i></a>
+            <a href="https://www.youtube.com" target="_blank" class="social-btn w-12 h-12 bg-slate-50 rounded-2xl flex items-center justify-center text-slate-400 hover:text-red-500 hover:bg-red-50">
+              <i class="fa-brands fa-youtube"></i></a>
           </div>
         </div>
- 
+
         <div class="lg:col-span-2">
           <h6 class="font-bold text-slate-900 mb-8 uppercase tracking-widest text-xs">Explore</h6>
           <ul class="space-y-4">
@@ -445,9 +914,10 @@
             <li><a href="about.html" class="text-slate-500 hover:text-brandRed transition-colors">About</a></li>
             <li><a href="services.html" class="text-slate-500 hover:text-brandRed transition-colors">Services</a></li>
             <li><a href="courses.html" class="text-slate-500 hover:text-brandRed transition-colors">Courses</a></li>
+            <li><a href="contact.html" class="text-slate-500 hover:text-brandRed transition-colors">Contact</a></li>
           </ul>
         </div>
- 
+
         <div class="lg:col-span-2">
           <h6 class="font-bold text-slate-900 mb-8 uppercase tracking-widest text-xs">Featured</h6>
           <ul class="space-y-4">
@@ -455,15 +925,21 @@
             <li><a href="course-data.html" class="text-slate-500 hover:text-brandRed transition-colors">Data Science</a></li>
             <li><a href="course-fullstack.html" class="text-slate-500 hover:text-brandRed transition-colors">Full Stack</a></li>
             <li><a href="course-programming.html" class="text-slate-500 hover:text-brandRed transition-colors">Java/Python</a></li>
+            <li><a href="#" class="text-slate-500 hover:text-brandRed transition-colors">AWS Cloud</a></li>
+            <li><a href="#" class="text-slate-500 hover:text-brandRed transition-colors">DevOps</a></li>
           </ul>
         </div>
- 
+
         <div class="lg:col-span-3">
           <h6 class="font-bold text-slate-900 mb-8 uppercase tracking-widest text-xs">Support</h6>
           <ul class="space-y-6">
             <li class="flex items-start gap-4 text-slate-500">
               <i class="fa-solid fa-phone text-brandRed mt-1"></i>
               <a href="tel:9866634443" class="hover:text-brandRed transition-colors">+91-9866634443</a>
+            </li>
+            <li class="flex items-start gap-4 text-slate-500">
+              <i class="fa-brands fa-whatsapp text-green-500 mt-1"></i>
+              <a href="https://wa.me/919502504742" target="_blank" class="hover:text-brandRed transition-colors">+91-9502504742</a>
             </li>
             <li class="flex items-start gap-4 text-slate-500">
               <i class="fa-solid fa-envelope text-brandRed mt-1"></i>
@@ -476,22 +952,29 @@
           </ul>
         </div>
       </div>
- 
+
       <div class="pt-12 border-t border-slate-100 flex flex-col md:flex-row justify-between items-center gap-6">
         <p class="text-slate-400 text-sm">© <span id="year"></span> Success Consultancy and Services. All rights reserved.</p>
         <div class="flex gap-8 text-sm text-slate-400">
           <a href="#" class="hover:text-brandRed transition-colors">Privacy Policy</a>
           <a href="#" class="hover:text-brandRed transition-colors">Terms & Conditions</a>
+          <a href="sitemap.html" class="hover:text-brandRed transition-colors">Sitemap</a>
         </div>
       </div>
     </div>
   </footer>
- 
+
+  <!-- Floating WhatsApp button -->
+  <a href="https://wa.me/919502504742" target="_blank"
+    class="fixed bottom-6 right-6 z-50 w-14 h-14 bg-green-500 rounded-full flex items-center justify-center shadow-xl hover:bg-green-600 transition-all duration-300 hover:scale-110 btn-press">
+    <i class="fa-brands fa-whatsapp text-white text-2xl"></i>
+  </a>
+
   <script>
     document.addEventListener('DOMContentLoaded', function () {
       document.getElementById("year").textContent = new Date().getFullYear();
- 
-      // Scroll progress bar — lightweight rAF loop
+
+      // ── Scroll progress bar ──
       const bar = document.getElementById('scroll-progress');
       function updateBar() {
         const scrollTop = window.scrollY;
@@ -499,6 +982,81 @@
         bar.style.width = (docHeight > 0 ? (scrollTop / docHeight) * 100 : 0) + '%';
       }
       window.addEventListener('scroll', updateBar, { passive: true });
+
+      // ── Sticky nav ──
+      const nav = document.getElementById('mainNav');
+      window.addEventListener('scroll', () => {
+        if (window.scrollY > 50) nav.classList.add('nav-scrolled');
+        else nav.classList.remove('nav-scrolled');
+      }, { passive: true });
+
+      // ── Mobile menu ──
+      document.getElementById('mobileMenuBtn').addEventListener('click', function () {
+        const menu = document.getElementById('mobileMenu');
+        menu.classList.toggle('hidden');
+      });
+
+      // ── Scroll reveal ──
+      const revealEls = document.querySelectorAll('.reveal');
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+            observer.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.12 });
+      revealEls.forEach(el => observer.observe(el));
+
+      // ── FAQ accordion ──
+      document.querySelectorAll('.faq-trigger').forEach(btn => {
+        btn.addEventListener('click', function () {
+          const item = this.closest('.faq-item');
+          const answer = item.querySelector('.faq-answer');
+          const isOpen = item.classList.contains('open');
+
+          // close all
+          document.querySelectorAll('.faq-item').forEach(i => {
+            i.classList.remove('open');
+            i.querySelector('.faq-answer').classList.remove('open');
+          });
+
+          // open clicked if it was closed
+          if (!isOpen) {
+            item.classList.add('open');
+            answer.classList.add('open');
+          }
+        });
+      });
+
+      // ── Smooth scroll for nav links ──
+      document.querySelectorAll('a[href^="#"]').forEach(a => {
+        a.addEventListener('click', function (e) {
+          const target = document.querySelector(this.getAttribute('href'));
+          if (target) {
+            e.preventDefault();
+            target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            document.getElementById('mobileMenu').classList.add('hidden');
+          }
+        });
+      });
+
+      // ── Newsletter form (prevent default) ──
+      const newsletterBtn = document.querySelector('button .fa-paper-plane');
+      if (newsletterBtn) {
+        newsletterBtn.closest('button').addEventListener('click', function () {
+          const input = this.previousElementSibling;
+          if (input && input.value.includes('@')) {
+            input.value = '';
+            this.innerHTML = '<i class="fa-solid fa-check"></i>';
+            this.classList.add('bg-green-500');
+            setTimeout(() => {
+              this.innerHTML = '<i class="fa-solid fa-paper-plane"></i>';
+              this.classList.remove('bg-green-500');
+            }, 2000);
+          }
+        });
+      }
     });
   </script>
 </body>
