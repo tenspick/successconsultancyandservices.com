@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
- 
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -11,7 +11,7 @@
   <meta property="og:description" content="Learn about our mission, our founder R. Murali, and our commitment to career growth." />
   <meta property="og:image" content="logo.jpg" />
   <meta name="description" content="Discover the story behind Success Consultancy and Services in Tirupati. Expert training and placement led by R. Murali." />
- 
+
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
@@ -29,18 +29,20 @@
   </script>
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap');
- 
+
     html {
       scroll-behavior: smooth;
       overflow-x: hidden;
     }
- 
+
     body {
       font-family: 'Plus Jakarta Sans', sans-serif;
       overflow-x: hidden;
     }
- 
-    /* ── Page-load entrance animations ── */
+
+    /* ─────────────────────────────────────
+       PAGE-LOAD ENTRANCE ANIMATIONS
+    ───────────────────────────────────── */
     @keyframes fadeUp {
       from { opacity: 0; transform: translateY(28px); }
       to   { opacity: 1; transform: translateY(0); }
@@ -61,147 +63,450 @@
       from { opacity: 0; transform: translateX(36px); }
       to   { opacity: 1; transform: translateX(0); }
     }
- 
+
+    /* NEW: Subtle continuous animations */
+    @keyframes floatY {
+      0%, 100% { transform: translateY(0); }
+      50%      { transform: translateY(-10px); }
+    }
+    @keyframes pulseGlow {
+      0%, 100% { box-shadow: 0 0 0 0 rgba(29, 78, 216, 0.35); }
+      50%      { box-shadow: 0 0 0 18px rgba(29, 78, 216, 0); }
+    }
+    @keyframes shimmer {
+      0%   { background-position: -200% 0; }
+      100% { background-position: 200% 0; }
+    }
+    @keyframes gradientShift {
+      0%, 100% { background-position: 0% 50%; }
+      50%      { background-position: 100% 50%; }
+    }
+    @keyframes blobFloat {
+      0%, 100% { transform: translate(0, 0) scale(1); }
+      33%      { transform: translate(30px, -20px) scale(1.08); }
+      66%      { transform: translate(-20px, 20px) scale(0.95); }
+    }
+    @keyframes underlineGrow {
+      from { width: 0; }
+      to   { width: 70px; }
+    }
+    @keyframes rotate360 {
+      from { transform: rotate(0deg); }
+      to   { transform: rotate(360deg); }
+    }
+    @keyframes bounceSoft {
+      0%, 100% { transform: translateY(0); }
+      50%      { transform: translateY(-6px); }
+    }
+    @keyframes arrowSlide {
+      0%, 100% { transform: translateX(0); }
+      50%      { transform: translateX(6px); }
+    }
+    @keyframes typing {
+      from { width: 0; }
+      to   { width: 100%; }
+    }
+
     /* Hero content */
-    .anim-hero        { animation: scaleIn  0.65s cubic-bezier(0.4,0,0.2,1) both; }
- 
+    .anim-hero { animation: scaleIn 0.65s cubic-bezier(0.4, 0, 0.2, 1) both; }
+
     /* Founder image / text */
-    .anim-slide-right { animation: slideRight 0.7s cubic-bezier(0.4,0,0.2,1) 0.1s both; }
-    .anim-slide-left  { animation: slideLeft  0.7s cubic-bezier(0.4,0,0.2,1) 0.1s both; }
- 
+    .anim-slide-right { animation: slideRight 0.7s cubic-bezier(0.4, 0, 0.2, 1) 0.1s both; }
+    .anim-slide-left  { animation: slideLeft  0.7s cubic-bezier(0.4, 0, 0.2, 1) 0.1s both; }
+
     /* Value cards staggered */
-    .anim-card-1 { animation: fadeUp 0.55s cubic-bezier(0.4,0,0.2,1) 0.05s both; }
-    .anim-card-2 { animation: fadeUp 0.55s cubic-bezier(0.4,0,0.2,1) 0.17s both; }
-    .anim-card-3 { animation: fadeUp 0.55s cubic-bezier(0.4,0,0.2,1) 0.29s both; }
- 
+    .anim-card-1 { animation: fadeUp 0.55s cubic-bezier(0.4, 0, 0.2, 1) 0.05s both; }
+    .anim-card-2 { animation: fadeUp 0.55s cubic-bezier(0.4, 0, 0.2, 1) 0.17s both; }
+    .anim-card-3 { animation: fadeUp 0.55s cubic-bezier(0.4, 0, 0.2, 1) 0.29s both; }
+
     /* Gallery items */
     .anim-gallery { animation: fadeIn 0.5s ease both; }
- 
+
     /* CTA block */
-    .anim-cta     { animation: scaleIn 0.6s cubic-bezier(0.4,0,0.2,1) 0.05s both; }
- 
-    /* ── Hover interactions (no scroll dependency) ── */
+    .anim-cta { animation: scaleIn 0.6s cubic-bezier(0.4, 0, 0.2, 1) 0.05s both; }
+
+    /* ─────────────────────────────────────
+       HERO ENHANCEMENTS
+    ───────────────────────────────────── */
+    .hero-title {
+      background: linear-gradient(90deg, #ffffff 0%, #bfdbfe 50%, #ffffff 100%);
+      background-size: 200% auto;
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+      animation: scaleIn 0.65s cubic-bezier(0.4, 0, 0.2, 1) both, shimmer 6s linear infinite;
+    }
+
+    .hero-blob {
+      position: absolute;
+      border-radius: 50%;
+      filter: blur(60px);
+      opacity: 0.4;
+      pointer-events: none;
+      z-index: 1;
+    }
+    .hero-blob-1 {
+      width: 280px; height: 280px;
+      background: #3b82f6;
+      top: 10%; left: 5%;
+      animation: blobFloat 12s ease-in-out infinite;
+    }
+    .hero-blob-2 {
+      width: 340px; height: 340px;
+      background: #1d4ed8;
+      bottom: 10%; right: 5%;
+      animation: blobFloat 15s ease-in-out infinite reverse;
+    }
+
+    /* Section heading underline */
+    .heading-underline {
+      position: relative;
+      display: inline-block;
+    }
+    .heading-underline::after {
+      content: '';
+      position: absolute;
+      bottom: -12px;
+      left: 50%;
+      transform: translateX(-50%);
+      height: 4px;
+      background: linear-gradient(90deg, #1d4ed8, #3b82f6);
+      border-radius: 2px;
+      animation: underlineGrow 0.8s cubic-bezier(0.4, 0, 0.2, 1) 0.3s both;
+    }
+
+    /* ─────────────────────────────────────
+       VALUE CARDS — hover
+    ───────────────────────────────────── */
     .value-card {
-      transition: transform 0.3s cubic-bezier(0.4,0,0.2,1),
-                  box-shadow 0.3s cubic-bezier(0.4,0,0.2,1);
+      position: relative;
+      overflow: hidden;
+      transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1),
+                  box-shadow 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    .value-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(90deg, transparent, rgba(29, 78, 216, 0.06), transparent);
+      transition: left 0.6s ease;
+      pointer-events: none;
     }
     .value-card:hover {
-      transform: translateY(-8px);
-      box-shadow: 0 20px 40px rgba(29,78,216,0.12);
+      transform: translateY(-10px);
+      box-shadow: 0 25px 50px rgba(29, 78, 216, 0.18);
+    }
+    .value-card:hover::before {
+      left: 100%;
     }
     .value-card .icon-wrap {
-      transition: transform 0.35s cubic-bezier(0.34,1.56,0.64,1);
+      position: relative;
+      transition: transform 0.35s cubic-bezier(0.34, 1.56, 0.64, 1),
+                  box-shadow 0.35s ease;
     }
     .value-card:hover .icon-wrap {
-      transform: scale(1.15) rotate(-6deg);
+      transform: scale(1.18) rotate(-8deg);
+      box-shadow: 0 10px 30px rgba(29, 78, 216, 0.4);
     }
- 
+    .value-card .icon-wrap::after {
+      content: '';
+      position: absolute;
+      inset: -6px;
+      border-radius: 20px;
+      border: 2px solid rgba(29, 78, 216, 0.3);
+      opacity: 0;
+      transition: opacity 0.3s ease, transform 0.4s ease;
+      transform: scale(0.8);
+    }
+    .value-card:hover .icon-wrap::after {
+      opacity: 1;
+      transform: scale(1);
+    }
+    .value-card h3 {
+      transition: color 0.3s ease;
+    }
+    .value-card:hover h3 {
+      color: #1d4ed8;
+    }
+
+    /* ─────────────────────────────────────
+       GALLERY CARDS — hover
+    ───────────────────────────────────── */
     .gallery-card {
       position: relative;
       overflow: hidden;
       border-radius: 20px;
       margin-bottom: 1.5rem;
-      transition: transform 0.35s cubic-bezier(0.4,0,0.2,1),
-                  box-shadow 0.35s cubic-bezier(0.4,0,0.2,1);
+      transition: transform 0.35s cubic-bezier(0.4, 0, 0.2, 1),
+                  box-shadow 0.35s cubic-bezier(0.4, 0, 0.2, 1);
     }
     .gallery-card:hover {
-      transform: translateY(-5px) scale(1.02);
-      box-shadow: 0 16px 40px rgba(29,78,216,0.15);
+      transform: translateY(-8px) scale(1.03);
+      box-shadow: 0 20px 45px rgba(29, 78, 216, 0.22);
     }
     .gallery-card img {
       width: 100%;
       height: auto;
       display: block;
-      transition: transform 0.6s cubic-bezier(0.4,0,0.2,1);
+      transition: transform 0.7s cubic-bezier(0.4, 0, 0.2, 1),
+                  filter 0.4s ease;
     }
     .gallery-card:hover img {
-      transform: scale(1.06);
+      transform: scale(1.08);
+      filter: brightness(1.05) saturate(1.15);
     }
     .gallery-overlay {
       position: absolute;
       inset: 0;
-      background: rgba(29,78,216,0.25);
+      background: linear-gradient(135deg, rgba(29, 78, 216, 0.4), rgba(59, 130, 246, 0.2));
       backdrop-filter: blur(4px);
       opacity: 0;
-      transition: opacity 0.3s;
+      transition: opacity 0.35s ease;
       display: flex;
       align-items: center;
       justify-content: center;
       color: white;
       font-weight: 800;
+      letter-spacing: 0.05em;
     }
     .gallery-card:hover .gallery-overlay { opacity: 1; }
- 
-    /* Founder photo border pulse */
+
+    .gallery-overlay i {
+      margin-right: 8px;
+      transition: transform 0.3s ease;
+    }
+    .gallery-card:hover .gallery-overlay i {
+      transform: scale(1.3) rotate(15deg);
+    }
+
+    /* ─────────────────────────────────────
+       FOUNDER — hover glow ring
+    ───────────────────────────────────── */
     .founder-frame {
-      transition: box-shadow 0.4s ease;
+      position: relative;
+      transition: box-shadow 0.5s ease, transform 0.5s ease;
+    }
+    .founder-frame::before {
+      content: '';
+      position: absolute;
+      inset: -8px;
+      border-radius: 2.8rem;
+      background: linear-gradient(135deg, #1d4ed8, #3b82f6, #1d4ed8);
+      background-size: 200% 200%;
+      opacity: 0;
+      z-index: -1;
+      transition: opacity 0.4s ease;
+      animation: gradientShift 4s ease infinite;
     }
     .founder-frame:hover {
-      box-shadow: 0 0 0 6px rgba(29,78,216,0.18), 0 20px 50px rgba(29,78,216,0.15);
+      box-shadow: 0 0 0 6px rgba(29, 78, 216, 0.22), 0 25px 60px rgba(29, 78, 216, 0.2);
+      transform: translateY(-4px);
     }
- 
-    /* Floating badge on founder */
+    .founder-frame:hover::before {
+      opacity: 1;
+    }
+    .founder-frame img {
+      transition: transform 0.6s ease;
+    }
+    .founder-frame:hover img {
+      transform: scale(1.03);
+    }
+
+    /* Floating badge — load + constant gentle float */
     .badge-float {
-      animation: badgePop 0.5s cubic-bezier(0.34,1.56,0.64,1) 0.4s both;
+      animation: badgePop 0.5s cubic-bezier(0.34, 1.56, 0.64, 1) 0.4s both,
+                 floatY 4s ease-in-out 1s infinite;
     }
     @keyframes badgePop {
       from { opacity: 0; transform: scale(0.6) translate(20px, 20px); }
       to   { opacity: 1; transform: scale(1)   translate(0,    0   ); }
     }
- 
-    /* CTA buttons */
+    .badge-float:hover {
+      animation-play-state: paused;
+    }
+
+    /* Office location card hover */
+    .location-card {
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .location-card:hover {
+      transform: translateX(6px);
+      box-shadow: 0 10px 30px rgba(29, 78, 216, 0.12);
+    }
+    .location-card i {
+      transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+    }
+    .location-card:hover i {
+      transform: scale(1.25) rotate(-10deg);
+    }
+
+    /* ─────────────────────────────────────
+       CTA BUTTONS
+    ───────────────────────────────────── */
     .btn-primary {
+      position: relative;
+      overflow: hidden;
       transition: background 0.25s, transform 0.2s, box-shadow 0.25s;
+    }
+    .btn-primary::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+      transition: left 0.6s ease;
     }
     .btn-primary:hover {
       transform: translateY(-3px) scale(1.04);
-      box-shadow: 0 10px 30px rgba(29,78,216,0.3);
+      box-shadow: 0 14px 35px rgba(29, 78, 216, 0.45);
+    }
+    .btn-primary:hover::before {
+      left: 100%;
     }
     .btn-primary:active { transform: scale(0.97); }
- 
+
     .btn-secondary {
-      transition: background 0.25s, transform 0.2s;
+      transition: background 0.25s, transform 0.2s, border-color 0.25s;
     }
     .btn-secondary:hover {
-      background: rgba(255,255,255,0.22) !important;
+      background: rgba(255, 255, 255, 0.22) !important;
       transform: translateY(-2px);
+      border-color: rgba(255, 255, 255, 0.5) !important;
     }
     .btn-secondary:active { transform: scale(0.97); }
- 
-    /* Social icon hover */
-    .social-btn {
-      transition: transform 0.25s cubic-bezier(0.34,1.56,0.64,1),
-                  background 0.2s, color 0.2s;
+
+    /* CTA blob animations */
+    .cta-blob {
+      animation: blobFloat 10s ease-in-out infinite;
     }
-    .social-btn:hover { transform: translateY(-4px) scale(1.12); }
- 
-    /* Subtle bg dot pattern */
+    .cta-blob-2 {
+      animation: blobFloat 12s ease-in-out infinite reverse;
+    }
+
+    /* ─────────────────────────────────────
+       SOCIAL ICONS — spring bounce
+    ───────────────────────────────────── */
+    .social-btn {
+      position: relative;
+      transition: transform 0.35s cubic-bezier(0.34, 1.8, 0.64, 1),
+                  background 0.25s, color 0.25s, box-shadow 0.3s;
+    }
+    .social-btn:hover {
+      transform: translateY(-6px) scale(1.15);
+      box-shadow: 0 10px 25px rgba(29, 78, 216, 0.25);
+    }
+    .social-btn:active {
+      transform: translateY(-2px) scale(1.05);
+    }
+
+    /* Footer link hover underline */
+    .footer-link {
+      position: relative;
+      transition: color 0.25s ease, padding-left 0.25s ease;
+    }
+    .footer-link::before {
+      content: '→';
+      position: absolute;
+      left: -18px;
+      opacity: 0;
+      transition: opacity 0.25s ease, left 0.25s ease;
+      color: #1d4ed8;
+    }
+    .footer-link:hover {
+      padding-left: 6px;
+      color: #1d4ed8;
+    }
+    .footer-link:hover::before {
+      opacity: 1;
+      left: -14px;
+    }
+
+    /* ─────────────────────────────────────
+       MISC
+    ───────────────────────────────────── */
     .bg-pattern {
       background-color: #ffffff;
       background-image: radial-gradient(#1d4ed8 0.5px, transparent 0.5px);
       background-size: 24px 24px;
       opacity: 0.05;
     }
- 
+
     .glass {
-      background: rgba(255,255,255,0.05);
+      background: rgba(255, 255, 255, 0.05);
       backdrop-filter: blur(20px);
       -webkit-backdrop-filter: blur(20px);
       border-radius: 24px;
-      border: 1px solid rgba(255,255,255,0.1);
-      box-shadow: 0 8px 32px 0 rgba(31,38,135,0.1);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.1);
+    }
+
+    /* Tagline pill under leadership label */
+    .leadership-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 6px 14px;
+      border-radius: 999px;
+      background: rgba(29, 78, 216, 0.08);
+      margin-bottom: 1rem;
+      animation: fadeUp 0.6s ease 0.2s both;
+    }
+    .leadership-pill::before {
+      content: '';
+      width: 8px;
+      height: 8px;
+      background: #1d4ed8;
+      border-radius: 50%;
+      animation: pulseGlow 2s ease-in-out infinite;
+    }
+
+    /* Scroll-down indicator on hero */
+    .scroll-indicator {
+      position: absolute;
+      bottom: 30px;
+      left: 50%;
+      transform: translateX(-50%);
+      color: rgba(255, 255, 255, 0.7);
+      z-index: 10;
+      animation: bounceSoft 2s ease-in-out infinite, fadeIn 1s ease 1.2s both;
+    }
+    .scroll-indicator i {
+      font-size: 1.5rem;
+    }
+
+    /* Stats strip items (new) */
+    .stat-pill {
+      transition: transform 0.3s ease, background 0.3s ease;
+    }
+    .stat-pill:hover {
+      transform: translateY(-3px);
+      background: rgba(29, 78, 216, 0.08);
+    }
+
+    /* Reduced motion */
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+      }
     }
   </style>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css" />
 </head>
- 
+
 <body class="bg-white text-slate-900">
   <header id="siteHeader"></header>
   <script src="navbar.js"></script>
- 
+
   <main class="relative">
     <div class="absolute inset-0 bg-pattern pointer-events-none"></div>
- 
+
     <!-- Hero Section -->
     <section class="relative h-[60vh] flex items-center justify-center overflow-hidden">
       <div class="absolute inset-0 z-0">
@@ -209,15 +514,23 @@
           class="w-full h-full object-cover scale-110 blur-sm opacity-30" />
         <div class="absolute inset-0 bg-gradient-to-br from-blue-900/80 via-blue-800/60 to-transparent"></div>
       </div>
- 
+
+      <!-- Animated background blobs -->
+      <div class="hero-blob hero-blob-1"></div>
+      <div class="hero-blob hero-blob-2"></div>
+
       <div class="mx-auto max-w-7xl px-4 relative z-10 text-center">
         <div class="glass p-10 md:p-16 border-white/10 anim-hero">
-          <h1 class="text-5xl font-black text-white sm:text-7xl mb-6">Our Story & Vision</h1>
+          <h1 class="hero-title text-5xl font-black sm:text-7xl mb-6">Our Story & Vision</h1>
           <p class="text-xl text-blue-100 max-w-2xl mx-auto">Building careers and bridging gaps with excellence since 2025.</p>
         </div>
       </div>
+
+      <div class="scroll-indicator">
+        <i class="fa-solid fa-chevron-down"></i>
+      </div>
     </section>
- 
+
     <!-- Founder Section -->
     <section class="py-24 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="grid lg:grid-cols-2 gap-16 items-center">
@@ -231,14 +544,14 @@
           </div>
         </div>
         <div class="anim-slide-left">
-          <p class="text-brandRed font-bold uppercase tracking-widest text-sm mb-4">The Leadership</p>
+          <span class="leadership-pill text-brandRed font-bold uppercase tracking-widest text-xs">The Leadership</span>
           <h2 class="text-4xl md:text-6xl font-black text-slate-900 mb-8 leading-tight">R. Murali <br /><span
               class="text-brandRed text-3xl md:text-4xl">Director & Visionary</span></h2>
           <p class="text-xl text-slate-600 leading-relaxed mb-8 font-medium">
             Success Consultancy and Services follows a student-first mission with practical training, interview
             preparation, and placement guidance for IT and non-IT career growth.
           </p>
-          <div class="glass p-6 border-blue-100 bg-blue-50/30">
+          <div class="glass p-6 border-blue-100 bg-blue-50/30 location-card">
             <div class="flex items-start gap-4">
               <i class="fa-solid fa-location-dot text-brandRed mt-1 text-xl"></i>
               <div>
@@ -250,10 +563,14 @@
         </div>
       </div>
     </section>
- 
+
     <!-- Values Section -->
-    <section class="py-24 bg-slate-50">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section class="py-24 bg-slate-50 relative overflow-hidden">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <div class="text-center mb-14 anim-hero">
+          <span class="leadership-pill text-brandRed font-bold uppercase tracking-widest text-xs">What Drives Us</span>
+          <h2 class="text-4xl md:text-5xl font-black text-slate-900 heading-underline">Our Core Values</h2>
+        </div>
         <div class="grid md:grid-cols-3 gap-8">
           <div class="value-card glass p-8 bg-white border-blue-50 anim-card-1">
             <div class="icon-wrap w-14 h-14 bg-blue-600 rounded-2xl flex items-center justify-center text-white mb-6">
@@ -279,103 +596,103 @@
         </div>
       </div>
     </section>
- 
+
     <!-- Opening Ceremony Gallery -->
     <section class="py-24 bg-white px-4 sm:px-6 lg:px-8">
       <div class="max-w-7xl mx-auto">
         <div class="text-center mb-16 anim-hero">
-          <h2 class="text-4xl md:text-6xl font-black text-slate-900 mb-4">Our Beginning</h2>
-          <p class="text-xl text-slate-600 font-medium max-w-3xl mx-auto">A memorable ceremony marking our commitment to trust and excellence in staffing and consultancy.</p>
+          <h2 class="text-4xl md:text-6xl font-black text-slate-900 mb-4 heading-underline">Our Beginning</h2>
+          <p class="text-xl text-slate-600 font-medium max-w-3xl mx-auto mt-8">A memorable ceremony marking our commitment to trust and excellence in staffing and consultancy.</p>
         </div>
         <div class="columns-1 md:columns-2 lg:columns-3 gap-6 space-y-6">
           <div class="gallery-card shadow-lg anim-gallery" style="animation-delay:0.05s">
             <a href="images/opening ceremony 1.jpeg" class="glightbox">
               <img src="images/opening ceremony 1.jpeg" alt="Opening ceremony" />
-              <div class="gallery-overlay">Full View</div>
+              <div class="gallery-overlay"><i class="fa-solid fa-expand"></i>Full View</div>
             </a>
           </div>
           <div class="gallery-card shadow-lg anim-gallery" style="animation-delay:0.12s">
             <a href="images/opening ceremony 2.jpeg" class="glightbox">
               <img src="images/opening ceremony 2.jpeg" alt="Opening ceremony" />
-              <div class="gallery-overlay">Full View</div>
+              <div class="gallery-overlay"><i class="fa-solid fa-expand"></i>Full View</div>
             </a>
           </div>
           <div class="gallery-card shadow-lg anim-gallery" style="animation-delay:0.19s">
             <a href="images/opening ceremony 3.jpeg" class="glightbox">
               <img src="images/opening ceremony 3.jpeg" alt="Opening ceremony" />
-              <div class="gallery-overlay">Full View</div>
+              <div class="gallery-overlay"><i class="fa-solid fa-expand"></i>Full View</div>
             </a>
           </div>
           <div class="gallery-card shadow-lg anim-gallery" style="animation-delay:0.26s">
             <a href="images/opening ceremony 4.jpeg" class="glightbox">
               <img src="images/opening ceremony 4.jpeg" alt="Opening ceremony" />
-              <div class="gallery-overlay">Full View</div>
+              <div class="gallery-overlay"><i class="fa-solid fa-expand"></i>Full View</div>
             </a>
           </div>
           <div class="gallery-card shadow-lg anim-gallery" style="animation-delay:0.33s">
             <a href="images/opening ceremony 5.jpeg" class="glightbox">
               <img src="images/opening ceremony 5.jpeg" alt="Opening ceremony" />
-              <div class="gallery-overlay">Full View</div>
+              <div class="gallery-overlay"><i class="fa-solid fa-expand"></i>Full View</div>
             </a>
           </div>
         </div>
       </div>
     </section>
- 
+
     <!-- Workspace Gallery Section -->
     <section class="py-24 bg-slate-50 px-4 sm:px-6 lg:px-8">
       <div class="max-w-7xl mx-auto">
         <div class="text-center mb-16 anim-hero">
-          <h2 class="text-4xl md:text-6xl font-black text-slate-900 mb-4">Our Gallery</h2>
-          <p class="text-xl text-slate-600 font-medium max-w-3xl mx-auto">Capturing the environment where we build the futures of our students and candidates.</p>
+          <h2 class="text-4xl md:text-6xl font-black text-slate-900 mb-4 heading-underline">Our Gallery</h2>
+          <p class="text-xl text-slate-600 font-medium max-w-3xl mx-auto mt-8">Capturing the environment where we build the futures of our students and candidates.</p>
         </div>
         <div class="columns-1 sm:columns-2 lg:columns-4 gap-6 space-y-6">
           <div class="gallery-card shadow-md anim-gallery" style="animation-delay:0.05s">
             <a href="images/office gallery 1.avif" class="glightbox">
               <img src="images/office gallery 1.avif" alt="Workspace" />
-              <div class="gallery-overlay">Full View</div>
+              <div class="gallery-overlay"><i class="fa-solid fa-expand"></i>Full View</div>
             </a>
           </div>
           <div class="gallery-card shadow-md anim-gallery" style="animation-delay:0.1s">
             <a href="images/office gallery 2.png" class="glightbox">
               <img src="images/office gallery 2.png" alt="Workspace" />
-              <div class="gallery-overlay">Full View</div>
+              <div class="gallery-overlay"><i class="fa-solid fa-expand"></i>Full View</div>
             </a>
           </div>
           <div class="gallery-card shadow-md anim-gallery" style="animation-delay:0.15s">
             <a href="images/office gallery 3.png" class="glightbox">
               <img src="images/office gallery 3.png" alt="Workspace" />
-              <div class="gallery-overlay">Full View</div>
+              <div class="gallery-overlay"><i class="fa-solid fa-expand"></i>Full View</div>
             </a>
           </div>
           <div class="gallery-card shadow-md anim-gallery" style="animation-delay:0.2s">
             <a href="images/office gallery 4.png" class="glightbox">
               <img src="images/office gallery 4.png" alt="Workspace" />
-              <div class="gallery-overlay">Full View</div>
+              <div class="gallery-overlay"><i class="fa-solid fa-expand"></i>Full View</div>
             </a>
           </div>
           <div class="gallery-card shadow-md anim-gallery" style="animation-delay:0.25s">
             <a href="images/office gallery 5.png" class="glightbox">
               <img src="images/office gallery 5.png" alt="Workspace" />
-              <div class="gallery-overlay">Full View</div>
+              <div class="gallery-overlay"><i class="fa-solid fa-expand"></i>Full View</div>
             </a>
           </div>
           <div class="gallery-card shadow-md anim-gallery" style="animation-delay:0.3s">
             <a href="images/office gallery 6.png" class="glightbox">
               <img src="images/office gallery 6.png" alt="Workspace" />
-              <div class="gallery-overlay">Full View</div>
+              <div class="gallery-overlay"><i class="fa-solid fa-expand"></i>Full View</div>
             </a>
           </div>
         </div>
       </div>
     </section>
- 
+
     <!-- CTA Section -->
     <section class="py-24 bg-white">
       <div class="mx-auto max-w-6xl px-4 text-center">
         <div class="bg-slate-900 rounded-[4rem] px-10 py-16 md:py-24 relative overflow-hidden anim-cta">
-          <div class="absolute -top-10 -right-10 w-40 h-40 bg-brandRed/20 blur-3xl rounded-full"></div>
-          <div class="absolute -bottom-10 -left-10 w-40 h-40 bg-brandRed/20 blur-3xl rounded-full"></div>
+          <div class="cta-blob absolute -top-10 -right-10 w-40 h-40 bg-brandRed/20 blur-3xl rounded-full"></div>
+          <div class="cta-blob-2 absolute -bottom-10 -left-10 w-40 h-40 bg-brandRed/20 blur-3xl rounded-full"></div>
           <div class="relative z-10 max-w-3xl mx-auto">
             <h2 class="text-4xl md:text-5xl font-black text-white mb-8">Join the Success Journey</h2>
             <p class="text-white/60 text-lg mb-12 font-medium">
@@ -392,7 +709,7 @@
       </div>
     </section>
   </main>
- 
+
   <!-- Footer -->
   <footer class="bg-white pt-24 pb-12 border-t border-slate-100">
     <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
@@ -411,27 +728,27 @@
             <a href="#" class="social-btn w-12 h-12 bg-slate-50 rounded-2xl flex items-center justify-center text-slate-400 hover:text-brandRed hover:bg-blue-50"><i class="fa-brands fa-instagram"></i></a>
           </div>
         </div>
- 
+
         <div class="lg:col-span-2">
           <h6 class="font-bold text-slate-900 mb-8 uppercase tracking-widest text-xs">Explore</h6>
           <ul class="space-y-4">
-            <li><a href="index.html" class="text-slate-500 hover:text-brandRed transition">Home</a></li>
-            <li><a href="about.html" class="text-slate-500 hover:text-brandRed transition">About</a></li>
-            <li><a href="services.html" class="text-slate-500 hover:text-brandRed transition">Services</a></li>
-            <li><a href="courses.html" class="text-slate-500 hover:text-brandRed transition">Courses</a></li>
+            <li><a href="index.html" class="footer-link text-slate-500 inline-block">Home</a></li>
+            <li><a href="about.html" class="footer-link text-slate-500 inline-block">About</a></li>
+            <li><a href="services.html" class="footer-link text-slate-500 inline-block">Services</a></li>
+            <li><a href="courses.html" class="footer-link text-slate-500 inline-block">Courses</a></li>
           </ul>
         </div>
- 
+
         <div class="lg:col-span-2">
           <h6 class="font-bold text-slate-900 mb-8 uppercase tracking-widest text-xs">Featured</h6>
           <ul class="space-y-4">
-            <li><a href="course-web.html" class="text-slate-500 hover:text-brandRed transition">Web Development</a></li>
-            <li><a href="course-data.html" class="text-slate-500 hover:text-brandRed transition">Data Science</a></li>
-            <li><a href="course-fullstack.html" class="text-slate-500 hover:text-brandRed transition">Full Stack</a></li>
-            <li><a href="course-programming.html" class="text-slate-500 hover:text-brandRed transition">Java/Python</a></li>
+            <li><a href="course-web.html" class="footer-link text-slate-500 inline-block">Web Development</a></li>
+            <li><a href="course-data.html" class="footer-link text-slate-500 inline-block">Data Science</a></li>
+            <li><a href="course-fullstack.html" class="footer-link text-slate-500 inline-block">Full Stack</a></li>
+            <li><a href="course-programming.html" class="footer-link text-slate-500 inline-block">Java/Python</a></li>
           </ul>
         </div>
- 
+
         <div class="lg:col-span-3">
           <h6 class="font-bold text-slate-900 mb-8 uppercase tracking-widest text-xs">Support</h6>
           <ul class="space-y-6">
@@ -450,9 +767,9 @@
           </ul>
         </div>
       </div>
- 
+
       <div class="pt-12 border-t border-slate-100 flex flex-col md:flex-row justify-between items-center gap-6">
-        <p class="text-slate-400 text-sm">© <span id="year"></span> Success Consultancy and Services. All rights reserved.</p>
+        <p class="text-slate-400 text-sm">©️ <span id="year"></span> Success Consultancy and Services. All rights reserved.</p>
         <div class="flex gap-8 text-sm text-slate-400">
           <a href="#" class="hover:text-brandRed transition">Privacy Policy</a>
           <a href="#" class="hover:text-brandRed transition">Terms & Conditions</a>
@@ -460,7 +777,7 @@
       </div>
     </div>
   </footer>
- 
+
   <script src="https://cdn.jsdelivr.net/npm/glightbox/dist/js/glightbox.min.js"></script>
   <script>
     document.addEventListener('DOMContentLoaded', function () {
@@ -469,6 +786,5 @@
     });
   </script>
 </body>
- 
+
 </html>
- 
