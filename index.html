@@ -324,13 +324,13 @@
   <header id="siteHeader"></header>
   <script src="navbar.js"></script>
 
-  <main class="relative pt-16">
+  <main class="relative pt-3">
     <div class="absolute inset-0 bg-pattern pointer-events-none"></div>
 
     <!-- ═══════════════════════════════════════════
          HERO SECTION
     ═══════════════════════════════════════════ -->
-    <section class="relative overflow-hidden pt-20 pb-16 lg:pt-32 lg:pb-32">
+    <section class="relative overflow-hidden pt-8 pb-16 lg:pt-16 lg:pb-25">
       <!-- Animated particles -->
       <div class="particle" style="left:10%; bottom:20%; animation-delay:0s;"></div>
       <div class="particle" style="left:20%; bottom:10%; animation-delay:1s; background:#60a5fa;"></div>
@@ -383,22 +383,50 @@
               </a>
             </div>
 
-            <div class="flex items-center justify-center lg:justify-start gap-12 hero-animate-5">
-              <div>
-                <p class="text-3xl font-black text-slate-900 stat-num">500+</p>
-                <p class="text-xs uppercase font-bold tracking-widest text-slate-400">Placements</p>
-              </div>
-              <div class="w-px h-10 bg-slate-200"></div>
-              <div>
-                <p class="text-3xl font-black text-slate-900 stat-num">10+</p>
-                <p class="text-xs uppercase font-bold tracking-widest text-slate-400">Years Experience</p>
-              </div>
-              <div class="w-px h-10 bg-slate-200"></div>
-              <div>
-                <p class="text-3xl font-black text-slate-900 stat-num">4.9★</p>
-                <p class="text-xs uppercase font-bold tracking-widest text-slate-400">Student Rating</p>
-              </div>
-            </div>
+            <div class="hero-animate-5 
+            grid grid-cols-1 sm:grid-cols-3 gap-6 sm:gap-8 
+            text-center sm:text-left 
+            items-center justify-center lg:justify-start">
+
+  <!-- ITEM 1 -->
+  <div class="flex flex-col items-center sm:items-start">
+    <p class="text-2xl sm:text-3xl font-black text-slate-900 stat-num">500+</p>
+    <p class="text-[10px] sm:text-xs uppercase font-bold tracking-widest text-slate-400">
+      Placements
+    </p>
+  </div>
+
+  <!-- ITEM 2 -->
+  <div class="flex flex-col items-center sm:items-start relative">
+    
+    <!-- Divider (Desktop) -->
+    <div class="hidden sm:block absolute -left-4 top-1/2 -translate-y-1/2 w-px h-10 bg-slate-200"></div>
+
+    <!-- Divider (Mobile) -->
+    <div class="block sm:hidden w-10 h-px bg-slate-200 mb-3"></div>
+
+    <p class="text-2xl sm:text-3xl font-black text-slate-900 stat-num">10+</p>
+    <p class="text-[10px] sm:text-xs uppercase font-bold tracking-widest text-slate-400">
+      Years Experience
+    </p>
+  </div>
+
+  <!-- ITEM 3 -->
+  <div class="flex flex-col items-center sm:items-start relative">
+    
+    <!-- Divider (Desktop) -->
+    <div class="hidden sm:block absolute -left-4 top-1/2 -translate-y-1/2 w-px h-10 bg-slate-200"></div>
+
+    <!-- Divider (Mobile) -->
+    <div class="block sm:hidden w-10 h-px bg-slate-200 mb-3"></div>
+
+    <p class="text-2xl sm:text-3xl font-black text-slate-900 stat-num">4.9★</p>
+    <p class="text-[10px] sm:text-xs uppercase font-bold tracking-widest text-slate-400">
+      Student Rating
+    </p>
+  </div>
+
+</div>
           </div>
 
           <div class="lg:col-span-5 mt-16 lg:mt-0 relative hero-img-animate">
@@ -745,161 +773,186 @@
     <!-- ═══════════════════════════════════════════
          CONTACT / LOCATION (NEW)
     ═══════════════════════════════════════════ -->
-    <section class="py-24 bg-slate-50 relative overflow-hidden">
-      <div class="absolute inset-0 bg-pattern pointer-events-none opacity-20"></div>
-      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div class="text-center mb-16 reveal">
-          <h2 class="text-brandRed font-bold uppercase tracking-widest text-sm mb-4">We're Right Here</h2>
-          <h3 class="text-4xl md:text-5xl font-black text-slate-900">Visit Us in <span class="gradient-text">Tirupati</span></h3>
+    <section class="py-16 sm:py-20 md:py-24 bg-slate-50 relative overflow-hidden">
+  <div class="absolute inset-0 bg-pattern pointer-events-none opacity-20"></div>
+
+  <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+
+    <!-- HEADING -->
+    <div class="text-center mb-12 sm:mb-14 md:mb-16 reveal">
+      <h2 class="text-brandRed font-bold uppercase tracking-widest text-xs sm:text-sm mb-3 sm:mb-4">
+        We're Right Here
+      </h2>
+
+      <h3 class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-black text-slate-900 leading-snug">
+        Visit Us in <span class="gradient-text">Tirupati</span>
+      </h3>
+    </div>
+
+    <!-- GRID -->
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-10 md:gap-12 items-stretch">
+
+      <!-- LEFT CONTENT -->
+      <div class="space-y-5 sm:space-y-6 reveal">
+
+        <!-- CARD 1 -->
+        <div class="bg-white rounded-2xl sm:rounded-3xl p-5 sm:p-6 md:p-8 border border-slate-100 card-hover flex items-start gap-4 sm:gap-6">
+          <div class="w-12 h-12 sm:w-14 sm:h-14 bg-blue-50 rounded-xl sm:rounded-2xl flex items-center justify-center text-brandRed flex-shrink-0">
+            <i class="fa-solid fa-location-dot text-lg sm:text-xl"></i>
+          </div>
+          <div>
+            <h5 class="font-bold text-slate-900 mb-1 sm:mb-2 text-sm sm:text-base">Address</h5>
+            <p class="text-slate-500 text-xs sm:text-sm leading-relaxed">
+              D No: 23-8-69/11, RC Road, Beside Harsha Residency Hotel, Tirupati – 517 501, Andhra Pradesh
+            </p>
+          </div>
         </div>
 
-        <div class="grid lg:grid-cols-2 gap-12 items-center">
-          <div class="space-y-6 reveal">
-            <div class="bg-white rounded-3xl p-8 border border-slate-100 card-hover flex items-start gap-6">
-              <div class="w-14 h-14 bg-blue-50 rounded-2xl flex items-center justify-center text-brandRed flex-shrink-0">
-                <i class="fa-solid fa-location-dot text-xl"></i>
-              </div>
-              <div>
-                <h5 class="font-bold text-slate-900 mb-2">Address</h5>
-                <p class="text-slate-500 text-sm leading-relaxed">D No: 23-8-69/11, RC Road, Beside Harsha Residency Hotel, Tirupati – 517 501, Andhra Pradesh</p>
-              </div>
-            </div>
-            <div class="bg-white rounded-3xl p-8 border border-slate-100 card-hover flex items-start gap-6">
-              <div class="w-14 h-14 bg-blue-50 rounded-2xl flex items-center justify-center text-brandRed flex-shrink-0">
-                <i class="fa-solid fa-phone text-xl"></i>
-              </div>
-              <div>
-                <h5 class="font-bold text-slate-900 mb-2">Phone</h5>
-                <a href="tel:9866634443" class="text-brandRed font-bold hover:underline">+91-9866634443</a>
-                <p class="text-slate-400 text-xs mt-1">Mon–Sat, 9 AM – 7 PM</p>
-              </div>
-            </div>
-            <div class="bg-white rounded-3xl p-8 border border-slate-100 card-hover flex items-start gap-6">
-              <div class="w-14 h-14 bg-blue-50 rounded-2xl flex items-center justify-center text-brandRed flex-shrink-0">
-                <i class="fa-solid fa-envelope text-xl"></i>
-              </div>
-              <div>
-                <h5 class="font-bold text-slate-900 mb-2">Email</h5>
-                <a href="mailto:successconsultancy0808@gmail.com" class="text-brandRed font-bold hover:underline text-sm">successconsultancy0808@gmail.com</a>
-                <p class="text-slate-400 text-xs mt-1">We typically reply within 24 hours</p>
-              </div>
-            </div>
+        <!-- CARD 2 -->
+        <div class="bg-white rounded-2xl sm:rounded-3xl p-5 sm:p-6 md:p-8 border border-slate-100 card-hover flex items-start gap-4 sm:gap-6">
+          <div class="w-12 h-12 sm:w-14 sm:h-14 bg-blue-50 rounded-xl sm:rounded-2xl flex items-center justify-center text-brandRed flex-shrink-0">
+            <i class="fa-solid fa-phone text-lg sm:text-xl"></i>
           </div>
+          <div>
+            <h5 class="font-bold text-slate-900 mb-1 sm:mb-2 text-sm sm:text-base">Phone</h5>
+            <a href="tel:9866634443" class="text-brandRed font-bold hover:underline text-sm sm:text-base">
+              +91-9866634443
+            </a>
+            <p class="text-slate-400 text-[10px] sm:text-xs mt-1">Mon–Sat, 9 AM – 7 PM</p>
+          </div>
+        </div>
 
-          <!-- Map embed -->
-          <div class="reveal reveal-delay-1">
-            <div class="rounded-3xl overflow-hidden shadow-xl border border-slate-100 h-96">
-              <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3878.5!2d79.4192!3d13.6288!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTPCsDM3JzQ0LjMiTiA3OcKwMjUnMDkuMSJF!5e0!3m2!1sen!2sin!4v1234567890"
-                width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
-                title="Success Consultancy Location">
-              </iframe>
-            </div>
+        <!-- CARD 3 -->
+        <div class="bg-white rounded-2xl sm:rounded-3xl p-5 sm:p-6 md:p-8 border border-slate-100 card-hover flex items-start gap-4 sm:gap-6">
+          <div class="w-12 h-12 sm:w-14 sm:h-14 bg-blue-50 rounded-xl sm:rounded-2xl flex items-center justify-center text-brandRed flex-shrink-0">
+            <i class="fa-solid fa-envelope text-lg sm:text-xl"></i>
           </div>
+          <div>
+            <h5 class="font-bold text-slate-900 mb-1 sm:mb-2 text-sm sm:text-base">Email</h5>
+            <a href="mailto:successconsultancy0808@gmail.com" class="text-brandRed font-bold hover:underline text-xs sm:text-sm">
+              successconsultancy0808@gmail.com
+            </a>
+            <p class="text-slate-400 text-[10px] sm:text-xs mt-1">We typically reply within 24 hours</p>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- MAP -->
+      <div class="reveal reveal-delay-1">
+        <div class="rounded-2xl sm:rounded-3xl overflow-hidden shadow-xl border border-slate-100 h-[250px] sm:h-[320px] md:h-[400px] lg:h-96">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3878.5!2d79.4192!3d13.6288!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTPCsDM3JzQ0LjMiTiA3OcKwMjUnMDkuMSJF!5e0!3m2!1sen!2sin!4v1234567890"
+            class="w-full h-full"
+            style="border:0;"
+            loading="lazy"
+            title="Success Consultancy Location">
+          </iframe>
         </div>
       </div>
-    </section>
+
+    </div>
+  </div>
+</section>
 
     <!-- ═══════════════════════════════════════════
          CTA
     ═══════════════════════════════════════════ -->
-    <section class="py-24">
-      <div class="mx-auto max-w-6xl px-4 text-center">
-        <div class="bg-slate-900 rounded-[4rem] px-10 py-16 md:py-24 relative overflow-hidden reveal">
-          <div class="absolute -top-10 -right-10 w-40 h-40 bg-brandRed/20 rounded-full blob"></div>
-          <div class="absolute -bottom-10 -left-10 w-40 h-40 bg-brandRed/20 rounded-full blob-delay"></div>
-          <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-blue-500/5 rounded-full blur-3xl"></div>
+    <section class="py-20 bg-gray-100">
+  <div class="mx-auto max-w-6xl px-4">
 
-          <div class="relative z-10 max-w-3xl mx-auto">
-            <div class="inline-flex items-center gap-2 bg-white/10 border border-white/20 rounded-full px-5 py-2 mb-8">
-              <span class="w-2 h-2 bg-green-400 rounded-full animate-pulse"></span>
-              <span class="text-white/80 text-sm font-semibold">Next batch starting soon · Limited seats</span>
-            </div>
-            <h2 class="text-4xl md:text-5xl font-black text-white mb-8">Ready to Transform Your Career?</h2>
-            <p class="text-white/60 text-lg mb-12">
-              Join our upcoming batch and start your journey towards a rewarding career with expert guidance and placement support.
-            </p>
-            <div class="flex flex-wrap justify-center gap-6">
-              <a href="contact.html" class="bg-brandRed text-white px-12 py-5 rounded-full font-bold btn-press">Enroll Now</a>
-              <a href="courses.html" class="bg-white/10 text-white border border-white/20 px-12 py-5 rounded-full font-bold btn-press hover:bg-white/20 transition-colors">Browse Courses</a>
-            </div>
-          </div>
+    <div class="bg-gray-200 border-2 border-blue-600 rounded-2xl px-8 md:px-12 py-10 md:py-12 text-center reveal">
+
+      <!-- CONTENT -->
+      <div class="max-w-2xl mx-auto">
+
+        <!-- BADGE -->
+        <div class="inline-flex items-center gap-2 bg-blue-100 border border-blue-300 rounded-full px-4 py-1.5 mb-5">
+          <span class="w-2 h-2 bg-green-500 rounded-full animate-pulse"></span>
+          <span class="text-blue-700 text-xs font-semibold">
+            Next batch starting soon · Limited seats
+          </span>
         </div>
+
+        <!-- HEADING -->
+        <h2 class="text-2xl md:text-3xl font-bold text-gray-900 mb-4">
+          Ready to Transform Your Career?
+        </h2>
+
+        <!-- TEXT -->
+        <p class="text-gray-600 text-sm md:text-base mb-8">
+          Join our upcoming batch and start your journey towards a rewarding career with expert guidance and placement support.
+        </p>
+
+        <!-- BUTTONS -->
+        <div class="flex flex-wrap justify-center gap-4">
+
+          <a href="contact.html"
+            class="bg-blue-600 text-white px-8 py-3 rounded-lg text-sm font-semibold hover:bg-blue-700 transition">
+            Enroll Now
+          </a>
+
+          <a href="courses.html"
+            class="border-2 border-blue-600 text-blue-600 px-8 py-3 rounded-lg text-sm font-semibold hover:bg-blue-600 hover:text-white transition">
+            Browse Courses
+          </a>
+
+        </div>
+
       </div>
-    </section>
+
+    </div>
+
+  </div>
+</section>
   </main>
 
   <!-- ═══════════════════════════════════════════
        FOOTER
   ═══════════════════════════════════════════ -->
-  <!-- Footer -->
-  <footer class="bg-white pt-24 pb-12 border-t border-slate-100">
-    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-      <div class="grid lg:grid-cols-12 gap-16 mb-20">
-        <div class="lg:col-span-5">
-          <div class="flex items-center gap-3 mb-8">
-            <img src="logo.jpg" alt="Logo" class="h-10 w-10 rounded-full" />
-            <span class="text-xl font-black text-slate-900">Success Consultancy</span>
-          </div>
-          <p class="text-slate-500 leading-relaxed mb-10 max-w-sm">
-            Empowering students through industry-focused training and reliable placement assistance since 2025. Located in the heart of Tirupati.
-          </p>
-          <div class="flex gap-4">
-            <a href="#" class="social-btn w-12 h-12 bg-slate-50 rounded-2xl flex items-center justify-center text-slate-400 hover:text-brandRed hover:bg-blue-50"><i class="fa-brands fa-facebook-f"></i></a>
-            <a href="#" class="social-btn w-12 h-12 bg-slate-50 rounded-2xl flex items-center justify-center text-slate-400 hover:text-brandRed hover:bg-blue-50"><i class="fa-brands fa-linkedin-in"></i></a>
-            <a href="#" class="social-btn w-12 h-12 bg-slate-50 rounded-2xl flex items-center justify-center text-slate-400 hover:text-brandRed hover:bg-blue-50"><i class="fa-brands fa-instagram"></i></a>
-          </div>
-        </div>
-
-        <div class="lg:col-span-2">
-          <h6 class="font-bold text-slate-900 mb-8 uppercase tracking-widest text-xs">Explore</h6>
-          <ul class="space-y-4">
-            <li><a href="index.html" class="footer-link text-slate-500 inline-block">Home</a></li>
-            <li><a href="about.html" class="footer-link text-slate-500 inline-block">About</a></li>
-            <li><a href="services.html" class="footer-link text-slate-500 inline-block">Services</a></li>
-            <li><a href="courses.html" class="footer-link text-slate-500 inline-block">Courses</a></li>
+    <footer class="border-t border-blue-200 bg-slate-900 text-white">
+    <div class="mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8">
+      <div class="grid gap-8 md:grid-cols-4 sm:grid-cols-2">
+        <div>
+          <h3 class="text-sm font-bold uppercase tracking-wider">Company</h3>
+          <ul class="mt-4 space-y-2 text-sm">
+            <li><a href="index.html" class="hover:text-red-400">Home</a></li>
+            <li><a href="about.html" class="hover:text-red-400">About Us</a></li>
+            <li><a href="contact.html" class="hover:text-red-400">Contact</a></li>
           </ul>
         </div>
-
-        <div class="lg:col-span-2">
-          <h6 class="font-bold text-slate-900 mb-8 uppercase tracking-widest text-xs">Featured</h6>
-          <ul class="space-y-4">
-            <li><a href="course-web.html" class="footer-link text-slate-500 inline-block">Web Development</a></li>
-            <li><a href="course-data.html" class="footer-link text-slate-500 inline-block">Data Science</a></li>
-            <li><a href="course-fullstack.html" class="footer-link text-slate-500 inline-block">Full Stack</a></li>
-            <li><a href="course-programming.html" class="footer-link text-slate-500 inline-block">Java/Python</a></li>
+        <div>
+          <h3 class="text-sm font-bold uppercase tracking-wider">Services</h3>
+          <ul class="mt-4 space-y-2 text-sm">
+            <li><a href="services-training.html" class="hover:text-red-400">Training</a></li>
+            <li><a href="services-placement.html" class="hover:text-red-400">Placement</a></li>
+            <li><a href="services-guidance.html" class="hover:text-red-400">Career Guidance</a></li>
           </ul>
         </div>
-
-        <div class="lg:col-span-3">
-          <h6 class="font-bold text-slate-900 mb-8 uppercase tracking-widest text-xs">Support</h6>
-          <ul class="space-y-6">
-            <li class="flex items-start gap-4 text-slate-500">
-              <i class="fa-solid fa-phone text-brandRed mt-1"></i>
-              <a href="tel:9866634443" class="hover:text-brandRed transition">+91-9866634443</a>
-            </li>
-            <li class="flex items-start gap-4 text-slate-500">
-              <i class="fa-solid fa-envelope text-brandRed mt-1"></i>
-              <a href="mailto:successconsultancy0808@gmail.com" class="hover:text-brandRed transition text-sm">successconsultancy0808@gmail.com</a>
-            </li>
-            <li class="flex items-start gap-4 text-slate-500">
-              <i class="fa-solid fa-location-dot text-brandRed mt-1"></i>
-              <span class="text-sm">RC Road, Tirupati, AP 517501</span>
-            </li>
+        <div>
+          <h3 class="text-sm font-bold uppercase tracking-wider">Courses</h3>
+          <ul class="mt-4 space-y-2 text-sm">
+            <li><a href="courses.html" class="hover:text-red-400">All Courses</a></li>
+            <li><a href="course-programming.html" class="hover:text-red-400">Programming</a></li>
+            <li><a href="course-web.html" class="hover:text-red-400">Web Dev</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3 class="text-sm font-bold uppercase tracking-wider">Contact</h3>
+          <ul class="mt-4 space-y-2 text-sm">
+            <li>Phone: <a href="tel:9866634443" class="hover:text-red-400">9866634443</a></li>
+            <li>WhatsApp: <a href="https://wa.me/919502504742" class="hover:text-red-400">9502504742</a></li>
+            <li>Email: <a href="mailto:successconsultancy0808@gmail.com"
+                class="hover:text-red-400">successconsultancy0808@gmail.com</a></li>
           </ul>
         </div>
       </div>
-
-      <div class="pt-12 border-t border-slate-100 flex flex-col md:flex-row justify-between items-center gap-6">
-        <p class="text-slate-400 text-sm">©️ <span id="year"></span> Success Consultancy and Services. All rights reserved.</p>
-        <div class="flex gap-8 text-sm text-slate-400">
-          <a href="#" class="hover:text-brandRed transition">Privacy Policy</a>
-          <a href="#" class="hover:text-brandRed transition">Terms & Conditions</a>
-        </div>
+      <div class="mt-8 border-t border-slate-700 pt-8 text-center text-sm text-slate-400">
+        <p>© <span id="year"></span> Success Consultancy and Services. All rights reserved.</p>
+        <p class="mt-2">Training and Placement for IT & Non-IT Careers | Tirupati, India</p>
       </div>
     </div>
   </footer>
-
   <!-- Floating WhatsApp button -->
   <a href="https://wa.me/919502504742" target="_blank"
     class="fixed bottom-6 right-6 z-50 w-14 h-14 bg-green-500 rounded-full flex items-center justify-center shadow-xl hover:bg-green-600 transition-all duration-300 hover:scale-110 btn-press">
