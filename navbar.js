@@ -12,6 +12,7 @@
       label: "Services",
       active: page === "services" || page.startsWith("services-"),
       children: [
+        { href: "services.html", label: "All Services", active: page === "services" },
         { href: "services-training.html", label: "Training Programs", active: page === "services-training" },
         { href: "services-placement.html", label: "Placement Assistance", active: page === "services-placement" },
         { href: "services-guidance.html", label: "Career Guidance", active: page === "services-guidance" }
@@ -22,6 +23,7 @@
       label: "Courses",
       active: page === "courses" || page.startsWith("course-"),
       children: [
+        { href: "courses.html", label: "All Courses", active: page === "courses" },
         { href: "course-programming.html", label: "Programming", active: page === "course-programming" },
         { href: "course-web.html", label: "Web Development", active: page === "course-web" },
         { href: "course-fullstack.html", label: "Full Stack", active: page === "course-fullstack" },
@@ -65,8 +67,8 @@
       </li>`;
   };
 
-  // Mobile Item Renderer
-  const renderMobileItem = (item) => {
+  // ✅ UPDATED MOBILE DROPDOWN
+  const renderMobileItem = (item, index) => {
     const isActive = item.active;
     const baseClass = isActive ? "bg-blue-700 text-white" : "bg-white text-slate-900 border-slate-200";
 
@@ -87,12 +89,17 @@
 
     return `
       <li class="space-y-3">
-        <a href="${item.href}" class="mobile-link block w-full rounded-2xl border p-4 text-base font-bold shadow-sm ${baseClass}">
-          ${item.label}
-        </a>
-        <div class="ml-4 flex flex-col border-l-2 border-blue-200 pl-4 space-y-1">
+
+        <button data-dropdown="dropdown-${index}" 
+          class="dropdown-btn flex justify-between items-center w-full rounded-2xl border p-4 text-base font-bold shadow-sm ${baseClass}">
+          <span>${item.label}</span>
+          <i class="fa-solid fa-angle-down text-sm transition-transform"></i>
+        </button>
+
+        <div id="dropdown-${index}" class="hidden ml-4 flex flex-col border-l-2 border-blue-200 pl-4 space-y-1">
           ${children}
         </div>
+
       </li>`;
   };
 
@@ -111,7 +118,7 @@
           ${navItems.map(renderDesktopItem).join("")}
         </ul>
 
-        <button id="menuBtn" class="inline-flex h-11 w-11 items-center justify-center rounded-xl bg-blue-50 text-blue-700 transition-colors hover:bg-blue-100 md:hidden" aria-label="Open Menu">
+        <button id="menuBtn" class="inline-flex h-11 w-11 items-center justify-center rounded-xl bg-blue-50 text-blue-700 transition-colors hover:bg-blue-100 md:hidden">
           <i class="fa-solid fa-bars-staggered text-xl"></i>
         </button>
       </nav>
@@ -124,22 +131,22 @@
         <div class="flex h-full flex-col">
           <div class="flex items-center justify-between border-b bg-white px-6 py-4">
             <div class="flex items-center gap-2">
-              <img src="logo.jpg" alt="Logo" class="h-8 w-8 rounded-md object-cover" />
+              <img src="logo.jpg" class="h-8 w-8 rounded-md object-cover" />
               <span class="text-sm font-black uppercase tracking-widest text-blue-700">Success Consultancy & Services</span>
             </div>
-            <button id="closeBtn" class="flex h-9 w-9 items-center justify-center rounded-full bg-slate-100 text-slate-500 transition-colors hover:bg-blue-50 hover:text-blue-700">
+            <button id="closeBtn" class="flex h-9 w-9 items-center justify-center rounded-full bg-slate-100">
               <i class="fa-solid fa-xmark text-lg"></i>
             </button>
           </div>
           
-          <div class="flex-1 overflow-y-auto overflow-x-hidden p-6">
+          <div class="flex-1 overflow-y-auto p-6">
             <ul class="space-y-6">
-              ${navItems.map(renderMobileItem).join("")}
+              ${navItems.map((item, i) => renderMobileItem(item, i)).join("")}
             </ul>
           </div>
 
-          <div class="border-t bg-white p-6 space-y-3">
-             <a href="tel:9866634443" class="flex items-center justify-center gap-3 w-full rounded-2xl bg-blue-700 py-4 font-bold text-white shadow-lg shadow-blue-200 active:scale-95 transition-transform">
+          <div class="border-t bg-white p-6">
+             <a href="tel:9866634443" class="flex items-center justify-center gap-3 w-full rounded-2xl bg-blue-700 py-4 font-bold text-white">
                 <i class="fa-solid fa-phone-volume"></i>
                 <span>Call 9866634443</span>
              </a>
@@ -151,19 +158,14 @@
     <div class="h-[65px] md:h-[73px]"></div>
   `;
 
-  // Logic Selectors
   const menuBtn = document.getElementById("menuBtn");
   const closeBtn = document.getElementById("closeBtn");
   const navOverlay = document.getElementById("navOverlay");
   const backdrop = document.getElementById("menuBackdrop");
   const drawer = document.getElementById("sideDrawer");
-  const body = document.body;
 
   const openMenu = () => {
     navOverlay.classList.remove("invisible");
-    body.style.overflow = "hidden"; // Stop background scroll
-
-    // Request animation frame to ensure classes trigger transition
     requestAnimationFrame(() => {
       backdrop.classList.add("opacity-100");
       drawer.classList.remove("translate-x-full");
@@ -173,28 +175,22 @@
   const closeMenu = () => {
     backdrop.classList.remove("opacity-100");
     drawer.classList.add("translate-x-full");
-    body.style.overflow = "";
-
-    // Wait for transition to finish before hiding container
-    setTimeout(() => {
-      if (drawer.classList.contains("translate-x-full")) {
-        navOverlay.classList.add("invisible");
-      }
-    }, 300);
+    setTimeout(() => navOverlay.classList.add("invisible"), 300);
   };
 
-  // Event Listeners
   menuBtn.addEventListener("click", openMenu);
   closeBtn.addEventListener("click", closeMenu);
   backdrop.addEventListener("click", closeMenu);
 
-  // Close when a link inside is clicked
-  document.querySelectorAll(".mobile-link").forEach(link => {
-    link.addEventListener("click", closeMenu);
+  // DROPDOWN LOGIC
+  document.querySelectorAll(".dropdown-btn").forEach(btn => {
+    btn.addEventListener("click", () => {
+      const target = document.getElementById(btn.dataset.dropdown);
+      const icon = btn.querySelector("i");
+
+      target.classList.toggle("hidden");
+      icon.classList.toggle("rotate-180");
+    });
   });
 
-  // Handle Resize
-  window.addEventListener("resize", () => {
-    if (window.innerWidth >= 768) closeMenu();
-  });
 })();
